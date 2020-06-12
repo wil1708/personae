@@ -25,7 +25,7 @@
         <?php include 'header.php'; ?>
         <div class="titleButton2">
             <h1>PERSONAE</h1>
-            <form action="connection.php" method="post">
+            <form class="formCreate" action="connection.php" method="post">
                 <label for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
                 <label for="password">Mot de passe</label>
