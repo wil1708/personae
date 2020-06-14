@@ -162,10 +162,14 @@ h4  {
 .titleDiagnostic {
   color: $white;
   text-align: center;
+  font-family: Source_Sans_Pro;
+  font-weight: normal;
 }
 .titleFaiblesses {
   color: $black;
   text-align: center;
+  font-family: Source_Sans_Pro;
+  font-weight: normal;
 }
 .inputDiag {
   margin: 10px 20px;
@@ -197,4 +201,112 @@ h4  {
 hr {
   width: 50%;
   margin-bottom: 60px;
+}
+//-----------------------------UPDATE section Priorites et cibles marché prioritaires---------------------
+.b2c {
+  display: flex;
+  flex-direction: column;
+  background-color: $purple;
+  padding: 10px 0;
+  width: 30%;
+}
+.mainB2c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titlePriority {
+  text-align: center;
+  font-family: Source_Sans_Pro;
+  padding: 10px;
+  border-style: solid;
+}
+.titlePriority2 {
+  text-align: center;
+}
+.b2b {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  padding: 10px 0;
+  width: 30%;
+}
+.submitButtonMarket {
+  color: $white;
+  background-color: $darkBlue;
+  padding: 10px 30px 10px 30px;
+  font-size: 15px;
+  font-family: Source_Sans_Pro;
+  font-weight: normal;
+  margin: 20px 0 60px 0;
+  border: none;
+}
+//-----------------------------UPDATE section Priorites et cibles produits prioritaires---------------------
+.divProduct {
+  display: flex;
+  flex-direction: column;
+}
+.titlePriorityDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.threeProducts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+.productA {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0 5px 0 0;
+}
+.productB {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0 5px 0 5px;
+}
+.productC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0 0 0 5px;
+}
+.A {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  padding: 10px 0;
+  background-color: $darkBlue;
+}
+.B {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  padding: 10px 0;
+  background-color: $purple;
+}
+.C {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  padding: 10px 0;
+  background-color: $lightGrey;
+}
+.divButtonProducts {
+  display: flex;
+  justify-content: center;
+}
+//--------------------------------------PERSONA-----------------------------------------------------------
+.titlePriority3 {
+  text-align: center;
+  font-family: Source_Sans_Pro;
+  padding: 10px 80px;
+  border-style: solid;
+
 }

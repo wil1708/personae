@@ -21,7 +21,7 @@
         <title>Personae créer ma stratégie</title>
     </head>
     <body>
-<!--    -------------------------------------------HEADER--------------------------------------------------->
+<!--    -------------------------------------------HEADER------------------------------------------------->
         <header>
             <?php include 'header.php';?>
             <div class="titleButton2">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </header>
-<!--        --------------------------------------SECTION STRATEGIC PLAN------------------------------------>
+<!--        --------------------------------------SECTION STRATEGIC PLAN---------------------------------->
         <section class="strategicPlan">
             <img class="laurierW" src="assets/img/laurier2.png" alt="image laurier blanc">
             <h1 class="h1Plan">PLAN STRATEGIQUE</h1>
@@ -44,7 +44,7 @@
             <i class="fas fa-angle-down fa-3x"></i>
             <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
         </section>
-<!--        ------------------------------------------SECTION DIAGNOSTIC------------------------------------>
+<!--        ------------------------------------------SECTION DIAGNOSTIC---------------------------------->
         <section class="diagnostic">
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
@@ -131,7 +131,130 @@
         </section>
 <!--        ----------------------------------SECTION PRIORITES ET CIBLES------------------------------->
         <section>
+            <div class="vaseDiagnostic">
+                <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
+                <h1 class="diagnosticTitle">PRIORITES ET CIBLES</h1>
+            </div>
+<!--            ---------------------------------FORM marchés prioritaires----------------------------->
+            <form action="" method="POST" enctype="multipart/form-data">
+<!--                ---------------------------------B2C------------------------------------------------>
+                <div class="mainB2c">
+                    <h4 class="titlePriority">Choix des marchés prioritaires</h4>
+                    <h3 class="titlePriority2">B2C</h3>
+                    <div class="b2c">
+                        <h4 class="titleDiagnostic">Par critères psychographiques</h4>
+                        <label for="psycho1"></label>
+                        <input class="inputDiag" type="text" name="psycho1" id="psycho1" placeholder="intérêts..." value="">
+                        <label for="psycho2"></label>
+                        <input class="inputDiag" type="text" name="psycho2" id="psycho2" placeholder="valeurs..." value="">
+                        <label for="psycho3"></label>
+                        <input class="inputDiag" type="text" name="psycho3" id="psycho3" placeholder="attitudes..." value="">
+                        <label for="psycho4"></label>
+                        <input class="inputDiag" type="text" name="psycho4" id="psycho4" placeholder="lifestyle..." value="">
+                        <label for="psycho5"></label>
+                        <input class="inputDiag" type="text" name="psycho5" id="psycho5" placeholder="autres..." value="">
+                    </div>
+                </div>
+<!--                ---------------------------------B2B------------------------------------------------>
+                <div class="mainB2c">
+                    <h3 class="titlePriority2">B2B</h3>
+                    <div class="b2b">
+                        <h4 class="titleDiagnostic">Par critères fondés sur l'identité</h4>
+                        <label for="identite1"></label>
+                        <input class="inputDiag" type="text" name="identite1" id="identite1" placeholder="secteurs d'activités..." value="">
+                        <label for="identite2"></label>
+                        <input class="inputDiag" type="text" name="identite2" id="identite2" placeholder="taille de l'entreprise..." value="">
+                        <label for="identite3"></label>
+                        <input class="inputDiag" type="text" name="identite3" id="identite3" placeholder="statut juridique..." value="">
+                        <label for="identite4"></label>
+                        <input class="inputDiag" type="text" name="identite4" id="identite4" placeholder="localisation géographique..." value="">
+                        <label for="identite5"></label>
+                        <input class="inputDiag" type="text" name="identite5" id="identite5" placeholder="technologie utilisée..." value="">
+                    </div>
+                    <button class="submitButtonMarket" type="submit" name="action">Valider les marchés</button>
+                </div>
+<!--                ----------------------------FORM produits prioritaires-------------------------------->
+            </form>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="divProduct">
+                    <div class="titlePriorityDiv">
+                        <h4 class="titlePriority">Choix des produits prioritaires</h4>
+                    </div>
+                    <div class="threeProducts">
+                        <div class="productA">
+                            <h3 class="titlePriority2">Produit A</h3>
+                            <div class="A">
+                                <label for="caracteristique1"></label>
+                                <input class="inputDiag" type="text" name="caracteristique1" id="caracteristique1" placeholder="nom..." value="">
+                                <label for="caracteristique2"></label>
+                                <input class="inputDiag" type="text" name="caracteristique2" id="caracteristique2" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique3"></label>
+                                <input class="inputDiag" type="text" name="caracteristique3" id="caracteristique3" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique4"></label>
+                                <input class="inputDiag" type="text" name="caracteristique4" id="caracteristique4" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique5"></label>
+                                <input class="inputDiag" type="text" name="caracteristique5" id="caracteristique5" placeholder="caractéristiques..." value="">
+                            </div>
+                        </div>
+                        <div class="productB">
+                            <h3 class="titlePriority2">Produit B</h3>
+                            <div class="B">
+                                <label for="caracteristique6"></label>
+                                <input class="inputDiag" type="text" name="caracteristique6" id="caracteristique6" placeholder="nom..." value="">
+                                <label for="caracteristique7"></label>
+                                <input class="inputDiag" type="text" name="caracteristique7" id="caracteristique7" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique8"></label>
+                                <input class="inputDiag" type="text" name="caracteristiqu8" id="caracteristique8" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique9"></label>
+                                <input class="inputDiag" type="text" name="caracteristique9" id="caracteristique9" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique10"></label>
+                                <input class="inputDiag" type="text" name="caracteristique10" id="caracteristique10" placeholder="caractéristiques..." value="">
+                            </div>
+                        </div>
+                        <div class="productC">
+                            <h3 class="titlePriority2">Produit C</h3>
+                            <div class="C">
+                                <label for="caracteristique11"></label>
+                                <input class="inputDiag" type="text" name="caracteristique11" id="caracteristique11" placeholder="nom..." value="">
+                                <label for="caracteristique12"></label>
+                                <input class="inputDiag" type="text" name="caracteristique12" id="caracteristique12" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique13"></label>
+                                <input class="inputDiag" type="text" name="caracteristique13" id="caracteristique13" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique14"></label>
+                                <input class="inputDiag" type="text" name="caracteristique14" id="caracteristique14" placeholder="caractéristiques..." value="">
+                                <label for="caracteristique15"></label>
+                                <input class="inputDiag" type="text" name="caracteristique15" id="caracteristique15" placeholder="caractéristiques..." value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divButtonProducts">
+                    <button class="submitButtonMarket" type="submit" name="action">Valider les produits</button>
+                    </div>
+                </div>
+            </form>
+<!--            --------------------------------FORM PERSONA---------------------------------------------->
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="mainB2c">
+                    <h4 class="titlePriority3">Persona</h4>
+                    <div class="persona">
+                        <div class="bandName">
 
+                        </div>
+                        <div class="threePersonaDivs">
+                            <div class="divPersona1">
+
+                            </div>
+                            <div class="divPersona2">
+
+                            </div>
+                            <div class="divPersona3">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="submitButtonMarket" type="submit" name="action">Valider le persona</button>
+                </div>
+            </form>
         </section>
         <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="assets/js/dist/scripts.min.js"></script>
