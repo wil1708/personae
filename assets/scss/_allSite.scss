@@ -83,7 +83,7 @@ header {
   border-radius: 60%;
   position: absolute;
   top: 1%;
-  left: 35%;
+  left: 5px;
 }
 //----------------------------------------UPDATE section strategic plan-----------------------------
 .strategicPlan {
@@ -308,5 +308,176 @@ hr {
   font-family: Source_Sans_Pro;
   padding: 10px 80px;
   border-style: solid;
+  margin: 10px 10px 30px 10px;
+}
+.persona {
+  width: 90%;
+  border-style: solid;
+  border-color: $purple;
+}
+.titlePersona{
+  color: $purple;
+  font-family: Source_Sans_Pro;
+}
+.bandName {
+  background-color: $purple;
+  padding: 1% 3%;
+}
+#personaName {
+  border: none;
+}
+.threePersonaDivs {
+  display: flex;
+}
+.divPersona1 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 1% 2%;
+}
+.divPersona2 {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 1% 3%;
+}
+.bio {
+  background-color: $purple;
+  margin-top: 40px;
+  padding: 10px;
+}
+.bioTitle {
+  font-family: Source_Sans_Pro;
+  color: $white;
+  margin: 0 0 10px 0;
+}
+#bio {
+  max-width: 99%;
+}
+.divPersona3 {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 1% 3%;
+}
+.rowPersona {
+  display: flex;
+  justify-content: space-between;
+  font-family: Source_Sans_Pro;
+}
+.introvertiLabel {
+  text-align: left;
+}
+.extravertiLabel {
+  text-align: right;
+}
+.threeBrands {
+  display: flex;
+  flex-direction: column;
+}
+.inputTrait {
+  margin: 5px;
+  border-color: $purple;
+  border-style: solid;
+}
+.traits2 {
+  margin-bottom: 40px;
+}
+.labelPhoto {
+  margin-top: 40px;
+}
+.inputPhoto {
+  margin-bottom: 40px;
+}
+.labelColor {
+  color: $purple;
+  font-family: Source_Sans_Pro;
+}
+#quote {
+  border-style: solid;
+  border-color: $purple;
+}
+.div3Margin {
+  margin-bottom: 5px;
+}
+.rangeMotivations {
+  margin-bottom: 20px;
+}
+.labelDiv3 {
+  font-family: Source_Sans_Pro;
+}
+.hrPriority {
+  margin-top: 60px;
+}
+//----------------------------------------MIX MARKETING------------------------------------------------------
+.divMix {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 
+}
+.produit {
+  display: flex;
+  flex-direction: column;
+  background-color: $purple;
+  padding: 10px 0;
+  width: 40%;
+}
+.prix {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: $lightGrey;
+  padding: 10px 0;
+  width: 40%;
+}
+.distribution {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkBlue;
+  padding: 10px 0 130px 0;
+  width: 40%;
+}
+.communication {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: $darkGrey;
+  padding: 10px 0;
+  width: 40%;
+}
+.inputLenght {
+  max-width: 50%;
+}
+.inputLenght2 {
+  min-width: 50%;
+  max-width: 50%;
+}
+.mixCircle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: $white;
+  background-color: #00000000;
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titleMix {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 60px 0;
+}
+.mixH3 {
+  text-align: right;
+}
+.buttonMix {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }

@@ -238,25 +238,193 @@
                     <h4 class="titlePriority3">Persona</h4>
                     <div class="persona">
                         <div class="bandName">
-
+                            <label for="personaName"></label>
+                            <input type="text" name="personaName" id="personaName" placeholder="nom...">
                         </div>
                         <div class="threePersonaDivs">
+<!-----------------------------------------------DIV PERSONA 1------------------------------------------------>
                             <div class="divPersona1">
-
+                                <div class="traits1">
+                                    <label for="trait1"></label>
+                                    <input class="inputTrait" type="text" name="trait1" id="trait1" placeholder="trait de personnalité...">
+                                    <label for="trait2"></label>
+                                    <input class="inputTrait" type="text" name="trait2" id="trait2" placeholder="trait de personnalité...">
+                                </div>
+                                <div class="traits2">
+                                    <label for="trait3"></label>
+                                    <input class="inputTrait" type="text" name="trait3" id="trait3" placeholder="trait de personnalité...">
+                                    <label for="trait4"></label>
+                                    <input class="inputTrait" type="text" name="trait4" id="trait4" placeholder="trait de personnalité...">
+                                </div>
+                                <div>
+                                    <label class="labelColor" for="age">Age :</label>
+                                    <input class="inputTrait" type="text" name="age" id="age" placeholder="âge...">
+                                </div>
+                                <div>
+                                    <label class="labelColor" for="fonction">Fonction :</label>
+                                    <input class="inputTrait" type="text" name="fonction" id="fonction" placeholder="fonction...">
+                                </div>
+                                <div>
+                                    <label class="labelColor" for="ville">Ville :</label>
+                                    <input class="inputTrait" type="text" name="ville" id="ville" placeholder="ville...">
+                                </div>
+                                <div>
+                                <label class="labelColor" for="famille">Famille :</label>
+                                <input class="inputTrait" type="text" name="famille" id="famille" placeholder="situation familiale...">
+                                </div>
+                                <label class="labelColor labelPhoto" for="photo">Photo :</label>
+                                <input class="inputPhoto" type="file" name="photo" id="photo" accept="image/*">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                <label for="quote"></label>
+                                <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"></textarea>
                             </div>
+<!-----------------------------------------------DIV PERSONA 2------------------------------------------------->
                             <div class="divPersona2">
-
+                                <h3 class="titlePersona">MOTIVATIONS</h3>
+                                <label for="motivation1"></label>
+                                <input class="inputTrait" type="text" name="motivation1" id="motivation1" placeholder="motivation n°1...">
+                                <label for="rangeMotivation1"></label>
+                                <input class="rangeMotivations" type="range" name="rangeMotivation1" id="rangeMotivation1" min="0" max="10">
+                                <label for="motivation2"></label>
+                                <input class="inputTrait" type="text" name="motivation2" id="motivation2" placeholder="motivation n°2...">
+                                <label for="rangeMotivation2"></label>
+                                <input class="rangeMotivations" type="range" name="rangeMotivation2" id="rangeMotivation2" min="0" max="10">
+                                <label for="motivation3"></label>
+                                <input class="inputTrait" type="text" name="motivation3" id="motivation3" placeholder="motivation n°3...">
+                                <label for="rangeMotivation3"></label>
+                                <input class="rangeMotivations" type="range" name="rangeMotivation3" id="rangeMotivation3" min="0" max="10">
+                                <h3 class="titlePersona">OBJECTIFS</h3>
+                                <label for="objectif1"></label>
+                                <input class="inputTrait" type="text" name="objectif1" id="objectif1" placeholder="objectif n°1...">
+                                <label for="objectif2"></label>
+                                <input class="inputTrait" type="text" name="objectif2" id="objectif2" placeholder="objectif n°2...">
+                                <label for="objectif3"></label>
+                                <input class="inputTrait" type="text" name="objectif3" id="objectif3" placeholder="objectif n°3...">
+                                <div class="bio">
+                                    <h3 class="bioTitle">BIO</h3>
+                                    <label for="bio"></label>
+                                    <textarea name="bio" id="bio" placeholder="description..." cols="60" rows="5"></textarea>
+                                </div>
                             </div>
+<!-----------------------------------------------DIV PERSONA 3------------------------------------------------->
                             <div class="divPersona3">
-
+                                <h3 class="titlePersona">PERSONALITE</h3>
+                                <label for="introverti">
+                                    <div class="rowPersona">
+                                        <div class="introvertiLabel">introverti</div>
+                                        <div class="extravertiLabel">extraverti</div>
+                                    </div>
+                                </label>
+                                <input class="div3Margin" type="range" name="introverti" id="introverti" min="0" max="10">
+                                <label for="analytique">
+                                    <div class="rowPersona">
+                                        <div class="introvertiLabel">analytique</div>
+                                        <div class="extravertiLabel">créatif</div>
+                                    </div>
+                                </label>
+                                <input class="div3Margin" type="range" name="analytique" id="analytique" min="0" max="10">
+                                <label for="loyal">
+                                    <div class="rowPersona">
+                                        <div class="introvertiLabel">loyal</div>
+                                        <div class="extravertiLabel">inconstant</div>
+                                    </div>
+                                </label>
+                                <input class="div3Margin" type="range" name="loyal" id="loyal" min="0" max="10">
+                                <label for="passif">
+                                    <div class="rowPersona">
+                                        <div class="introvertiLabel">passif</div>
+                                        <div class="extravertiLabel">actif</div>
+                                    </div>
+                                </label>
+                                <input class="div3Margin" type="range" name="passif" id="passif" min="0" max="10">
+                                <h3 class="titlePersona">COMMUNICATION</h3>
+                                <label class="labelDiv3" for="reseau">Réseaux sociaux</label>
+                                <input class="div3Margin" type="range" name="reseau" id="reseau" min="0" max="10">
+                                <label class="labelDiv3" for="mobile">Mobile</label>
+                                <input class="div3Margin" type="range" name="mobile" id="mobile" min="0" max="10">
+                                <label class="labelDiv3" for="email">Email</label>
+                                <input class="div3Margin" type="range" name="email" id="email" min="0" max="10">
+                                <label class="labelDiv3" for="media">Médias traditionnels</label>
+                                <input class="div3Margin" type="range" name="media" id="media" min="0" max="10">
+                                <h3 class="titlePersona">MARQUES</h3>
+                                <div class="threeBrands">
+                                    <label class="labelDiv3" for="brand1">Marque n°1</label>
+                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept="image/*">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                    <label class="labelDiv3" for="brand2">Marque n°2</label>
+                                    <input class="div3Margin" type="file" name="brand2" id="brand2" accept="image/*">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                    <label class="labelDiv3" for="brand3">Marque n°3</label>
+                                    <input class="div3Margin" type="file" name="brand3" id="brand3" accept="image/*">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <button class="submitButtonMarket" type="submit" name="action">Valider le persona</button>
                 </div>
             </form>
+            <hr class="hrPriority">
+        </section>
+        <section>
+            <div class="vaseDiagnostic">
+                <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
+                <h1 class="diagnosticTitle">MIX MARKETING</h1>
+            </div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="divMix">
+                    <div class="produit">
+                        <label for="concept"></label>
+                        <input class="inputDiag inputLenght" type="text" name="concept" id="concept" placeholder="Concept...">
+                        <label for="performance"></label>
+                        <input class="inputDiag inputLenght" type="text" name="performance" id="performance" placeholder="Performances...">
+                        <label for="design"></label>
+                        <input class="inputDiag inputLenght" type="text" name="design" id="design" placeholder="Design...">
+                        <label for="packaging"></label>
+                        <input class="inputDiag inputLenght" type="text" name="packaging" id="packaging" placeholder="Packaging...">
+                        <label for="service"></label>
+                        <input class="inputDiag inputLenght" type="text" name="service" id="service" placeholder="Services associés...">
+                        <label for="mark"></label>
+                        <input class="inputDiag inputLenght" type="text" name="mark" id="mark" placeholder="Nom de marque...">
+                    </div>
+                    <div class="prix">
+                        <label for="price"></label>
+                        <input class="inputDiag inputLenght2" type="text" name="price" id="price" placeholder="Prix de base...">
+                        <label for="tarifs"></label>
+                        <input class="inputDiag inputLenght2" type="text" name="tarifs" id="tarifs" placeholder="Tarifs préférentiels...">
+                    </div>
+                    <div class="distribution">
+                        <label for="vente"></label>
+                        <input class="inputDiag inputLenght" type="text" name="vente" id="vente" placeholder="Force de vente...">
+                        <label for="taille"></label>
+                        <input class="inputDiag inputLenght" type="text" name="taille" id="taille" placeholder="Taille, motivation, répartition...">
+                        <label for="distribution"></label>
+                        <input class="inputDiag inputLenght" type="text" name="distribution" id="distribution" placeholder="Circuits de distribution...">
+                    </div>
+                    <div class="communication">
+                        <label for="strategie"></label>
+                        <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stragégie média...">
+                        <label for="outMedia"></label>
+                        <input class="inputDiag inputLenght2" type="text" name="outMedia" id="outMedia" placeholder="Stratégie hors média...">
+                    </div>
+                    <div class="mixCircle">
+                        <div class=" titleMix">
+                        <h3 class="bioTitle">Produit</h3>
+                        <h3 class="bioTitle">Prix</h3>
+                        </div>
+                        <div class=" titleMix">
+                        <h3 class="bioTitle">Distribution</h3>
+                        <h3 class="bioTitle">Communication</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonMix">
+                    <button class="submitButtonMarket" type="submit" name="action">Valider le mix-marketing</button>
+                </div>
+            </form>
         </section>
         <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="assets/js/dist/scripts.min.js"></script>
+        <?php include 'footer.php';?>
     </body>
 </html>
