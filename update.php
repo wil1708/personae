@@ -403,7 +403,7 @@
                     </div>
                     <div class="communication">
                         <label for="strategie"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stragégie média...">
+                        <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stratégie média...">
                         <label for="outMedia"></label>
                         <input class="inputDiag inputLenght2" type="text" name="outMedia" id="outMedia" placeholder="Stratégie hors média...">
                     </div>
@@ -423,8 +423,8 @@
                 </div>
             </form>
         </section>
+        <?php include 'footer.php';?>
         <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="assets/js/dist/scripts.min.js"></script>
-        <?php include 'footer.php';?>
     </body>
 </html>

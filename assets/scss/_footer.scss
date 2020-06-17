@@ -4,5 +4,37 @@ footer {
   display: flex;
 }
 .pilier {
-  width: 8%;
+  width: 130px;
+  margin-left: 30%;
+}
+.footerTitle {
+  color: $white;
+  font-weight: normal;
+  font-size: 15px;
+}
+.fa-linkedin-in {
+  color: $white;
+}
+.contact {
+  margin: 70px 0 0 10px;
+}
+#top_window {
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  color: $darkBlue;
+  border-radius: 50px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 9999999999999999999999999999999;
+  bottom: 40px;
+  right: 40px;
+  font-size: 25px;
+  //display: none;
+}
+#top_window i {
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%,-50%);
 }
