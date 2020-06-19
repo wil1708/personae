@@ -10,8 +10,9 @@
         <meta name="description" content="Votre ressource stragégie marketing">
         <meta name="robots" content="index, no follow">
         <!--LINKS-->
-        <link rel="stylesheet" href="assets/css/style.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.min.css">
+
         <!--OPENGRAPH ogp.me-->
         <meta property="og:title" content="Personae">
         <meta property="og:description" content="Votre ressource stratégie marketing">
@@ -124,7 +125,7 @@
                     </div>
                 </div>
                 <div class="divButton">
-                    <button class="submitButton" type="submit" name="action">Valider mon diagnostic</button>
+                    <button class="submitButton submitButton2" type="submit" name="action">Valider mon diagnostic</button>
                 </div>
             </form>
             <hr>
@@ -238,8 +239,8 @@
                     <h4 class="titlePriority3">Persona</h4>
                     <div class="persona">
                         <div class="bandName">
-                            <label for="personaName"></label>
-                            <input type="text" name="personaName" id="personaName" placeholder="nom...">
+                            <label for="persona_name"></label>
+                            <input type="text" name="persona_name" id="persona_name" placeholder="nom...">
                         </div>
                         <div class="threePersonaDivs">
 <!-----------------------------------------------DIV PERSONA 1------------------------------------------------>
@@ -283,8 +284,8 @@
                                 <h3 class="titlePersona">MOTIVATIONS</h3>
                                 <label for="motivation1"></label>
                                 <input class="inputTrait" type="text" name="motivation1" id="motivation1" placeholder="motivation n°1...">
-                                <label for="rangeMotivation1"></label>
-                                <input class="rangeMotivations" type="range" name="rangeMotivation1" id="rangeMotivation1" min="0" max="10">
+                                <label for="range_motivation1"></label>
+                                <input class="rangeMotivations" type="range" name="range_motivation1" id="range_motivation1" min="0" max="10">
                                 <label for="motivation2"></label>
                                 <input class="inputTrait" type="text" name="motivation2" id="motivation2" placeholder="motivation n°2...">
                                 <label for="rangeMotivation2"></label>
@@ -404,8 +405,8 @@
                     <div class="communication">
                         <label for="strategie"></label>
                         <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stratégie média...">
-                        <label for="outMedia"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="outMedia" id="outMedia" placeholder="Stratégie hors média...">
+                        <label for="hors_media"></label>
+                        <input class="inputDiag inputLenght2" type="text" name="hors_media" id="hors_media" placeholder="Stratégie hors média...">
                     </div>
                     <div class="mixCircle">
                         <div class=" titleMix">

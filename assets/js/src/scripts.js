@@ -10,7 +10,16 @@ function wheelloop() {
     $('.wheel').show(0);
     wheelloop();
 };
-// ---------------------------------------SCRIPT WHEELOOP------------------------------------------------------
+// ------------------------------------BURGER SCRIPT--------------------------------------------------------
+$('.fa-bars').click(function() {
+    $(this).hide();
+    $('.fa-times, .temple, .menuText').fadeIn(1500);
+});
+
+$('.fa-times').click(function() {
+    $('.fa-times, .temple, .menuText').hide();
+    $('.fa-bars').fadeIn(1000);
+});
 
 
 
@@ -32,6 +41,7 @@ btn.click(function() {
     $("html,body").animate({scrollTop: 0},'slow');
 });
 
+// ---------------------------------------SCRIPT WHEELOOP------------------------------------------------------
 wheelloop();
 
 

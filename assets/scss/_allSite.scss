@@ -1,6 +1,10 @@
 img {
   max-width: 100%;
 }
+a, a:link, a:visited, a:focus, a:hover, a:active {
+  text-decoration: none;
+  color: #000000;
+}
 //-------------------------------------------INDEX--------------------------------------------------
 .titleButton {
   display: flex;
@@ -12,7 +16,7 @@ h1 {
   font-family: Aclonica;
   font-size: 4vw;
   font-weight: normal;
-  color: #00000000;
+  color: transparent;
   -webkit-text-stroke: 1px #000;
 }
 h6 {
@@ -46,11 +50,12 @@ header {
   font-size: 15px;
   font-family: Source_Sans_Pro;
   font-weight: normal;
-  margin: 0 0 0 5%;
   border: none;
 }
+.submitButton2 {
+  margin: 0 0 0 5%;
+}
 .inputCreate {
-  color: $white;
   padding: 10px 30px 10px 30px;
   font-size: 15px;
   font-family: Source_Sans_Pro;
@@ -241,7 +246,7 @@ hr {
   margin: 20px 0 60px 0;
   border: none;
 }
-//-----------------------------UPDATE section Priorites et cibles produits prioritaires---------------------
+//-----------------------------UPDATE section Priorites et cibles produits prioritaires------------------
 .divProduct {
   display: flex;
   flex-direction: column;
@@ -409,7 +414,7 @@ hr {
 .hrPriority {
   margin-top: 60px;
 }
-//----------------------------------------MIX MARKETING------------------------------------------------------
+//----------------------------------------MIX MARKETING---------------------------------------------------
 .divMix {
   display: flex;
   justify-content: center;
@@ -463,7 +468,7 @@ hr {
   background-color: #00000000;
   position: absolute;
   z-index: 1;
-  top: 2%;
+  top: 1.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;

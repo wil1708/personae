@@ -31,8 +31,27 @@ li {
 .temple {
   min-width: 39px;
   height: 33.5px;
+  display: none;
 }
 .menuText {
   font-family: Source_Sans_Pro_Bold;
   font-size: 1vw;
+  display: none;
+}
+.menuText:hover {
+  font-weight: normal;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+.fa-times {
+  display: none;
+}
+.fa-times:hover {
+  cursor: pointer;
+}
+.fa-bars {
+  margin-right: 41.5%;
+}
+.fa-bars:hover {
+  cursor: pointer;
 }
