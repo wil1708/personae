@@ -1,4 +1,4 @@
-
+<?php require "config.php"; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,13 +26,21 @@
         <?php include 'header.php'; ?>
         <div class="titleButton2">
             <h1>PERSONAE</h1>
-            <form class="formCreate" action="update.php" method="post">
+            <form class="formCreate" action="connection.php" method="post">
                 <label for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
                 <label for="password">Mot de passe</label>
                 <input class="inputCreate" type="text" id="password" name="password" value="">
                 <button class="submitButton" type="submit" name="action">Se connecter</button>
             </form>
+            <?php
+            if (isset($_POST['user'])) {$user = ($_POST['user']);}
+            if (isset($_POST['password'])) {$password = ($_POST['password']);}
+
+            if (isset($user) && isset($password) && !empty($user) && !empty($password)) {
+                $manager->connection($user);
+            }
+            ?>
         </div>
     </header>
     <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>

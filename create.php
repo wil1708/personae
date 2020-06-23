@@ -27,23 +27,30 @@
         <div class="titleButton2">
             <h1>PERSONAE</h1>
             <form class="formCreate" action="create.php" method="post">
-                <label for="user">Nom d'utilisateur</label>
+                <label class="labelDiv3" for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
-                <label for="password">Mot de passe</label>
-                <input class="inputCreate" type="text" id="password" name="password" value="">
-                <label for="password">Confirmation de mot de passe</label>
-                <input class="inputCreate" type="text" id="password" name="confpassword" value="">
-                <button class="submitButton" type="submit" name="action">Créer un compte</button>
+                <label class="labelDiv3" for="password">Mot de passe</label>
+                <input class="inputCreate" type="password" id="password" name="password" value="">
+                <label class="labelDiv3" for="password">Confirmation de mot de passe</label>
+                <input class="inputCreate" type="password" id="password" name="confpassword" value="">
+                <button onclick="href=update.php;" class="submitButton" type="submit" name="action">Créer un compte</button>
             </form>
-        </div>
+
         <?php
-//
-            $user = new User (array('user'=>$_POST['user'], 'password'=>$_POST['password']));
-//
+        if (isset($_POST['user'])) {$user = ($_POST['user']);}
+        if (isset($_POST['password'])) {$password = ($_POST['password']);}
+        if (isset($_POST['confpassword'])) {$confpassword = ($_POST['confpassword']);}
+
+        if (isset($user) && isset($password) && isset($confpassword) && $password == $confpassword && !empty($user) && !empty($password) && !empty($confpassword)){
+            $user = new User (array('user'=>$_POST['user'], 'password'=>password_hash($_POST['password'], PASSWORD_DEFAULT)));
             $manager -> add($user);
-//        }
-        var_dump($user);
+            echo '<p class="labelDiv3">Votre compte a bien été crée</p>';
+            echo '<META http-equiv="refresh" content="2; URL=connection.php"> ';
+        }else {
+            echo '<p class="labelDiv3">Veuillez remplir entièrement les champs</p>';
+        }
         ?>
+        </div>
     </header>
     <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/js/dist/scripts.min.js"></script>
