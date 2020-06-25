@@ -101,7 +101,7 @@ class User
     private $_strategie;
     private $_hors_media;
 
-    //----------------------------------------CONSTRUCTEUR---------------------------------------------
+    //----------------------------------------CONSTRUCTEUR----------------------------------------
 
     public function __construct(array $donnees){
         $this->hydrate($donnees);
@@ -117,7 +117,7 @@ class User
             }
         }
     }
-//    -----------------------------------------FONCTIONS GETTERS----------------------------------------
+//    -----------------------------------------FONCTIONS GETTERS-------------------------------------
 
     public function id() {
         return $this->_id;

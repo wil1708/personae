@@ -167,9 +167,9 @@
             if (isset($_POST['menace6'])) {$menace6 = ($_POST['menace6']);}
 
             if (isset($force1) && isset($force2) && isset($force3) && isset($force4) && isset($force5) && isset($force6) && isset($opportunite1) && isset($opportunite2) && isset($opportunite3) && isset($opportunite4) && isset($opportunite5) && isset($opportunite6) && isset($faiblesse1) && isset($faiblesse2) && isset($faiblesse3) && isset($faiblesse4) && isset($faiblesse5) && isset($faiblesse6) && isset($menace1) && isset($menace2) && isset($menace3) && isset($menace4) && isset($menace5) && isset($menace6)) {
-                $user = new User (array('force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
+                $user = new User (array('user'=>$_SESSION['user'], 'force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
+
                 $manager -> updateDiagnostic($user);
-                var_dump($user);
             }
             ?>
             <hr>
@@ -181,7 +181,7 @@
                 <h1 class="diagnosticTitle">PRIORITES ET CIBLES</h1>
             </div>
 <!--            ---------------------------------FORM marchés prioritaires--------------------------->
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="update.php" method="POST" enctype="multipart/form-data">
 <!--                ---------------------------------B2C--------------------------------------------->
                 <div class="mainB2c">
                     <h4 class="titlePriority">Choix des marchés prioritaires</h4>
@@ -218,9 +218,27 @@
                     </div>
                     <button class="submitButtonMarket" type="submit" name="action">Valider les marchés</button>
                 </div>
-<!--                ----------------------------FORM produits prioritaires---------------------------->
             </form>
-            <form action="" method="POST" enctype="multipart/form-data">
+            <?php
+            if (isset($_POST['psycho1'])) {$psycho1 = ($_POST['psycho1']);}
+            if (isset($_POST['psycho2'])) {$psycho2 = ($_POST['psycho2']);}
+            if (isset($_POST['psycho3'])) {$psycho3 = ($_POST['psycho3']);}
+            if (isset($_POST['psycho4'])) {$psycho4 = ($_POST['psycho4']);}
+            if (isset($_POST['psycho5'])) {$psycho5 = ($_POST['psycho5']);}
+            if (isset($_POST['identite1'])) {$identite1 = ($_POST['identite1']);}
+            if (isset($_POST['identite2'])) {$identite2 = ($_POST['identite2']);}
+            if (isset($_POST['identite3'])) {$identite3 = ($_POST['identite3']);}
+            if (isset($_POST['identite4'])) {$identite4 = ($_POST['identite4']);}
+            if (isset($_POST['identite5'])) {$identite5 = ($_POST['identite5']);}
+
+             if (isset($psycho1) && isset($psycho2) && isset($psycho3) && isset($psycho4) && isset($psycho5) && isset($identite1) && isset($identite2) && isset($identite3) && isset($identite4) && isset($identite5)) {
+                 $user = new User (array('user'=>$_SESSION['user'], 'psycho1'=>$_POST['psycho1'], 'psycho2'=>$_POST['psycho2'], 'psycho3'=>$_POST['psycho3'], 'psycho4'=>$_POST['psycho4'], 'psycho5'=>$_POST['psycho5'], 'identite1'=>$_POST['identite1'], 'identite2'=>$_POST['identite2'], 'identite3'=>$_POST['identite3'], 'identite4'=>$_POST['identite4'], 'identite5'=>$_POST['identite5']));
+
+                 $manager->updateMarket($user);
+             }
+            ?>
+            <!------------------------------FORM produits prioritaires------------------------------>
+            <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="divProduct">
                     <div class="titlePriorityDiv">
                         <h4 class="titlePriority">Choix des produits prioritaires</h4>
@@ -277,9 +295,32 @@
                     </div>
                 </div>
             </form>
+            <?php
+            if (isset($_POST['caracteristique1'])) {$caracteristique1 = ($_POST['caracteristique1']);}
+            if (isset($_POST['caracteristique2'])) {$caracteristique2 = ($_POST['caracteristique2']);}
+            if (isset($_POST['caracteristique3'])) {$caracteristique3 = ($_POST['caracteristique3']);}
+            if (isset($_POST['caracteristique4'])) {$caracteristique4 = ($_POST['caracteristique4']);}
+            if (isset($_POST['caracteristique5'])) {$caracteristique5 = ($_POST['caracteristique5']);}
+            if (isset($_POST['caracteristique6'])) {$caracteristique6 = ($_POST['caracteristique6']);}
+            if (isset($_POST['caracteristique7'])) {$caracteristique7 = ($_POST['caracteristique7']);}
+            if (isset($_POST['caracteristique8'])) {$caracteristique8 = ($_POST['caracteristique8']);}
+            if (isset($_POST['caracteristique9'])) {$caracteristique9 = ($_POST['caracteristique9']);}
+            if (isset($_POST['caracteristique10'])) {$caracteristique10 = ($_POST['caracteristique10']);}
+            if (isset($_POST['caracteristique11'])) {$caracteristique11 = ($_POST['caracteristique11']);}
+            if (isset($_POST['caracteristique12'])) {$caracteristique12 = ($_POST['caracteristique12']);}
+            if (isset($_POST['caracteristique13'])) {$caracteristique13 = ($_POST['caracteristique13']);}
+            if (isset($_POST['caracteristique14'])) {$caracteristique14 = ($_POST['caracteristique14']);}
+            if (isset($_POST['caracteristique15'])) {$caracteristique15 = ($_POST['caracteristique15']);}
+
+            if (isset($caracteristique1) && isset($caracteristique2) && isset($caracteristique3) && isset($caracteristique4) && isset($caracteristique5) && isset($caracteristique6) && isset($caracteristique7) && isset($caracteristique8) && isset($caracteristique9) && isset($caracteristique10) && isset($caracteristique11) && isset($caracteristique12) && isset($caracteristique13) && isset($caracteristique14) && isset($caracteristique15)) {
+                $user = new User (array('user'=>$_SESSION['user'], 'caracteristique1'=>$_POST['caracteristique1'], 'caracteristique2'=>$_POST['caracteristique2'], 'caracteristique3'=>$_POST['caracteristique3'], 'caracteristique4'=>$_POST['caracteristique4'], 'caracteristique5'=>$_POST['caracteristique5'], 'caracteristique6'=>$_POST['caracteristique6'], 'caracteristique7'=>$_POST['caracteristique7'], 'caracteristique8'=>$_POST['caracteristique8'], 'caracteristique9'=>$_POST['caracteristique9'], 'caracteristique10'=>$_POST['caracteristique10'], 'caracteristique11'=>$_POST['caracteristique11'], 'caracteristique12'=>$_POST['caracteristique12'], 'caracteristique13'=>$_POST['caracteristique13'], 'caracteristique14'=>$_POST['caracteristique14'], 'caracteristique15'=>$_POST['caracteristique15']));
+var_dump($user);
+                $manager->updateProduct($user);
+            }
+            ?>
 <!--            --------------------------------FORM PERSONA----------------------------------------->
-            <form action="" method="POST" enctype="multipart/form-data">
-                <div class="mainB2c">
+            <form action="update.php" method="POST" enctype="multipart/form-data">
+                <div class="mainB3c">
                     <h4 class="titlePriority3">Persona</h4>
                     <div class="persona">
                         <div class="bandName">
@@ -287,7 +328,7 @@
                             <input type="text" name="persona_name" id="persona_name" placeholder="nom...">
                         </div>
                         <div class="threePersonaDivs">
-<!-----------------------------------------------DIV PERSONA 1---------------------------------------->
+<!-----------------------------------------------DIV PERSONA 6---------------------------------------->
                             <div class="divPersona1">
                                 <div class="traits1">
                                     <label for="trait1"></label>
@@ -416,6 +457,7 @@
                 <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
                 <h1 class="diagnosticTitle">MIX MARKETING</h1>
             </div>
+<!--------------------------------------DIV MIX MARKETING----------------------------------------->
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="divMix">
                     <div class="produit">
@@ -467,6 +509,27 @@
                     <button class="submitButtonMarket" type="submit" name="action">Valider le mix-marketing</button>
                 </div>
             </form>
+            <?php
+            if (isset($_POST['concept'])) {$concept = ($_POST['concept']);}
+            if (isset($_POST['performance'])) {$performance = ($_POST['performance']);}
+            if (isset($_POST['design'])) {$design = ($_POST['design']);}
+            if (isset($_POST['packaging'])) {$packaging = ($_POST['packaging']);}
+            if (isset($_POST['service'])) {$service = ($_POST['service']);}
+            if (isset($_POST['mark'])) {$mark = ($_POST['mark']);}
+            if (isset($_POST['price'])) {$price = ($_POST['price']);}
+            if (isset($_POST['tarifs'])) {$tarifs = ($_POST['tarifs']);}
+            if (isset($_POST['vente'])) {$vente = ($_POST['vente']);}
+            if (isset($_POST['taille'])) {$taille = ($_POST['taille']);}
+            if (isset($_POST['distribution'])) {$distribution = ($_POST['distribution']);}
+            if (isset($_POST['strategie'])) {$strategie = ($_POST['strategie']);}
+            if (isset($_POST['hors_media'])) {$hors_media = ($_POST['hors_media']);}
+
+            if (isset($concept) && isset($performance) && isset($design) && isset($packaging) && isset($service) && isset($mark) && isset($price) && isset($tarifs) && isset($vente) && isset($taille) && isset($distribution) && isset($strategie) && isset($hors_media)) {
+                $user = new User (array('user'=>$_SESSION['user'], 'concept'=>$_POST['concept'], 'performance'=>$_POST['performance'], 'design'=>$_POST['design'], 'packaging'=>$_POST['packaging'], 'service'=>$_POST['service'], 'mark'=>$_POST['mark'], 'price'=>$_POST['price'], 'tarifs'=>$_POST['tarifs'], 'vente'=>$_POST['vente'], 'taille'=>$_POST['taille'], 'distribution'=>$_POST['distribution'], 'strategie'=>$_POST['strategie'], 'hors_media'=>$_POST['hors_media']));
+
+                $manager->updateMix($user);
+            }
+            ?>
         </section>
         <?php include 'footer.php';?>
         <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
