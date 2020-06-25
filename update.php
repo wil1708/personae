@@ -1,3 +1,15 @@
+<?php
+    require "config.php";
+    session_start();
+    $user = $manager->get($_SESSION['user']);
+
+    if (isset($_GET['deconnexion']))
+    {
+        session_destroy();
+        header('Location: index.php');
+        exit();
+    }
+?>
 
 <!doctype html>
 <html lang="en">
@@ -22,20 +34,20 @@
         <title>Personae créer ma stratégie</title>
     </head>
     <body>
-<!--    -------------------------------------------HEADER------------------------------------------------->
+<!---------------------------------------------HEADER--------------------------------------------->
         <header>
             <?php include 'header.php';?>
             <div class="titleButton2">
                 <h1>PERSONAE</h1>
-                <h4></h4>
-                <h6>Déconnexion</h6>
+                <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
+                <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
                 <h3 class="infoTitle">Créer/éditer ma stratégie marketing</h3>
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
             </div>
         </header>
-<!--        --------------------------------------SECTION STRATEGIC PLAN---------------------------------->
+<!----------------------------------------SECTION STRATEGIC PLAN------------------------------>
         <section class="strategicPlan">
             <img class="laurierW" src="assets/img/laurier2.png" alt="image laurier blanc">
             <h1 class="h1Plan">PLAN STRATEGIQUE</h1>
@@ -45,13 +57,13 @@
             <i class="fas fa-angle-down fa-3x"></i>
             <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
         </section>
-<!--        ------------------------------------------SECTION DIAGNOSTIC---------------------------------->
+<!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
         <section class="diagnostic">
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
                 <h1 class="diagnosticTitle">DIAGNOSTIC</h1>
             </div>
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="diagnosticForm">
                     <div class="divRotate">
                         <h4 class="titleRotate">INTERNE</h4>
@@ -128,17 +140,49 @@
                     <button class="submitButton submitButton2" type="submit" name="action">Valider mon diagnostic</button>
                 </div>
             </form>
+            <?php
+            if (isset($_POST['force1'])) {$force1 = ($_POST['force1']);}
+            if (isset($_POST['force2'])) {$force2 = ($_POST['force2']);}
+            if (isset($_POST['force3'])) {$force3 = ($_POST['force3']);}
+            if (isset($_POST['force4'])) {$force4 = ($_POST['force4']);}
+            if (isset($_POST['force5'])) {$force5 = ($_POST['force5']);}
+            if (isset($_POST['force6'])) {$force6 = ($_POST['force6']);}
+            if (isset($_POST['opportunite1'])) {$opportunite1 = ($_POST['opportunite1']);}
+            if (isset($_POST['opportunite2'])) {$opportunite2 = ($_POST['opportunite2']);}
+            if (isset($_POST['opportunite3'])) {$opportunite3 = ($_POST['opportunite3']);}
+            if (isset($_POST['opportunite4'])) {$opportunite4 = ($_POST['opportunite4']);}
+            if (isset($_POST['opportunite5'])) {$opportunite5 = ($_POST['opportunite5']);}
+            if (isset($_POST['opportunite6'])) {$opportunite6 = ($_POST['opportunite6']);}
+            if (isset($_POST['faiblesse1'])) {$faiblesse1 = ($_POST['faiblesse1']);}
+            if (isset($_POST['faiblesse2'])) {$faiblesse2 = ($_POST['faiblesse2']);}
+            if (isset($_POST['faiblesse3'])) {$faiblesse3 = ($_POST['faiblesse3']);}
+            if (isset($_POST['faiblesse4'])) {$faiblesse4 = ($_POST['faiblesse4']);}
+            if (isset($_POST['faiblesse5'])) {$faiblesse5 = ($_POST['faiblesse5']);}
+            if (isset($_POST['faiblesse6'])) {$faiblesse6 = ($_POST['faiblesse6']);}
+            if (isset($_POST['menace1'])) {$menace1 = ($_POST['menace1']);}
+            if (isset($_POST['menace2'])) {$menace2 = ($_POST['menace2']);}
+            if (isset($_POST['menace3'])) {$menace3 = ($_POST['menace3']);}
+            if (isset($_POST['menace4'])) {$menace4 = ($_POST['menace4']);}
+            if (isset($_POST['menace5'])) {$menace5 = ($_POST['menace5']);}
+            if (isset($_POST['menace6'])) {$menace6 = ($_POST['menace6']);}
+
+            if (isset($force1) && isset($force2) && isset($force3) && isset($force4) && isset($force5) && isset($force6) && isset($opportunite1) && isset($opportunite2) && isset($opportunite3) && isset($opportunite4) && isset($opportunite5) && isset($opportunite6) && isset($faiblesse1) && isset($faiblesse2) && isset($faiblesse3) && isset($faiblesse4) && isset($faiblesse5) && isset($faiblesse6) && isset($menace1) && isset($menace2) && isset($menace3) && isset($menace4) && isset($menace5) && isset($menace6)) {
+                $user = new User (array('force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
+                $manager -> updateDiagnostic($user);
+                var_dump($user);
+            }
+            ?>
             <hr>
         </section>
-<!--        ----------------------------------SECTION PRIORITES ET CIBLES------------------------------->
+<!------------------------------------SECTION PRIORITES ET CIBLES----------------------------->
         <section>
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
                 <h1 class="diagnosticTitle">PRIORITES ET CIBLES</h1>
             </div>
-<!--            ---------------------------------FORM marchés prioritaires----------------------------->
+<!--            ---------------------------------FORM marchés prioritaires--------------------------->
             <form action="" method="POST" enctype="multipart/form-data">
-<!--                ---------------------------------B2C------------------------------------------------>
+<!--                ---------------------------------B2C--------------------------------------------->
                 <div class="mainB2c">
                     <h4 class="titlePriority">Choix des marchés prioritaires</h4>
                     <h3 class="titlePriority2">B2C</h3>
@@ -156,7 +200,7 @@
                         <input class="inputDiag" type="text" name="psycho5" id="psycho5" placeholder="autres..." value="">
                     </div>
                 </div>
-<!--                ---------------------------------B2B------------------------------------------------>
+<!--                ---------------------------------B2B--------------------------------------------->
                 <div class="mainB2c">
                     <h3 class="titlePriority2">B2B</h3>
                     <div class="b2b">
@@ -174,7 +218,7 @@
                     </div>
                     <button class="submitButtonMarket" type="submit" name="action">Valider les marchés</button>
                 </div>
-<!--                ----------------------------FORM produits prioritaires-------------------------------->
+<!--                ----------------------------FORM produits prioritaires---------------------------->
             </form>
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="divProduct">
@@ -233,7 +277,7 @@
                     </div>
                 </div>
             </form>
-<!--            --------------------------------FORM PERSONA---------------------------------------------->
+<!--            --------------------------------FORM PERSONA----------------------------------------->
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="mainB2c">
                     <h4 class="titlePriority3">Persona</h4>
@@ -243,7 +287,7 @@
                             <input type="text" name="persona_name" id="persona_name" placeholder="nom...">
                         </div>
                         <div class="threePersonaDivs">
-<!-----------------------------------------------DIV PERSONA 1------------------------------------------------>
+<!-----------------------------------------------DIV PERSONA 1---------------------------------------->
                             <div class="divPersona1">
                                 <div class="traits1">
                                     <label for="trait1"></label>
@@ -279,7 +323,7 @@
                                 <label for="quote"></label>
                                 <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"></textarea>
                             </div>
-<!-----------------------------------------------DIV PERSONA 2------------------------------------------------->
+<!-----------------------------------------------DIV PERSONA 2---------------------------------------->
                             <div class="divPersona2">
                                 <h3 class="titlePersona">MOTIVATIONS</h3>
                                 <label for="motivation1"></label>
@@ -307,7 +351,7 @@
                                     <textarea name="bio" id="bio" placeholder="description..." cols="60" rows="5"></textarea>
                                 </div>
                             </div>
-<!-----------------------------------------------DIV PERSONA 3------------------------------------------------->
+<!-----------------------------------------------DIV PERSONA 3---------------------------------------->
                             <div class="divPersona3">
                                 <h3 class="titlePersona">PERSONALITE</h3>
                                 <label for="introverti">
