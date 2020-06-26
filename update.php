@@ -267,7 +267,7 @@
                                 <label for="caracteristique7"></label>
                                 <input class="inputDiag" type="text" name="caracteristique7" id="caracteristique7" placeholder="caractéristiques..." value="">
                                 <label for="caracteristique8"></label>
-                                <input class="inputDiag" type="text" name="caracteristiqu8" id="caracteristique8" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique8" id="caracteristique8" placeholder="caractéristiques..." value="">
                                 <label for="caracteristique9"></label>
                                 <input class="inputDiag" type="text" name="caracteristique9" id="caracteristique9" placeholder="caractéristiques..." value="">
                                 <label for="caracteristique10"></label>
@@ -314,13 +314,13 @@
 
             if (isset($caracteristique1) && isset($caracteristique2) && isset($caracteristique3) && isset($caracteristique4) && isset($caracteristique5) && isset($caracteristique6) && isset($caracteristique7) && isset($caracteristique8) && isset($caracteristique9) && isset($caracteristique10) && isset($caracteristique11) && isset($caracteristique12) && isset($caracteristique13) && isset($caracteristique14) && isset($caracteristique15)) {
                 $user = new User (array('user'=>$_SESSION['user'], 'caracteristique1'=>$_POST['caracteristique1'], 'caracteristique2'=>$_POST['caracteristique2'], 'caracteristique3'=>$_POST['caracteristique3'], 'caracteristique4'=>$_POST['caracteristique4'], 'caracteristique5'=>$_POST['caracteristique5'], 'caracteristique6'=>$_POST['caracteristique6'], 'caracteristique7'=>$_POST['caracteristique7'], 'caracteristique8'=>$_POST['caracteristique8'], 'caracteristique9'=>$_POST['caracteristique9'], 'caracteristique10'=>$_POST['caracteristique10'], 'caracteristique11'=>$_POST['caracteristique11'], 'caracteristique12'=>$_POST['caracteristique12'], 'caracteristique13'=>$_POST['caracteristique13'], 'caracteristique14'=>$_POST['caracteristique14'], 'caracteristique15'=>$_POST['caracteristique15']));
-var_dump($user);
+
                 $manager->updateProduct($user);
             }
             ?>
 <!--            --------------------------------FORM PERSONA----------------------------------------->
             <form action="update.php" method="POST" enctype="multipart/form-data">
-                <div class="mainB3c">
+                <div class="mainB2c">
                     <h4 class="titlePriority3">Persona</h4>
                     <div class="persona">
                         <div class="bandName">
