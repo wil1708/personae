@@ -157,6 +157,46 @@ class UserManager
 
         $q->execute();
     }
+    //----------------------------------------function updateProduct------------------------------------
+    public function updatePersona(User $obj){
+        $q = $this->_db->prepare('UPDATE main_table SET persona_name=:persona_name, trait1=:trait1, trait2=:trait2, trait3=:trait3, trait4=:trait4, age=:age, fonction=:fonction, ville=:ville, famille=:famille, photo=:photo, quote=:quote, motivation1=:motivation1, range_motivation1=:range_motivation1, motivation2=:motivation2, range_motivation2=:range_motivation2, motivation3=:motivation3, range_motivation3=:range_motivation3, objectif1=:objectif1, objectif2=:objectif2, objectif3=:objectif3, bio=:bio, introverti=:introverti, analytique=:analytique, loyal=:loyal, passif=:passif, reseau=:reseau, mobile=:mobile, email=:email, media=:media, brand1=:brand1, brand2=:brand2, brand3=:brand3 WHERE user=:user');
+
+        $q->bindValue(':user', $obj->user());
+        $q->bindValue(':persona_name', $obj->persona_name(), PDO::PARAM_STR);
+        $q->bindValue(':trait1', $obj->trait1(), PDO::PARAM_STR);
+        $q->bindValue(':trait2', $obj->trait2(), PDO::PARAM_STR);
+        $q->bindValue(':trait3', $obj->trait3(), PDO::PARAM_STR);
+        $q->bindValue(':trait4', $obj->trait4(), PDO::PARAM_STR);
+        $q->bindValue(':age', $obj->age(), PDO::PARAM_INT);
+        $q->bindValue(':fonction', $obj->fonction(), PDO::PARAM_STR);
+        $q->bindValue(':ville', $obj->ville(), PDO::PARAM_STR);
+        $q->bindValue(':famille', $obj->famille(), PDO::PARAM_STR);
+        $q->bindValue(':photo', $obj->photo(), PDO::PARAM_STR);
+        $q->bindValue(':quote', $obj->quote(), PDO::PARAM_STR);
+        $q->bindValue(':motivation1', $obj->motivation1(), PDO::PARAM_STR);
+        $q->bindValue(':range_motivation1', $obj->range_motivation1(), PDO::PARAM_INT);
+        $q->bindValue(':motivation2', $obj->motivation2(), PDO::PARAM_STR);
+        $q->bindValue(':range_motivation2', $obj->range_motivation2(), PDO::PARAM_INT);
+        $q->bindValue(':motivation3', $obj->motivation3(), PDO::PARAM_STR);
+        $q->bindValue(':range_motivation3', $obj->range_motivation3(), PDO::PARAM_INT);
+        $q->bindValue(':objectif1', $obj->objectif1(), PDO::PARAM_STR);
+        $q->bindValue(':objectif2', $obj->objectif2(), PDO::PARAM_STR);
+        $q->bindValue(':objectif3', $obj->objectif3(), PDO::PARAM_STR);
+        $q->bindValue(':bio', $obj->bio(), PDO::PARAM_STR);
+        $q->bindValue(':introverti', $obj->introverti(), PDO::PARAM_INT);
+        $q->bindValue(':analytique', $obj->analytique(), PDO::PARAM_INT);
+        $q->bindValue(':loyal', $obj->loyal(), PDO::PARAM_INT);
+        $q->bindValue(':passif', $obj->passif(), PDO::PARAM_INT);
+        $q->bindValue(':reseau', $obj->reseau(), PDO::PARAM_INT);
+        $q->bindValue(':mobile', $obj->mobile(), PDO::PARAM_INT);
+        $q->bindValue(':email', $obj->email(), PDO::PARAM_INT);
+        $q->bindValue(':media', $obj->media(), PDO::PARAM_INT);
+        $q->bindValue(':brand1', $obj->brand1(), PDO::PARAM_STR);
+        $q->bindValue(':brand2', $obj->brand2(), PDO::PARAM_STR);
+        $q->bindValue(':brand3', $obj->brand3(), PDO::PARAM_STR);
+
+        $q->execute();
+    }
 
 
 

@@ -359,8 +359,8 @@
                                 <input class="inputTrait" type="text" name="famille" id="famille" placeholder="situation familiale...">
                                 </div>
                                 <label class="labelColor labelPhoto" for="photo">Photo :</label>
-                                <input class="inputPhoto" type="file" name="photo" id="photo" accept="image/*">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                <input class="inputPhoto" type="file" name="photo" id="photo" accept=".png, .jpg">
+<!--                                <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                 <label for="quote"></label>
                                 <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"></textarea>
                             </div>
@@ -374,11 +374,11 @@
                                 <label for="motivation2"></label>
                                 <input class="inputTrait" type="text" name="motivation2" id="motivation2" placeholder="motivation n°2...">
                                 <label for="rangeMotivation2"></label>
-                                <input class="rangeMotivations" type="range" name="rangeMotivation2" id="rangeMotivation2" min="0" max="10">
+                                <input class="rangeMotivations" type="range" name="range_motivation2" id="range_motivation2" min="0" max="10">
                                 <label for="motivation3"></label>
                                 <input class="inputTrait" type="text" name="motivation3" id="motivation3" placeholder="motivation n°3...">
                                 <label for="rangeMotivation3"></label>
-                                <input class="rangeMotivations" type="range" name="rangeMotivation3" id="rangeMotivation3" min="0" max="10">
+                                <input class="rangeMotivations" type="range" name="range_motivation3" id="range_motivation3" min="0" max="10">
                                 <h3 class="titlePersona">OBJECTIFS</h3>
                                 <label for="objectif1"></label>
                                 <input class="inputTrait" type="text" name="objectif1" id="objectif1" placeholder="objectif n°1...">
@@ -435,14 +435,14 @@
                                 <h3 class="titlePersona">MARQUES</h3>
                                 <div class="threeBrands">
                                     <label class="labelDiv3" for="brand1">Marque n°1</label>
-                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept="image/*">
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept=".png, .jpg">
+<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                     <label class="labelDiv3" for="brand2">Marque n°2</label>
-                                    <input class="div3Margin" type="file" name="brand2" id="brand2" accept="image/*">
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                    <input class="div3Margin" type="file" name="brand2" id="brand2" accept=".png, .jpg">
+<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                     <label class="labelDiv3" for="brand3">Marque n°3</label>
-                                    <input class="div3Margin" type="file" name="brand3" id="brand3" accept="image/*">
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                                    <input class="div3Margin" type="file" name="brand3" id="brand3" accept=".png, .jpg">
+<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                 </div>
                             </div>
                         </div>
@@ -450,6 +450,69 @@
                     <button class="submitButtonMarket" type="submit" name="action">Valider le persona</button>
                 </div>
             </form>
+            <?php
+            if (isset($_POST['persona_name'])) {$persona_name = ($_POST['persona_name']);}
+            if (isset($_POST['trait1'])) {$trait1 = ($_POST['trait1']);}
+            if (isset($_POST['trait2'])) {$trait2 = ($_POST['trait2']);}
+            if (isset($_POST['trait3'])) {$trait3 = ($_POST['trait3']);}
+            if (isset($_POST['trait4'])) {$trait4 = ($_POST['trait4']);}
+            if (isset($_POST['age'])) {$age = ($_POST['age']);}
+            if (isset($_POST['fonction'])) {$fonction = ($_POST['fonction']);}
+            if (isset($_POST['ville'])) {$ville = ($_POST['ville']);}
+            if (isset($_POST['famille'])) {$famille = ($_POST['famille']);}
+            if (isset($_FILES['photo'])) {$photo = ($_FILES['photo']);}
+            if (isset($_POST['quote'])) {$quote = ($_POST['quote']);}
+            if (isset($_POST['motivation1'])) {$motivation1 = ($_POST['motivation1']);}
+            if (isset($_POST['range_motivation1'])) {$range_motivation1 = ($_POST['range_motivation1']);}
+            if (isset($_POST['motivation2'])) {$motivation2 = ($_POST['motivation2']);}
+            if (isset($_POST['range_motivation2'])) {$range_motivation2 = ($_POST['range_motivation2']);}
+            if (isset($_POST['motivation3'])) {$motivation3 = ($_POST['motivation3']);}
+            if (isset($_POST['range_motivation3'])) {$range_motivation3 = ($_POST['range_motivation3']);}
+            if (isset($_POST['objectif1'])) {$objectif1 = ($_POST['objectif1']);}
+            if (isset($_POST['objectif2'])) {$objectif2 = ($_POST['objectif2']);}
+            if (isset($_POST['objectif3'])) {$objectif3 = ($_POST['objectif3']);}
+            if (isset($_POST['bio'])) {$bio = ($_POST['bio']);}
+            if (isset($_POST['introverti'])) {$introverti = ($_POST['introverti']);}
+            if (isset($_POST['analytique'])) {$analytique = ($_POST['analytique']);}
+            if (isset($_POST['loyal'])) {$loyal = ($_POST['loyal']);}
+            if (isset($_POST['passif'])) {$passif = ($_POST['passif']);}
+            if (isset($_POST['reseau'])) {$reseau = ($_POST['reseau']);}
+            if (isset($_POST['mobile'])) {$mobile = ($_POST['mobile']);}
+            if (isset($_POST['email'])) {$email = ($_POST['email']);}
+            if (isset($_POST['media'])) {$media = ($_POST['media']);}
+            if (isset($_FILES['brand1'])) {$brand1 = ($_FILES['brand1']);}
+            if (isset($_FILES['brand2'])) {$brand2 = ($_FILES['brand2']);}
+            if (isset($_FILES['brand3'])) {$brand3 = ($_FILES['brand3']);}
+//var_dump($user);
+            var_dump($photo);
+            $valid_ext = array('jpg','png');
+            $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) || pathinfo($brand1['name'],PATHINFO_EXTENSION) || pathinfo($brand2['name'],PATHINFO_EXTENSION) || pathinfo($brand3['name'],PATHINFO_EXTENSION);
+            if (isset($persona_name) && isset($trait1) && isset($trait2) && isset($trait3) && isset($trait4) && isset($age) && isset($fonction) && isset($ville) && isset($famille) && isset($quote) && isset($motivation1) && isset($range_motivation1) && isset($motivation2) && isset($range_motivation2) && isset($motivation3) && isset($range_motivation3) && isset($objectif1) && isset($objectif2) && isset($objectif3) && isset($bio) && isset($introverti) && isset($analytique) && isset($loyal) && isset($passif) && isset($reseau) && isset($mobile) && isset($email) && isset($media) && in_array($upload_ext,$valid_ext)) {
+
+                if($photo['size'] <= 1000000 && $brand1['size'] <= 1000000 && $brand2['size'] <= 1000000 && $brand3['size'] <= 1000000) {
+                    $dbname1 = uniqid() . '_' . $photo['name'];
+                    $dbname2 = uniqid() . '_' . $brand1['name'];
+                    $dbname3 = uniqid() . '_' . $brand2['name'];
+                    $dbname4 = uniqid() . '_' . $brand3['name'];
+                    $upload_name1 = './assets/upload/' . $dbname1;
+                    $upload_name2 = './assets/upload/' . $dbname2;
+                    $upload_name3 = './assets/upload/' . $dbname3;
+                    $upload_name4 = './assets/upload/' . $dbname4;
+                    $move_result1 = move_uploaded_file($photo['tmp_name'], $upload_name1);
+                    $move_result2 = move_uploaded_file($brand1['tmp_name'], $upload_name2);
+                    $move_result3 = move_uploaded_file($brand2['tmp_name'], $upload_name3);
+                    $move_result4 = move_uploaded_file($brand3['tmp_name'], $upload_name4);
+
+                    if($move_result1 || $move_result2 || $move_result3|| $move_result4) {
+                        $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
+
+                        $manager->updatePersona($user);
+                    }
+
+                }
+
+            }
+            ?>
             <hr class="hrPriority">
         </section>
         <section>
@@ -525,6 +588,7 @@
             if (isset($_POST['hors_media'])) {$hors_media = ($_POST['hors_media']);}
 
             if (isset($concept) && isset($performance) && isset($design) && isset($packaging) && isset($service) && isset($mark) && isset($price) && isset($tarifs) && isset($vente) && isset($taille) && isset($distribution) && isset($strategie) && isset($hors_media)) {
+                var_dump($user);
                 $user = new User (array('user'=>$_SESSION['user'], 'concept'=>$_POST['concept'], 'performance'=>$_POST['performance'], 'design'=>$_POST['design'], 'packaging'=>$_POST['packaging'], 'service'=>$_POST['service'], 'mark'=>$_POST['mark'], 'price'=>$_POST['price'], 'tarifs'=>$_POST['tarifs'], 'vente'=>$_POST['vente'], 'taille'=>$_POST['taille'], 'distribution'=>$_POST['distribution'], 'strategie'=>$_POST['strategie'], 'hors_media'=>$_POST['hors_media']));
 
                 $manager->updateMix($user);
