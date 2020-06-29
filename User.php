@@ -694,7 +694,7 @@ class User
         }
     }
     public function setAge($ag){
-        if (is_int($ag)){
+        if (is_numeric($ag)){
             $this->_age=$ag;
         }
     }
@@ -729,7 +729,7 @@ class User
             }
     }
     public function setRange_motivation1($ra1){
-            if( is_int($ra1)){
+            if( is_string($ra1)){
                 $this->_range_motivation1=$ra1;
             }
     }
@@ -739,7 +739,7 @@ class User
         }
     }
     public function setRange_motivation2($ra2){
-        if( is_int($ra2)){
+        if( is_string($ra2)){
             $this->_range_motivation2=$ra2;
         }
     }
@@ -749,7 +749,7 @@ class User
         }
     }
     public function setRange_motivation3($ra3){
-        if( is_int($ra3)){
+        if( is_string($ra3)){
             $this->_range_motivation3=$ra3;
         }
     }
@@ -774,42 +774,42 @@ class User
         }
     }
     public function setIntroverti($intr){
-        if (is_int($intr)){
+        if (is_string($intr)){
             $this->_introverti=$intr;
         }
     }
     public function setAnalytique($ana){
-        if (is_int($ana)){
+        if (is_string($ana)){
             $this->_analytique=$ana;
         }
     }
     public function setLoyal($loy){
-        if (is_int($loy)){
+        if (is_string($loy)){
             $this->_loyal=$loy;
         }
     }
     public function setPassif($pas){
-        if (is_int($pas)){
+        if (is_string($pas)){
             $this->_passif=$pas;
         }
     }
     public function setReseau($res){
-        if (is_int($res)){
+        if (is_string($res)){
             $this->_reseau=$res;
         }
     }
     public function setMobile($mob){
-        if (is_int($mob)){
+        if (is_string($mob)){
             $this->_mobile=$mob;
         }
     }
     public function setEmail($em){
-        if (is_int($em)){
+        if (is_string($em)){
             $this->_email=$em;
         }
     }
     public function setMedia($med){
-        if (is_int($med)){
+        if (is_string($med)){
             $this->_media=$med;
         }
     }

@@ -39,6 +39,7 @@
             <?php include 'header.php';?>
             <div class="titleButton2">
                 <h1>PERSONAE</h1>
+                <?= "<img src='./assets/upload/".$user->photo()."' />" ?>
                 <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
                 <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
                 <h3 class="infoTitle">Créer/éditer ma stratégie marketing</h3>
@@ -74,32 +75,32 @@
                         <div class="forces">
                             <h4 class="titleDiagnostic">Forces</h4>
                             <label for="force1"></label>
-                            <input class="inputDiag" type="text" name="force1" id="force1" placeholder="produits..." value="">
+                            <input class="inputDiag" type="text" name="force1" id="force1" placeholder="produits..." value="<?= $user->force1() ?>">
                             <label for="force2"></label>
-                            <input class="inputDiag" type="text" name="force2" id="force2" placeholder="marque..." value="">
+                            <input class="inputDiag" type="text" name="force2" id="force2" placeholder="marque..." value="<?= $user->force2() ?>">
                             <label for="force3"></label>
-                            <input class="inputDiag" type="text" name="force3" id="force3" placeholder="management..." value="">
+                            <input class="inputDiag" type="text" name="force3" id="force3" placeholder="management..." value="<?= $user->force3() ?>">
                             <label for="force4"></label>
-                            <input class="inputDiag" type="text" name="force4" id="force4" placeholder="force de vente..." value="">
+                            <input class="inputDiag" type="text" name="force4" id="force4" placeholder="force de vente..." value="<?= $user->force4() ?>">
                             <label for="force5"></label>
-                            <input class="inputDiag" type="text" name="force5" id="force5" placeholder="communication..." value="">
+                            <input class="inputDiag" type="text" name="force5" id="force5" placeholder="communication..." value="<?= $user->force5() ?>">
                             <label for="force6"></label>
-                            <input class="inputDiag" type="text" name="force6" id="force6" placeholder="notoriété..." value="">
+                            <input class="inputDiag" type="text" name="force6" id="force6" placeholder="notoriété..." value="<?= $user->force6() ?>">
                         </div>
                         <div class="opportunites">
                             <h4 class="titleDiagnostic">Opportunités</h4>
                             <label for="opportunite1"></label>
-                            <input class="inputDiag" type="text" name="opportunite1" id="opportunite1" placeholder="concurrence..." value="">
+                            <input class="inputDiag" type="text" name="opportunite1" id="opportunite1" placeholder="concurrence..." value="<?= $user->opportunite1() ?>">
                             <label for="opportunite2"></label>
-                            <input class="inputDiag" type="text" name="opportunite2" id="opportunite2" placeholder="partenaires de distribution..." value="">
+                            <input class="inputDiag" type="text" name="opportunite2" id="opportunite2" placeholder="partenaires de distribution..." value="<?= $user->opportunite2() ?>">
                             <label for="opportunite3"></label>
-                            <input class="inputDiag" type="text" name="opportunite3" id="opportunite3" placeholder="fournisseurs..." value="">
+                            <input class="inputDiag" type="text" name="opportunite3" id="opportunite3" placeholder="fournisseurs..." value="<?= $user->opportunite3() ?>">
                             <label for="opportunite4"></label>
-                            <input class="inputDiag" type="text" name="opportunite4" id="opportunite4" placeholder="clients..." value="">
+                            <input class="inputDiag" type="text" name="opportunite4" id="opportunite4" placeholder="clients..." value="<?= $user->opportunite4() ?>">
                             <label for="opportunite5"></label>
-                            <input class="inputDiag" type="text" name="opportunite5" id="opportunite5" placeholder="macro-environnement..." value="">
+                            <input class="inputDiag" type="text" name="opportunite5" id="opportunite5" placeholder="macro-environnement..." value="<?= $user->opportunite5() ?>">
                             <label for="opportunite6"></label>
-                            <input class="inputDiag" type="text" name="opportunite6" id="opportunite6" placeholder="autres..." value="">
+                            <input class="inputDiag" type="text" name="opportunite6" id="opportunite6" placeholder="autres..." value="<?= $user->opportunite6() ?>">
                         </div>
                     </div>
                     <div class="posNeg">
@@ -107,32 +108,32 @@
                         <div class="faiblesses">
                             <h4 class="titleFaiblesses">Faiblesses</h4>
                             <label for="faiblesse1"></label>
-                            <input class="inputDiag" type="text" name="faiblesse1" id="faiblesse1" placeholder="produits..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse1" id="faiblesse1" placeholder="produits..." value="<?= $user->faiblesse1() ?>">
                             <label for="faiblesse2"></label>
-                            <input class="inputDiag" type="text" name="faiblesse2" id="faiblesse2" placeholder="marque..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse2" id="faiblesse2" placeholder="marque..." value="<?= $user->faiblesse2() ?>">
                             <label for="faiblesse3"></label>
-                            <input class="inputDiag" type="text" name="faiblesse3" id="faiblesse3" placeholder="management..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse3" id="faiblesse3" placeholder="management..." value="<?= $user->faiblesse3() ?>">
                             <label for="faiblesse4"></label>
-                            <input class="inputDiag" type="text" name="faiblesse4" id="faiblesse4" placeholder="force de vente..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse4" id="faiblesse4" placeholder="force de vente..." value="<?= $user->faiblesse4() ?>">
                             <label for="faiblesse5"></label>
-                            <input class="inputDiag" type="text" name="faiblesse5" id="faiblesse5" placeholder="communication..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse5" id="faiblesse5" placeholder="communication..." value="<?= $user->faiblesse5() ?>">
                             <label for="faiblesse6"></label>
-                            <input class="inputDiag" type="text" name="faiblesse6" id="faiblesse6" placeholder="notoriété..." value="">
+                            <input class="inputDiag" type="text" name="faiblesse6" id="faiblesse6" placeholder="notoriété..." value="<?= $user->faiblesse6() ?>">
                         </div>
                         <div class="menaces">
                             <h4 class="titleDiagnostic">Menaces</h4>
                             <label for="menace1"></label>
-                            <input class="inputDiag" type="text" name="menace1" id="menace1" placeholder="concurrence..." value="">
+                            <input class="inputDiag" type="text" name="menace1" id="menace1" placeholder="concurrence..." value="<?= $user->menace1() ?>">
                             <label for="menace2"></label>
-                            <input class="inputDiag" type="text" name="menace2" id="menace2" placeholder="partenaires de distribution..." value="">
+                            <input class="inputDiag" type="text" name="menace2" id="menace2" placeholder="partenaires de distribution..." value="<?= $user->menace2() ?>">
                             <label for="menace3"></label>
-                            <input class="inputDiag" type="text" name="menace3" id="menace3" placeholder="fournisseurs..." value="">
+                            <input class="inputDiag" type="text" name="menace3" id="menace3" placeholder="fournisseurs..." value="<?= $user->menace3() ?>">
                             <label for="menace4"></label>
-                            <input class="inputDiag" type="text" name="menace4" id="menace4" placeholder="clients..." value="">
+                            <input class="inputDiag" type="text" name="menace4" id="menace4" placeholder="clients..." value="<?= $user->menace4() ?>">
                             <label for="menace5"></label>
-                            <input class="inputDiag" type="text" name="menace5" id="menace5" placeholder="macro-environnement..." value="">
+                            <input class="inputDiag" type="text" name="menace5" id="menace5" placeholder="macro-environnement..." value="<?= $user->menace5() ?>">
                             <label for="menace6"></label>
-                            <input class="inputDiag" type="text" name="menace6" id="menace6" placeholder="autres..." value="">
+                            <input class="inputDiag" type="text" name="menace6" id="menace6" placeholder="autres..." value="<?= $user->menace6() ?>">
                         </div>
                     </div>
                 </div>
@@ -189,15 +190,15 @@
                     <div class="b2c">
                         <h4 class="titleDiagnostic">Par critères psychographiques</h4>
                         <label for="psycho1"></label>
-                        <input class="inputDiag" type="text" name="psycho1" id="psycho1" placeholder="intérêts..." value="">
+                        <input class="inputDiag" type="text" name="psycho1" id="psycho1" placeholder="intérêts..." value="<?= $user->psycho1() ?>">
                         <label for="psycho2"></label>
-                        <input class="inputDiag" type="text" name="psycho2" id="psycho2" placeholder="valeurs..." value="">
+                        <input class="inputDiag" type="text" name="psycho2" id="psycho2" placeholder="valeurs..." value="<?= $user->psycho2() ?>">
                         <label for="psycho3"></label>
-                        <input class="inputDiag" type="text" name="psycho3" id="psycho3" placeholder="attitudes..." value="">
+                        <input class="inputDiag" type="text" name="psycho3" id="psycho3" placeholder="attitudes..." value="<?= $user->psycho3() ?>">
                         <label for="psycho4"></label>
-                        <input class="inputDiag" type="text" name="psycho4" id="psycho4" placeholder="lifestyle..." value="">
+                        <input class="inputDiag" type="text" name="psycho4" id="psycho4" placeholder="lifestyle..." value="<?= $user->psycho4() ?>">
                         <label for="psycho5"></label>
-                        <input class="inputDiag" type="text" name="psycho5" id="psycho5" placeholder="autres..." value="">
+                        <input class="inputDiag" type="text" name="psycho5" id="psycho5" placeholder="autres..." value="<?= $user->psycho5() ?>">
                     </div>
                 </div>
 <!--                ---------------------------------B2B--------------------------------------------->
@@ -206,15 +207,15 @@
                     <div class="b2b">
                         <h4 class="titleDiagnostic">Par critères fondés sur l'identité</h4>
                         <label for="identite1"></label>
-                        <input class="inputDiag" type="text" name="identite1" id="identite1" placeholder="secteurs d'activités..." value="">
+                        <input class="inputDiag" type="text" name="identite1" id="identite1" placeholder="secteurs d'activités..." value="<?= $user->identite1() ?>">
                         <label for="identite2"></label>
-                        <input class="inputDiag" type="text" name="identite2" id="identite2" placeholder="taille de l'entreprise..." value="">
+                        <input class="inputDiag" type="text" name="identite2" id="identite2" placeholder="taille de l'entreprise..." value="<?= $user->identite2() ?>">
                         <label for="identite3"></label>
-                        <input class="inputDiag" type="text" name="identite3" id="identite3" placeholder="statut juridique..." value="">
+                        <input class="inputDiag" type="text" name="identite3" id="identite3" placeholder="statut juridique..." value="<?= $user->identite3() ?>">
                         <label for="identite4"></label>
-                        <input class="inputDiag" type="text" name="identite4" id="identite4" placeholder="localisation géographique..." value="">
+                        <input class="inputDiag" type="text" name="identite4" id="identite4" placeholder="localisation géographique..." value="<?= $user->identite4() ?>">
                         <label for="identite5"></label>
-                        <input class="inputDiag" type="text" name="identite5" id="identite5" placeholder="technologie utilisée..." value="">
+                        <input class="inputDiag" type="text" name="identite5" id="identite5" placeholder="technologie utilisée..." value="<?= $user->identite5() ?>">
                     </div>
                     <button class="submitButtonMarket" type="submit" name="action">Valider les marchés</button>
                 </div>
@@ -248,45 +249,45 @@
                             <h3 class="titlePriority2">Produit A</h3>
                             <div class="A">
                                 <label for="caracteristique1"></label>
-                                <input class="inputDiag" type="text" name="caracteristique1" id="caracteristique1" placeholder="nom..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique1" id="caracteristique1" placeholder="nom..." value="<?= $user->caracteristique1() ?>">
                                 <label for="caracteristique2"></label>
-                                <input class="inputDiag" type="text" name="caracteristique2" id="caracteristique2" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique2" id="caracteristique2" placeholder="caractéristiques..." value="<?= $user->caracteristique2() ?>">
                                 <label for="caracteristique3"></label>
-                                <input class="inputDiag" type="text" name="caracteristique3" id="caracteristique3" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique3" id="caracteristique3" placeholder="caractéristiques..." value="<?= $user->caracteristique3() ?>">
                                 <label for="caracteristique4"></label>
-                                <input class="inputDiag" type="text" name="caracteristique4" id="caracteristique4" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique4" id="caracteristique4" placeholder="caractéristiques..." value="<?= $user->caracteristique4() ?>">
                                 <label for="caracteristique5"></label>
-                                <input class="inputDiag" type="text" name="caracteristique5" id="caracteristique5" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique5" id="caracteristique5" placeholder="caractéristiques..." value="<?= $user->caracteristique5() ?>">
                             </div>
                         </div>
                         <div class="productB">
                             <h3 class="titlePriority2">Produit B</h3>
                             <div class="B">
                                 <label for="caracteristique6"></label>
-                                <input class="inputDiag" type="text" name="caracteristique6" id="caracteristique6" placeholder="nom..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique6" id="caracteristique6" placeholder="nom..." value="<?= $user->caracteristique6() ?>">
                                 <label for="caracteristique7"></label>
-                                <input class="inputDiag" type="text" name="caracteristique7" id="caracteristique7" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique7" id="caracteristique7" placeholder="caractéristiques..." value="<?= $user->caracteristique7() ?>">
                                 <label for="caracteristique8"></label>
-                                <input class="inputDiag" type="text" name="caracteristique8" id="caracteristique8" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique8" id="caracteristique8" placeholder="caractéristiques..." value="<?= $user->caracteristique8() ?>">
                                 <label for="caracteristique9"></label>
-                                <input class="inputDiag" type="text" name="caracteristique9" id="caracteristique9" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique9" id="caracteristique9" placeholder="caractéristiques..." value="<?= $user->caracteristique9() ?>">
                                 <label for="caracteristique10"></label>
-                                <input class="inputDiag" type="text" name="caracteristique10" id="caracteristique10" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique10" id="caracteristique10" placeholder="caractéristiques..." value="<?= $user->caracteristique10() ?>">
                             </div>
                         </div>
                         <div class="productC">
                             <h3 class="titlePriority2">Produit C</h3>
                             <div class="C">
                                 <label for="caracteristique11"></label>
-                                <input class="inputDiag" type="text" name="caracteristique11" id="caracteristique11" placeholder="nom..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique11" id="caracteristique11" placeholder="nom..." value="<?= $user->caracteristique11() ?>">
                                 <label for="caracteristique12"></label>
-                                <input class="inputDiag" type="text" name="caracteristique12" id="caracteristique12" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique12" id="caracteristique12" placeholder="caractéristiques..." value="<?= $user->caracteristique12() ?>">
                                 <label for="caracteristique13"></label>
-                                <input class="inputDiag" type="text" name="caracteristique13" id="caracteristique13" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique13" id="caracteristique13" placeholder="caractéristiques..." value="<?= $user->caracteristique13() ?>">
                                 <label for="caracteristique14"></label>
-                                <input class="inputDiag" type="text" name="caracteristique14" id="caracteristique14" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique14" id="caracteristique14" placeholder="caractéristiques..." value="<?= $user->caracteristique14() ?>">
                                 <label for="caracteristique15"></label>
-                                <input class="inputDiag" type="text" name="caracteristique15" id="caracteristique15" placeholder="caractéristiques..." value="">
+                                <input class="inputDiag" type="text" name="caracteristique15" id="caracteristique15" placeholder="caractéristiques..." value="<?= $user->caracteristique15() ?>">
                             </div>
                         </div>
                     </div>
@@ -325,71 +326,71 @@
                     <div class="persona">
                         <div class="bandName">
                             <label for="persona_name"></label>
-                            <input type="text" name="persona_name" id="persona_name" placeholder="nom...">
+                            <input type="text" name="persona_name" id="persona_name" placeholder="nom..." value="<?= $user->persona_name() ?>">
                         </div>
                         <div class="threePersonaDivs">
-<!-----------------------------------------------DIV PERSONA 6---------------------------------------->
+<!-----------------------------------------------DIV PERSONA 1---------------------------------------->
                             <div class="divPersona1">
                                 <div class="traits1">
                                     <label for="trait1"></label>
-                                    <input class="inputTrait" type="text" name="trait1" id="trait1" placeholder="trait de personnalité...">
+                                    <input class="inputTrait" type="text" name="trait1" id="trait1" placeholder="trait de personnalité..." value="<?= $user->trait1() ?>">
                                     <label for="trait2"></label>
-                                    <input class="inputTrait" type="text" name="trait2" id="trait2" placeholder="trait de personnalité...">
+                                    <input class="inputTrait" type="text" name="trait2" id="trait2" placeholder="trait de personnalité..." value="<?= $user->trait2() ?>">
                                 </div>
                                 <div class="traits2">
                                     <label for="trait3"></label>
-                                    <input class="inputTrait" type="text" name="trait3" id="trait3" placeholder="trait de personnalité...">
+                                    <input class="inputTrait" type="text" name="trait3" id="trait3" placeholder="trait de personnalité..." value="<?= $user->trait3() ?>">
                                     <label for="trait4"></label>
-                                    <input class="inputTrait" type="text" name="trait4" id="trait4" placeholder="trait de personnalité...">
+                                    <input class="inputTrait" type="text" name="trait4" id="trait4" placeholder="trait de personnalité..." value="<?= $user->trait4() ?>">
                                 </div>
                                 <div>
                                     <label class="labelColor" for="age">Age :</label>
-                                    <input class="inputTrait" type="text" name="age" id="age" placeholder="âge...">
+                                    <input class="inputTrait" type="text" name="age" id="age" placeholder="âge..." value="<?= $user->age() ?>">
                                 </div>
                                 <div>
                                     <label class="labelColor" for="fonction">Fonction :</label>
-                                    <input class="inputTrait" type="text" name="fonction" id="fonction" placeholder="fonction...">
+                                    <input class="inputTrait" type="text" name="fonction" id="fonction" placeholder="fonction..." value="<?= $user->fonction() ?>">
                                 </div>
                                 <div>
                                     <label class="labelColor" for="ville">Ville :</label>
-                                    <input class="inputTrait" type="text" name="ville" id="ville" placeholder="ville...">
+                                    <input class="inputTrait" type="text" name="ville" id="ville" placeholder="ville..." value="<?= $user->ville() ?>">
                                 </div>
                                 <div>
                                 <label class="labelColor" for="famille">Famille :</label>
-                                <input class="inputTrait" type="text" name="famille" id="famille" placeholder="situation familiale...">
+                                <input class="inputTrait" type="text" name="famille" id="famille" placeholder="situation familiale..." value="<?= $user->famille() ?>">
                                 </div>
                                 <label class="labelColor labelPhoto" for="photo">Photo :</label>
-                                <input class="inputPhoto" type="file" name="photo" id="photo" accept=".png, .jpg">
+                                <input class="inputPhoto" type="file" name="photo" id="photo" accept=".png, .jpg" value="<?= $user->photo() ?>">
 <!--                                <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                 <label for="quote"></label>
-                                <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"></textarea>
+                                <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"><?= $user->quote() ?></textarea>
                             </div>
 <!-----------------------------------------------DIV PERSONA 2---------------------------------------->
                             <div class="divPersona2">
                                 <h3 class="titlePersona">MOTIVATIONS</h3>
                                 <label for="motivation1"></label>
-                                <input class="inputTrait" type="text" name="motivation1" id="motivation1" placeholder="motivation n°1...">
+                                <input class="inputTrait" type="text" name="motivation1" id="motivation1" placeholder="motivation n°1..." value="<?= $user->motivation1() ?>">
                                 <label for="range_motivation1"></label>
-                                <input class="rangeMotivations" type="range" name="range_motivation1" id="range_motivation1" min="0" max="10">
+                                <input class="rangeMotivations" type="range" name="range_motivation1" id="range_motivation1" min="0" max="10" step="1" value="<?= $user->range_motivation1() ?>">
                                 <label for="motivation2"></label>
-                                <input class="inputTrait" type="text" name="motivation2" id="motivation2" placeholder="motivation n°2...">
+                                <input class="inputTrait" type="text" name="motivation2" id="motivation2" placeholder="motivation n°2..." value="<?= $user->motivation2() ?>">
                                 <label for="rangeMotivation2"></label>
-                                <input class="rangeMotivations" type="range" name="range_motivation2" id="range_motivation2" min="0" max="10">
+                                <input class="rangeMotivations" type="range" name="range_motivation2" id="range_motivation2" min="0" max="10" step="1" value="<?= $user->range_motivation2() ?>">
                                 <label for="motivation3"></label>
-                                <input class="inputTrait" type="text" name="motivation3" id="motivation3" placeholder="motivation n°3...">
+                                <input class="inputTrait" type="text" name="motivation3" id="motivation3" placeholder="motivation n°3..." value="<?= $user->motivation3() ?>">
                                 <label for="rangeMotivation3"></label>
-                                <input class="rangeMotivations" type="range" name="range_motivation3" id="range_motivation3" min="0" max="10">
+                                <input class="rangeMotivations" type="range" name="range_motivation3" id="range_motivation3" min="0" max="10" step="1" value="<?= $user->range_motivation3() ?>">
                                 <h3 class="titlePersona">OBJECTIFS</h3>
                                 <label for="objectif1"></label>
-                                <input class="inputTrait" type="text" name="objectif1" id="objectif1" placeholder="objectif n°1...">
+                                <input class="inputTrait" type="text" name="objectif1" id="objectif1" placeholder="objectif n°1..." value="<?= $user->objectif1() ?>">
                                 <label for="objectif2"></label>
-                                <input class="inputTrait" type="text" name="objectif2" id="objectif2" placeholder="objectif n°2...">
+                                <input class="inputTrait" type="text" name="objectif2" id="objectif2" placeholder="objectif n°2..." value="<?= $user->objectif2() ?>">
                                 <label for="objectif3"></label>
-                                <input class="inputTrait" type="text" name="objectif3" id="objectif3" placeholder="objectif n°3...">
+                                <input class="inputTrait" type="text" name="objectif3" id="objectif3" placeholder="objectif n°3..." value="<?= $user->objectif3() ?>">
                                 <div class="bio">
                                     <h3 class="bioTitle">BIO</h3>
                                     <label for="bio"></label>
-                                    <textarea name="bio" id="bio" placeholder="description..." cols="60" rows="5"></textarea>
+                                    <textarea name="bio" id="bio" placeholder="description..." cols="60" rows="5"><?= $user->bio() ?></textarea>
                                 </div>
                             </div>
 <!-----------------------------------------------DIV PERSONA 3---------------------------------------->
@@ -401,48 +402,45 @@
                                         <div class="extravertiLabel">extraverti</div>
                                     </div>
                                 </label>
-                                <input class="div3Margin" type="range" name="introverti" id="introverti" min="0" max="10">
+                                <input class="div3Margin" type="range" name="introverti" id="introverti" min="0" max="10" step="1" value="<?= $user->introverti() ?>">
                                 <label for="analytique">
                                     <div class="rowPersona">
                                         <div class="introvertiLabel">analytique</div>
                                         <div class="extravertiLabel">créatif</div>
                                     </div>
                                 </label>
-                                <input class="div3Margin" type="range" name="analytique" id="analytique" min="0" max="10">
+                                <input class="div3Margin" type="range" name="analytique" id="analytique" min="0" max="10" step="1" value="<?= $user->analytique() ?>">
                                 <label for="loyal">
                                     <div class="rowPersona">
                                         <div class="introvertiLabel">loyal</div>
                                         <div class="extravertiLabel">inconstant</div>
                                     </div>
                                 </label>
-                                <input class="div3Margin" type="range" name="loyal" id="loyal" min="0" max="10">
+                                <input class="div3Margin" type="range" name="loyal" id="loyal" min="0" max="10" step="1" value="<?= $user->loyal() ?>">
                                 <label for="passif">
                                     <div class="rowPersona">
                                         <div class="introvertiLabel">passif</div>
                                         <div class="extravertiLabel">actif</div>
                                     </div>
                                 </label>
-                                <input class="div3Margin" type="range" name="passif" id="passif" min="0" max="10">
+                                <input class="div3Margin" type="range" name="passif" id="passif" min="0" max="10" step="1" value="<?= $user->passif() ?>">
                                 <h3 class="titlePersona">COMMUNICATION</h3>
                                 <label class="labelDiv3" for="reseau">Réseaux sociaux</label>
-                                <input class="div3Margin" type="range" name="reseau" id="reseau" min="0" max="10">
+                                <input class="div3Margin" type="range" name="reseau" id="reseau" min="0" max="10" step="1" value="<?= $user->reseau() ?>">
                                 <label class="labelDiv3" for="mobile">Mobile</label>
-                                <input class="div3Margin" type="range" name="mobile" id="mobile" min="0" max="10">
+                                <input class="div3Margin" type="range" name="mobile" id="mobile" min="0" max="10" step="1" value="<?= $user->mobile() ?>">
                                 <label class="labelDiv3" for="email">Email</label>
-                                <input class="div3Margin" type="range" name="email" id="email" min="0" max="10">
+                                <input class="div3Margin" type="range" name="email" id="email" min="0" max="10" step="1" value="<?= $user->email() ?>">
                                 <label class="labelDiv3" for="media">Médias traditionnels</label>
-                                <input class="div3Margin" type="range" name="media" id="media" min="0" max="10">
+                                <input class="div3Margin" type="range" name="media" id="media" min="0" max="10" step="1" value="<?= $user->media() ?>">
                                 <h3 class="titlePersona">MARQUES</h3>
                                 <div class="threeBrands">
                                     <label class="labelDiv3" for="brand1">Marque n°1</label>
-                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept=".png, .jpg">
-<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
+                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept=".png, .jpg" value="<?= $user->brand1() ?>"
                                     <label class="labelDiv3" for="brand2">Marque n°2</label>
                                     <input class="div3Margin" type="file" name="brand2" id="brand2" accept=".png, .jpg">
-<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                     <label class="labelDiv3" for="brand3">Marque n°3</label>
                                     <input class="div3Margin" type="file" name="brand3" id="brand3" accept=".png, .jpg">
-<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">-->
                                 </div>
                             </div>
                         </div>
@@ -451,6 +449,7 @@
                 </div>
             </form>
             <?php
+            var_dump($user);
             if (isset($_POST['persona_name'])) {$persona_name = ($_POST['persona_name']);}
             if (isset($_POST['trait1'])) {$trait1 = ($_POST['trait1']);}
             if (isset($_POST['trait2'])) {$trait2 = ($_POST['trait2']);}
@@ -483,13 +482,13 @@
             if (isset($_FILES['brand1'])) {$brand1 = ($_FILES['brand1']);}
             if (isset($_FILES['brand2'])) {$brand2 = ($_FILES['brand2']);}
             if (isset($_FILES['brand3'])) {$brand3 = ($_FILES['brand3']);}
-//var_dump($user);
-            var_dump($photo);
-            $valid_ext = array('jpg','png');
-            $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) || pathinfo($brand1['name'],PATHINFO_EXTENSION) || pathinfo($brand2['name'],PATHINFO_EXTENSION) || pathinfo($brand3['name'],PATHINFO_EXTENSION);
-            if (isset($persona_name) && isset($trait1) && isset($trait2) && isset($trait3) && isset($trait4) && isset($age) && isset($fonction) && isset($ville) && isset($famille) && isset($quote) && isset($motivation1) && isset($range_motivation1) && isset($motivation2) && isset($range_motivation2) && isset($motivation3) && isset($range_motivation3) && isset($objectif1) && isset($objectif2) && isset($objectif3) && isset($bio) && isset($introverti) && isset($analytique) && isset($loyal) && isset($passif) && isset($reseau) && isset($mobile) && isset($email) && isset($media) && in_array($upload_ext,$valid_ext)) {
 
-                if($photo['size'] <= 1000000 && $brand1['size'] <= 1000000 && $brand2['size'] <= 1000000 && $brand3['size'] <= 1000000) {
+            if (isset($persona_name) && isset($trait1) && isset($trait2) && isset($trait3) && isset($trait4) && isset($age) && isset($fonction) && isset($ville) && isset($famille) && isset($quote) && isset($motivation1) && isset($range_motivation1) && isset($motivation2) && isset($range_motivation2) && isset($motivation3) && isset($range_motivation3) && isset($objectif1) && isset($objectif2) && isset($objectif3) && isset($bio) && isset($introverti) && isset($analytique) && isset($loyal) && isset($passif) && isset($reseau) && isset($mobile) && isset($email) && isset($media)) {
+
+                $valid_ext = array('jpg','png');
+                $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) || pathinfo($brand1['name'],PATHINFO_EXTENSION) || pathinfo($brand2['name'],PATHINFO_EXTENSION) || pathinfo($brand3['name'],PATHINFO_EXTENSION);
+
+                if(in_array($upload_ext,$valid_ext) && ($photo['size'] <= 1000000 && $brand1['size'] <= 1000000 && $brand2['size'] <= 1000000 && $brand3['size'] <= 1000000)) {
                     $dbname1 = uniqid() . '_' . $photo['name'];
                     $dbname2 = uniqid() . '_' . $brand1['name'];
                     $dbname3 = uniqid() . '_' . $brand2['name'];
@@ -504,6 +503,7 @@
                     $move_result4 = move_uploaded_file($brand3['tmp_name'], $upload_name4);
 
                     if($move_result1 || $move_result2 || $move_result3|| $move_result4) {
+
                         $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
 
                         $manager->updatePersona($user);
@@ -525,37 +525,37 @@
                 <div class="divMix">
                     <div class="produit">
                         <label for="concept"></label>
-                        <input class="inputDiag inputLenght" type="text" name="concept" id="concept" placeholder="Concept...">
+                        <input class="inputDiag inputLenght" type="text" name="concept" id="concept" placeholder="Concept..." value="<?= $user->concept() ?>">
                         <label for="performance"></label>
-                        <input class="inputDiag inputLenght" type="text" name="performance" id="performance" placeholder="Performances...">
+                        <input class="inputDiag inputLenght" type="text" name="performance" id="performance" placeholder="Performances..." value="<?= $user->performance() ?>">
                         <label for="design"></label>
-                        <input class="inputDiag inputLenght" type="text" name="design" id="design" placeholder="Design...">
+                        <input class="inputDiag inputLenght" type="text" name="design" id="design" placeholder="Design..." value="<?= $user->design() ?>">
                         <label for="packaging"></label>
-                        <input class="inputDiag inputLenght" type="text" name="packaging" id="packaging" placeholder="Packaging...">
+                        <input class="inputDiag inputLenght" type="text" name="packaging" id="packaging" placeholder="Packaging..." value="<?= $user->packaging() ?>">
                         <label for="service"></label>
-                        <input class="inputDiag inputLenght" type="text" name="service" id="service" placeholder="Services associés...">
+                        <input class="inputDiag inputLenght" type="text" name="service" id="service" placeholder="Services associés..." value="<?= $user->service() ?>">
                         <label for="mark"></label>
-                        <input class="inputDiag inputLenght" type="text" name="mark" id="mark" placeholder="Nom de marque...">
+                        <input class="inputDiag inputLenght" type="text" name="mark" id="mark" placeholder="Nom de marque..." value="<?= $user->mark() ?>">
                     </div>
                     <div class="prix">
                         <label for="price"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="price" id="price" placeholder="Prix de base...">
+                        <input class="inputDiag inputLenght2" type="text" name="price" id="price" placeholder="Prix de base..." value="<?= $user->price() ?>">
                         <label for="tarifs"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="tarifs" id="tarifs" placeholder="Tarifs préférentiels...">
+                        <input class="inputDiag inputLenght2" type="text" name="tarifs" id="tarifs" placeholder="Tarifs préférentiels..." value="<?= $user->tarifs() ?>">
                     </div>
                     <div class="distribution">
                         <label for="vente"></label>
-                        <input class="inputDiag inputLenght" type="text" name="vente" id="vente" placeholder="Force de vente...">
+                        <input class="inputDiag inputLenght" type="text" name="vente" id="vente" placeholder="Force de vente..." value="<?= $user->vente() ?>">
                         <label for="taille"></label>
-                        <input class="inputDiag inputLenght" type="text" name="taille" id="taille" placeholder="Taille, motivation, répartition...">
+                        <input class="inputDiag inputLenght" type="text" name="taille" id="taille" placeholder="Taille, motivation, répartition..." value="<?= $user->taille() ?>">
                         <label for="distribution"></label>
-                        <input class="inputDiag inputLenght" type="text" name="distribution" id="distribution" placeholder="Circuits de distribution...">
+                        <input class="inputDiag inputLenght" type="text" name="distribution" id="distribution" placeholder="Circuits de distribution..." value="<?= $user->distribution() ?>">
                     </div>
                     <div class="communication">
                         <label for="strategie"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stratégie média...">
+                        <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stratégie média..." value="<?= $user->strategie() ?>">
                         <label for="hors_media"></label>
-                        <input class="inputDiag inputLenght2" type="text" name="hors_media" id="hors_media" placeholder="Stratégie hors média...">
+                        <input class="inputDiag inputLenght2" type="text" name="hors_media" id="hors_media" placeholder="Stratégie hors média..." value="<?= $user->hors_media() ?>">
                     </div>
                     <div class="mixCircle">
                         <div class=" titleMix">
@@ -588,7 +588,7 @@
             if (isset($_POST['hors_media'])) {$hors_media = ($_POST['hors_media']);}
 
             if (isset($concept) && isset($performance) && isset($design) && isset($packaging) && isset($service) && isset($mark) && isset($price) && isset($tarifs) && isset($vente) && isset($taille) && isset($distribution) && isset($strategie) && isset($hors_media)) {
-                var_dump($user);
+
                 $user = new User (array('user'=>$_SESSION['user'], 'concept'=>$_POST['concept'], 'performance'=>$_POST['performance'], 'design'=>$_POST['design'], 'packaging'=>$_POST['packaging'], 'service'=>$_POST['service'], 'mark'=>$_POST['mark'], 'price'=>$_POST['price'], 'tarifs'=>$_POST['tarifs'], 'vente'=>$_POST['vente'], 'taille'=>$_POST['taille'], 'distribution'=>$_POST['distribution'], 'strategie'=>$_POST['strategie'], 'hors_media'=>$_POST['hors_media']));
 
                 $manager->updateMix($user);
