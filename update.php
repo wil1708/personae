@@ -171,6 +171,12 @@
                 $user = new User (array('user'=>$_SESSION['user'], 'force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
 
                 $manager -> updateDiagnostic($user);
+                $success = true;
+                if($success){
+                    echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                }else{
+                    echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                }
             }
             ?>
             <hr>
@@ -236,6 +242,12 @@
                  $user = new User (array('user'=>$_SESSION['user'], 'psycho1'=>$_POST['psycho1'], 'psycho2'=>$_POST['psycho2'], 'psycho3'=>$_POST['psycho3'], 'psycho4'=>$_POST['psycho4'], 'psycho5'=>$_POST['psycho5'], 'identite1'=>$_POST['identite1'], 'identite2'=>$_POST['identite2'], 'identite3'=>$_POST['identite3'], 'identite4'=>$_POST['identite4'], 'identite5'=>$_POST['identite5']));
 
                  $manager->updateMarket($user);
+                 $success = true;
+                 if($success){
+                     echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                 }else{
+                     echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                 }
              }
             ?>
             <!------------------------------FORM produits prioritaires------------------------------>
@@ -317,6 +329,12 @@
                 $user = new User (array('user'=>$_SESSION['user'], 'caracteristique1'=>$_POST['caracteristique1'], 'caracteristique2'=>$_POST['caracteristique2'], 'caracteristique3'=>$_POST['caracteristique3'], 'caracteristique4'=>$_POST['caracteristique4'], 'caracteristique5'=>$_POST['caracteristique5'], 'caracteristique6'=>$_POST['caracteristique6'], 'caracteristique7'=>$_POST['caracteristique7'], 'caracteristique8'=>$_POST['caracteristique8'], 'caracteristique9'=>$_POST['caracteristique9'], 'caracteristique10'=>$_POST['caracteristique10'], 'caracteristique11'=>$_POST['caracteristique11'], 'caracteristique12'=>$_POST['caracteristique12'], 'caracteristique13'=>$_POST['caracteristique13'], 'caracteristique14'=>$_POST['caracteristique14'], 'caracteristique15'=>$_POST['caracteristique15']));
 
                 $manager->updateProduct($user);
+                $success = true;
+                if($success){
+                    echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                }else{
+                    echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                }
             }
             ?>
 <!--            --------------------------------FORM PERSONA----------------------------------------->
@@ -390,7 +408,7 @@
                                 <div class="bio">
                                     <h3 class="bioTitle">BIO</h3>
                                     <label for="bio"></label>
-                                    <textarea name="bio" id="bio" placeholder="description..." cols="60" rows="5"><?= $user->bio() ?></textarea>
+                                    <textarea name="bio" id="bio" placeholder="description..." cols="70" rows="5"><?= $user->bio() ?></textarea>
                                 </div>
                             </div>
 <!-----------------------------------------------DIV PERSONA 3---------------------------------------->
@@ -449,7 +467,6 @@
                 </div>
             </form>
             <?php
-            var_dump($user);
             if (isset($_POST['persona_name'])) {$persona_name = ($_POST['persona_name']);}
             if (isset($_POST['trait1'])) {$trait1 = ($_POST['trait1']);}
             if (isset($_POST['trait2'])) {$trait2 = ($_POST['trait2']);}
@@ -501,15 +518,19 @@
                     $move_result2 = move_uploaded_file($brand1['tmp_name'], $upload_name2);
                     $move_result3 = move_uploaded_file($brand2['tmp_name'], $upload_name3);
                     $move_result4 = move_uploaded_file($brand3['tmp_name'], $upload_name4);
+                }
 
-                    if($move_result1 || $move_result2 || $move_result3|| $move_result4) {
 
                         $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
 
                         $manager->updatePersona($user);
-                    }
+                        $success = true;
+                        if($success){
+                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                        }else{
+                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                        }
 
-                }
 
             }
             ?>
@@ -521,7 +542,7 @@
                 <h1 class="diagnosticTitle">MIX MARKETING</h1>
             </div>
 <!--------------------------------------DIV MIX MARKETING----------------------------------------->
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="divMix">
                     <div class="produit">
                         <label for="concept"></label>
@@ -592,6 +613,12 @@
                 $user = new User (array('user'=>$_SESSION['user'], 'concept'=>$_POST['concept'], 'performance'=>$_POST['performance'], 'design'=>$_POST['design'], 'packaging'=>$_POST['packaging'], 'service'=>$_POST['service'], 'mark'=>$_POST['mark'], 'price'=>$_POST['price'], 'tarifs'=>$_POST['tarifs'], 'vente'=>$_POST['vente'], 'taille'=>$_POST['taille'], 'distribution'=>$_POST['distribution'], 'strategie'=>$_POST['strategie'], 'hors_media'=>$_POST['hors_media']));
 
                 $manager->updateMix($user);
+                $success = true;
+                if($success){
+                    echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                }else{
+                    echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                }
             }
             ?>
         </section>

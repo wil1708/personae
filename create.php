@@ -42,11 +42,16 @@
         if (isset($_POST['confpassword'])) {$confpassword = ($_POST['confpassword']);}
 
         if (isset($user) && isset($password) && isset($confpassword) && $password == $confpassword && !empty($user) && !empty($password) && !empty($confpassword)){
-            $user = new User (array('user'=>$_POST['user'], 'password'=>password_hash($_POST['password'], PASSWORD_DEFAULT)));
-            var_dump($user);
-            $manager -> add($user);
-            echo '<p class="labelDiv3">Votre compte a bien été crée</p>';
-            echo '<META http-equiv="refresh" content="2; URL=connection.php"> ';
+            if ($manager->exists($_POST['user'])){
+                echo '<p class="labelDiv3">Cet utilisateur existe déjà</p>';
+            }else{
+                $user = new User (array('user'=>$_POST['user'], 'password'=>password_hash($_POST['password'], PASSWORD_DEFAULT)));
+                var_dump($user);
+                $manager -> add($user);
+                echo '<p class="labelDiv3">Votre compte a bien été crée</p>';
+                echo '<META http-equiv="refresh" content="2; URL=connection.php"> ';
+            }
+
         }else {
             echo '<p class="labelDiv3">Veuillez remplir entièrement les champs</p>';
         }

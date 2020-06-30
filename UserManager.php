@@ -93,6 +93,7 @@ class UserManager
         $q->bindValue(':menace4', $obj->menace4(), PDO::PARAM_STR);
         $q->bindValue(':menace5', $obj->menace5(), PDO::PARAM_STR);
         $q->bindValue(':menace6', $obj->menace6(), PDO::PARAM_STR);
+
         $q->execute();
     }
 //----------------------------------------function updateProduct------------------------------------
