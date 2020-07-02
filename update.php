@@ -39,7 +39,7 @@
             <?php include 'header.php';?>
             <div class="titleButton2">
                 <h1>PERSONAE</h1>
-                <?= "<img src='./assets/upload/".$user->photo()."' />" ?>
+                <img src="assets/img/laurier1.png" alt="dessin couronne de laurier">
                 <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
                 <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
                 <h3 class="infoTitle">Créer/éditer ma stratégie marketing</h3>
