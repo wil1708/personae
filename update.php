@@ -503,7 +503,7 @@
             if (isset($persona_name) && isset($trait1) && isset($trait2) && isset($trait3) && isset($trait4) && isset($age) && isset($fonction) && isset($ville) && isset($famille) && isset($quote) && isset($motivation1) && isset($range_motivation1) && isset($motivation2) && isset($range_motivation2) && isset($motivation3) && isset($range_motivation3) && isset($objectif1) && isset($objectif2) && isset($objectif3) && isset($bio) && isset($introverti) && isset($analytique) && isset($loyal) && isset($passif) && isset($reseau) && isset($mobile) && isset($email) && isset($media)) {
 
                 $valid_ext = array('jpg','png');
-                $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) || pathinfo($brand1['name'],PATHINFO_EXTENSION) || pathinfo($brand2['name'],PATHINFO_EXTENSION) || pathinfo($brand3['name'],PATHINFO_EXTENSION);
+                $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) && pathinfo($brand1['name'],PATHINFO_EXTENSION) && pathinfo($brand2['name'],PATHINFO_EXTENSION) && pathinfo($brand3['name'],PATHINFO_EXTENSION);
 
                 if(in_array($upload_ext,$valid_ext) && ($photo['size'] <= 1000000 && $brand1['size'] <= 1000000 && $brand2['size'] <= 1000000 && $brand3['size'] <= 1000000)) {
                     $dbname1 = uniqid() . '_' . $photo['name'];
@@ -518,18 +518,25 @@
                     $move_result2 = move_uploaded_file($brand1['tmp_name'], $upload_name2);
                     $move_result3 = move_uploaded_file($brand2['tmp_name'], $upload_name3);
                     $move_result4 = move_uploaded_file($brand3['tmp_name'], $upload_name4);
-                }
 
-
+                    $success2 = true;
+                    if($success2){
                         $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
 
                         $manager->updatePersona($user);
-                        $success = true;
-                        if($success){
-                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
-                        }else{
-                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
-                        }
+                    }
+                }else {
+                    echo '<p class="labelDiv3">Veuillez renseigner les 4 images</p>';
+                }
+
+
+
+//                        $success = true;
+//                        if($success){
+//                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+//                        }else{
+//                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+//                        }
 
 
             }
