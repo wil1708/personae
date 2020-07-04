@@ -40,7 +40,7 @@ class UserManager
     }
 //    ---------------------------------function connection------------------------------------
     public function connection($info2){
-        $q = $this->_db->prepare('SELECT id, password FROM main_table WHERE user=:user');
+        $q = $this->_db->prepare('SELECT user, password FROM main_table WHERE user=:user');
         $q->bindValue(':user', $info2, PDO::PARAM_STR);
         $q->execute();
         $result = $q->fetch();
@@ -49,12 +49,12 @@ class UserManager
 
         if($passverify){
             session_start();
-            $_SESSION['id'] = $result['id'];
+            $_SESSION['user'] = $result['user'];
             $_SESSION['user'] = $info2;
             echo '<p class="labelDiv3">Vous êtes connecté</p>';
             $success = true;
             if($success){
-                echo '<META http-equiv="refresh" content="2; URL=update.php"> ';
+                header('Location: update.php');
             }
         }
         else{

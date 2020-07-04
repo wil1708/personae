@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <?php include 'header.php'; ?>
+        <?php include 'header2.php'; ?>
         <div class="titleButton2">
             <h1>PERSONAE</h1>
             <form class="formCreate" action="create.php" method="post">
@@ -57,6 +57,7 @@
         ?>
         </div>
     </header>
+    <?php include 'footer.php';?>
     <script type="text/javascript" src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/js/dist/scripts.min.js"></script>
 </body>

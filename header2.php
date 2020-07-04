@@ -1,6 +1,6 @@
 <div class="faceMenu">
     <img class="statueFace" src="assets/img/Vdroite.png" alt="demi visage statue">
-    <i class="fas fa-bars fa-3x"></i>
+    <i id="fa-bars2" class="fas fa-bars fa-3x"></i>
     <nav>
         <ul class="headerContain">
             <li>
@@ -13,19 +13,13 @@
                     Présentation
                 </li></a>
             <a href="create.php"><li class="menuText">
-                Créer mon compte
-            </li></a>
+                    Créer mon compte
+                </li></a>
             <a href="connection.php"><li class="menuText">
-                Se connecter
-            </li></a>
-            <a href="update.php"><li class="menuText">
-                Créer/éditer ma stratégie
-            </li></a>
-            <a href="read.php"><li class="menuText">
-                Voir ma stratégie
-            </li></a>
-            <a href="delete.php"><li class="menuText">
-                    Supprimer mon compte
+                    Se connecter
+                </li></a>
+            <a href="#contactMenu" class="contactScroll"><li class="menuText">
+                    Contact
                 </li></a>
         </ul>
     </nav>

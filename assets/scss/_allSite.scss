@@ -19,6 +19,10 @@ h1 {
   color: transparent;
   -webkit-text-stroke: 1px #000;
 }
+.h1Subtitle {
+  margin: 0;
+  font-style: italic;
+}
 h6 {
   color: $white;
   background-color: $darkBlue;
@@ -130,7 +134,8 @@ h3 {
 .arrowMargin {
   margin-bottom: 60px;
 }
-//---------------------------------------UPDATE section diagnostic----------------------------------------
+
+//---------------------------------------UPDATE section diagnostic-------------------------------------
 .vase {
   width: 10%;
 }
@@ -138,7 +143,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-margin-top: 60px;
+  margin-top: 60px;
 }
 .diagnosticForm {
   display: flex;

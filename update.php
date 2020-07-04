@@ -37,15 +37,7 @@
 <!---------------------------------------------HEADER--------------------------------------------->
         <header>
             <?php include 'header.php';?>
-            <h3 class="deleteLink"><a href="<?php
-                $user = new User(array('user'=>$_SESSION['user']));
-                $manager->delete($user);
-                $success3 = true;
-                if($success3){
-                    echo '<META http-equiv="refresh" content="1; URL=index.php"> ';
-                }
-                ?>">(Supprimer mon compte)</a>
-            </h3>
+
             <div class="titleButton2">
                 <h1>PERSONAE</h1>
                 <img src="assets/img/laurier1.png" alt="dessin couronne de laurier">
@@ -152,30 +144,30 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['force1'])) {$force1 = ($_POST['force1']);}
-            if (isset($_POST['force2'])) {$force2 = ($_POST['force2']);}
-            if (isset($_POST['force3'])) {$force3 = ($_POST['force3']);}
-            if (isset($_POST['force4'])) {$force4 = ($_POST['force4']);}
-            if (isset($_POST['force5'])) {$force5 = ($_POST['force5']);}
-            if (isset($_POST['force6'])) {$force6 = ($_POST['force6']);}
-            if (isset($_POST['opportunite1'])) {$opportunite1 = ($_POST['opportunite1']);}
-            if (isset($_POST['opportunite2'])) {$opportunite2 = ($_POST['opportunite2']);}
-            if (isset($_POST['opportunite3'])) {$opportunite3 = ($_POST['opportunite3']);}
-            if (isset($_POST['opportunite4'])) {$opportunite4 = ($_POST['opportunite4']);}
-            if (isset($_POST['opportunite5'])) {$opportunite5 = ($_POST['opportunite5']);}
-            if (isset($_POST['opportunite6'])) {$opportunite6 = ($_POST['opportunite6']);}
-            if (isset($_POST['faiblesse1'])) {$faiblesse1 = ($_POST['faiblesse1']);}
-            if (isset($_POST['faiblesse2'])) {$faiblesse2 = ($_POST['faiblesse2']);}
-            if (isset($_POST['faiblesse3'])) {$faiblesse3 = ($_POST['faiblesse3']);}
-            if (isset($_POST['faiblesse4'])) {$faiblesse4 = ($_POST['faiblesse4']);}
-            if (isset($_POST['faiblesse5'])) {$faiblesse5 = ($_POST['faiblesse5']);}
-            if (isset($_POST['faiblesse6'])) {$faiblesse6 = ($_POST['faiblesse6']);}
-            if (isset($_POST['menace1'])) {$menace1 = ($_POST['menace1']);}
-            if (isset($_POST['menace2'])) {$menace2 = ($_POST['menace2']);}
-            if (isset($_POST['menace3'])) {$menace3 = ($_POST['menace3']);}
-            if (isset($_POST['menace4'])) {$menace4 = ($_POST['menace4']);}
-            if (isset($_POST['menace5'])) {$menace5 = ($_POST['menace5']);}
-            if (isset($_POST['menace6'])) {$menace6 = ($_POST['menace6']);}
+            if (isset($_POST['force1'])) {$force1 = (strip_tags($_POST['force1']));}
+            if (isset($_POST['force2'])) {$force2 = (strip_tags($_POST['force2']));}
+            if (isset($_POST['force3'])) {$force3 = strip_tags($_POST['force3']);}
+            if (isset($_POST['force4'])) {$force4 = (strip_tags($_POST['force4']));}
+            if (isset($_POST['force5'])) {$force5 = (strip_tags($_POST['force5']));}
+            if (isset($_POST['force6'])) {$force6 = (strip_tags($_POST['force6']));}
+            if (isset($_POST['opportunite1'])) {$opportunite1 = (strip_tags($_POST['opportunite1']));}
+            if (isset($_POST['opportunite2'])) {$opportunite2 = (strip_tags($_POST['opportunite2']));}
+            if (isset($_POST['opportunite3'])) {$opportunite3 = (strip_tags($_POST['opportunite3']));}
+            if (isset($_POST['opportunite4'])) {$opportunite4 = (strip_tags($_POST['opportunite4']));}
+            if (isset($_POST['opportunite5'])) {$opportunite5 = (strip_tags($_POST['opportunite5']));}
+            if (isset($_POST['opportunite6'])) {$opportunite6 = (strip_tags($_POST['opportunite6']));}
+            if (isset($_POST['faiblesse1'])) {$faiblesse1 = (strip_tags($_POST['faiblesse1']));}
+            if (isset($_POST['faiblesse2'])) {$faiblesse2 = (strip_tags($_POST['faiblesse2']));}
+            if (isset($_POST['faiblesse3'])) {$faiblesse3 = (strip_tags($_POST['faiblesse3']));}
+            if (isset($_POST['faiblesse4'])) {$faiblesse4 = (strip_tags($_POST['faiblesse4']));}
+            if (isset($_POST['faiblesse5'])) {$faiblesse5 = (strip_tags($_POST['faiblesse5']));}
+            if (isset($_POST['faiblesse6'])) {$faiblesse6 = (strip_tags($_POST['faiblesse6']));}
+            if (isset($_POST['menace1'])) {$menace1 = (strip_tags($_POST['menace1']));}
+            if (isset($_POST['menace2'])) {$menace2 = (strip_tags($_POST['menace2']));}
+            if (isset($_POST['menace3'])) {$menace3 = (strip_tags($_POST['menace3']));}
+            if (isset($_POST['menace4'])) {$menace4 = (strip_tags($_POST['menace4']));}
+            if (isset($_POST['menace5'])) {$menace5 = (strip_tags($_POST['menace5']));}
+            if (isset($_POST['menace6'])) {$menace6 = (strip_tags($_POST['menace6']));}
 
             if (isset($force1) && isset($force2) && isset($force3) && isset($force4) && isset($force5) && isset($force6) && isset($opportunite1) && isset($opportunite2) && isset($opportunite3) && isset($opportunite4) && isset($opportunite5) && isset($opportunite6) && isset($faiblesse1) && isset($faiblesse2) && isset($faiblesse3) && isset($faiblesse4) && isset($faiblesse5) && isset($faiblesse6) && isset($menace1) && isset($menace2) && isset($menace3) && isset($menace4) && isset($menace5) && isset($menace6)) {
                 $user = new User (array('user'=>$_SESSION['user'], 'force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
@@ -237,16 +229,16 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['psycho1'])) {$psycho1 = ($_POST['psycho1']);}
-            if (isset($_POST['psycho2'])) {$psycho2 = ($_POST['psycho2']);}
-            if (isset($_POST['psycho3'])) {$psycho3 = ($_POST['psycho3']);}
-            if (isset($_POST['psycho4'])) {$psycho4 = ($_POST['psycho4']);}
-            if (isset($_POST['psycho5'])) {$psycho5 = ($_POST['psycho5']);}
-            if (isset($_POST['identite1'])) {$identite1 = ($_POST['identite1']);}
-            if (isset($_POST['identite2'])) {$identite2 = ($_POST['identite2']);}
-            if (isset($_POST['identite3'])) {$identite3 = ($_POST['identite3']);}
-            if (isset($_POST['identite4'])) {$identite4 = ($_POST['identite4']);}
-            if (isset($_POST['identite5'])) {$identite5 = ($_POST['identite5']);}
+            if (isset($_POST['psycho1'])) {$psycho1 = (strip_tags($_POST['psycho1']));}
+            if (isset($_POST['psycho2'])) {$psycho2 = (strip_tags($_POST['psycho2']));}
+            if (isset($_POST['psycho3'])) {$psycho3 = (strip_tags($_POST['psycho3']));}
+            if (isset($_POST['psycho4'])) {$psycho4 = (strip_tags($_POST['psycho4']));}
+            if (isset($_POST['psycho5'])) {$psycho5 = (strip_tags($_POST['psycho5']));}
+            if (isset($_POST['identite1'])) {$identite1 = (strip_tags($_POST['identite1']));}
+            if (isset($_POST['identite2'])) {$identite2 = (strip_tags($_POST['identite2']));}
+            if (isset($_POST['identite3'])) {$identite3 = (strip_tags($_POST['identite3']));}
+            if (isset($_POST['identite4'])) {$identite4 = (strip_tags($_POST['identite4']));}
+            if (isset($_POST['identite5'])) {$identite5 = (strip_tags($_POST['identite5']));}
 
              if (isset($psycho1) && isset($psycho2) && isset($psycho3) && isset($psycho4) && isset($psycho5) && isset($identite1) && isset($identite2) && isset($identite3) && isset($identite4) && isset($identite5)) {
                  $user = new User (array('user'=>$_SESSION['user'], 'psycho1'=>$_POST['psycho1'], 'psycho2'=>$_POST['psycho2'], 'psycho3'=>$_POST['psycho3'], 'psycho4'=>$_POST['psycho4'], 'psycho5'=>$_POST['psycho5'], 'identite1'=>$_POST['identite1'], 'identite2'=>$_POST['identite2'], 'identite3'=>$_POST['identite3'], 'identite4'=>$_POST['identite4'], 'identite5'=>$_POST['identite5']));
@@ -319,21 +311,21 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['caracteristique1'])) {$caracteristique1 = ($_POST['caracteristique1']);}
-            if (isset($_POST['caracteristique2'])) {$caracteristique2 = ($_POST['caracteristique2']);}
-            if (isset($_POST['caracteristique3'])) {$caracteristique3 = ($_POST['caracteristique3']);}
-            if (isset($_POST['caracteristique4'])) {$caracteristique4 = ($_POST['caracteristique4']);}
-            if (isset($_POST['caracteristique5'])) {$caracteristique5 = ($_POST['caracteristique5']);}
-            if (isset($_POST['caracteristique6'])) {$caracteristique6 = ($_POST['caracteristique6']);}
-            if (isset($_POST['caracteristique7'])) {$caracteristique7 = ($_POST['caracteristique7']);}
-            if (isset($_POST['caracteristique8'])) {$caracteristique8 = ($_POST['caracteristique8']);}
-            if (isset($_POST['caracteristique9'])) {$caracteristique9 = ($_POST['caracteristique9']);}
-            if (isset($_POST['caracteristique10'])) {$caracteristique10 = ($_POST['caracteristique10']);}
-            if (isset($_POST['caracteristique11'])) {$caracteristique11 = ($_POST['caracteristique11']);}
-            if (isset($_POST['caracteristique12'])) {$caracteristique12 = ($_POST['caracteristique12']);}
-            if (isset($_POST['caracteristique13'])) {$caracteristique13 = ($_POST['caracteristique13']);}
-            if (isset($_POST['caracteristique14'])) {$caracteristique14 = ($_POST['caracteristique14']);}
-            if (isset($_POST['caracteristique15'])) {$caracteristique15 = ($_POST['caracteristique15']);}
+            if (isset($_POST['caracteristique1'])) {$caracteristique1 = (strip_tags($_POST['caracteristique1']));}
+            if (isset($_POST['caracteristique2'])) {$caracteristique2 = (strip_tags($_POST['caracteristique2']));}
+            if (isset($_POST['caracteristique3'])) {$caracteristique3 = (strip_tags($_POST['caracteristique3']));}
+            if (isset($_POST['caracteristique4'])) {$caracteristique4 = (strip_tags($_POST['caracteristique4']));}
+            if (isset($_POST['caracteristique5'])) {$caracteristique5 = (strip_tags($_POST['caracteristique5']));}
+            if (isset($_POST['caracteristique6'])) {$caracteristique6 = (strip_tags($_POST['caracteristique6']));}
+            if (isset($_POST['caracteristique7'])) {$caracteristique7 = (strip_tags($_POST['caracteristique7']));}
+            if (isset($_POST['caracteristique8'])) {$caracteristique8 = (strip_tags($_POST['caracteristique8']));}
+            if (isset($_POST['caracteristique9'])) {$caracteristique9 = (strip_tags($_POST['caracteristique9']));}
+            if (isset($_POST['caracteristique10'])) {$caracteristique10 = (strip_tags($_POST['caracteristique10']));}
+            if (isset($_POST['caracteristique11'])) {$caracteristique11 = (strip_tags($_POST['caracteristique11']));}
+            if (isset($_POST['caracteristique12'])) {$caracteristique12 = (strip_tags($_POST['caracteristique12']));}
+            if (isset($_POST['caracteristique13'])) {$caracteristique13 = (strip_tags($_POST['caracteristique13']));}
+            if (isset($_POST['caracteristique14'])) {$caracteristique14 = (strip_tags($_POST['caracteristique14']));}
+            if (isset($_POST['caracteristique15'])) {$caracteristique15 = (strip_tags($_POST['caracteristique15']));}
 
             if (isset($caracteristique1) && isset($caracteristique2) && isset($caracteristique3) && isset($caracteristique4) && isset($caracteristique5) && isset($caracteristique6) && isset($caracteristique7) && isset($caracteristique8) && isset($caracteristique9) && isset($caracteristique10) && isset($caracteristique11) && isset($caracteristique12) && isset($caracteristique13) && isset($caracteristique14) && isset($caracteristique15)) {
                 $user = new User (array('user'=>$_SESSION['user'], 'caracteristique1'=>$_POST['caracteristique1'], 'caracteristique2'=>$_POST['caracteristique2'], 'caracteristique3'=>$_POST['caracteristique3'], 'caracteristique4'=>$_POST['caracteristique4'], 'caracteristique5'=>$_POST['caracteristique5'], 'caracteristique6'=>$_POST['caracteristique6'], 'caracteristique7'=>$_POST['caracteristique7'], 'caracteristique8'=>$_POST['caracteristique8'], 'caracteristique9'=>$_POST['caracteristique9'], 'caracteristique10'=>$_POST['caracteristique10'], 'caracteristique11'=>$_POST['caracteristique11'], 'caracteristique12'=>$_POST['caracteristique12'], 'caracteristique13'=>$_POST['caracteristique13'], 'caracteristique14'=>$_POST['caracteristique14'], 'caracteristique15'=>$_POST['caracteristique15']));
@@ -477,35 +469,35 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['persona_name'])) {$persona_name = ($_POST['persona_name']);}
-            if (isset($_POST['trait1'])) {$trait1 = ($_POST['trait1']);}
-            if (isset($_POST['trait2'])) {$trait2 = ($_POST['trait2']);}
-            if (isset($_POST['trait3'])) {$trait3 = ($_POST['trait3']);}
-            if (isset($_POST['trait4'])) {$trait4 = ($_POST['trait4']);}
-            if (isset($_POST['age'])) {$age = ($_POST['age']);}
-            if (isset($_POST['fonction'])) {$fonction = ($_POST['fonction']);}
-            if (isset($_POST['ville'])) {$ville = ($_POST['ville']);}
-            if (isset($_POST['famille'])) {$famille = ($_POST['famille']);}
+            if (isset($_POST['persona_name'])) {$persona_name = (strip_tags($_POST['persona_name']));}
+            if (isset($_POST['trait1'])) {$trait1 = (strip_tags($_POST['trait1']));}
+            if (isset($_POST['trait2'])) {$trait2 = (strip_tags($_POST['trait2']));}
+            if (isset($_POST['trait3'])) {$trait3 = (strip_tags($_POST['trait3']));}
+            if (isset($_POST['trait4'])) {$trait4 = (strip_tags($_POST['trait4']));}
+            if (isset($_POST['age'])) {$age = (strip_tags($_POST['age']));}
+            if (isset($_POST['fonction'])) {$fonction = (strip_tags($_POST['fonction']));}
+            if (isset($_POST['ville'])) {$ville = (strip_tags($_POST['ville']));}
+            if (isset($_POST['famille'])) {$famille = (strip_tags($_POST['famille']));}
             if (isset($_FILES['photo'])) {$photo = ($_FILES['photo']);}
-            if (isset($_POST['quote'])) {$quote = ($_POST['quote']);}
-            if (isset($_POST['motivation1'])) {$motivation1 = ($_POST['motivation1']);}
-            if (isset($_POST['range_motivation1'])) {$range_motivation1 = ($_POST['range_motivation1']);}
-            if (isset($_POST['motivation2'])) {$motivation2 = ($_POST['motivation2']);}
-            if (isset($_POST['range_motivation2'])) {$range_motivation2 = ($_POST['range_motivation2']);}
-            if (isset($_POST['motivation3'])) {$motivation3 = ($_POST['motivation3']);}
-            if (isset($_POST['range_motivation3'])) {$range_motivation3 = ($_POST['range_motivation3']);}
-            if (isset($_POST['objectif1'])) {$objectif1 = ($_POST['objectif1']);}
-            if (isset($_POST['objectif2'])) {$objectif2 = ($_POST['objectif2']);}
-            if (isset($_POST['objectif3'])) {$objectif3 = ($_POST['objectif3']);}
-            if (isset($_POST['bio'])) {$bio = ($_POST['bio']);}
-            if (isset($_POST['introverti'])) {$introverti = ($_POST['introverti']);}
-            if (isset($_POST['analytique'])) {$analytique = ($_POST['analytique']);}
-            if (isset($_POST['loyal'])) {$loyal = ($_POST['loyal']);}
-            if (isset($_POST['passif'])) {$passif = ($_POST['passif']);}
-            if (isset($_POST['reseau'])) {$reseau = ($_POST['reseau']);}
-            if (isset($_POST['mobile'])) {$mobile = ($_POST['mobile']);}
-            if (isset($_POST['email'])) {$email = ($_POST['email']);}
-            if (isset($_POST['media'])) {$media = ($_POST['media']);}
+            if (isset($_POST['quote'])) {$quote = (strip_tags($_POST['quote']));}
+            if (isset($_POST['motivation1'])) {$motivation1 = (strip_tags($_POST['motivation1']));}
+            if (isset($_POST['range_motivation1'])) {$range_motivation1 = (strip_tags($_POST['range_motivation1']));}
+            if (isset($_POST['motivation2'])) {$motivation2 = (strip_tags($_POST['motivation2']));}
+            if (isset($_POST['range_motivation2'])) {$range_motivation2 = (strip_tags($_POST['range_motivation2']));}
+            if (isset($_POST['motivation3'])) {$motivation3 = (strip_tags($_POST['motivation3']));}
+            if (isset($_POST['range_motivation3'])) {$range_motivation3 = (strip_tags($_POST['range_motivation3']));}
+            if (isset($_POST['objectif1'])) {$objectif1 = (strip_tags($_POST['objectif1']));}
+            if (isset($_POST['objectif2'])) {$objectif2 = (strip_tags($_POST['objectif2']));}
+            if (isset($_POST['objectif3'])) {$objectif3 = (strip_tags($_POST['objectif3']));}
+            if (isset($_POST['bio'])) {$bio = (strip_tags($_POST['bio']));}
+            if (isset($_POST['introverti'])) {$introverti = (strip_tags($_POST['introverti']));}
+            if (isset($_POST['analytique'])) {$analytique = (strip_tags($_POST['analytique']));}
+            if (isset($_POST['loyal'])) {$loyal = (strip_tags($_POST['loyal']));}
+            if (isset($_POST['passif'])) {$passif = (strip_tags($_POST['passif']));}
+            if (isset($_POST['reseau'])) {$reseau = (strip_tags($_POST['reseau']));}
+            if (isset($_POST['mobile'])) {$mobile = (strip_tags($_POST['mobile']));}
+            if (isset($_POST['email'])) {$email = (strip_tags($_POST['email']));}
+            if (isset($_POST['media'])) {$media = (strip_tags($_POST['media']));}
             if (isset($_FILES['brand1'])) {$brand1 = ($_FILES['brand1']);}
             if (isset($_FILES['brand2'])) {$brand2 = ($_FILES['brand2']);}
             if (isset($_FILES['brand3'])) {$brand3 = ($_FILES['brand3']);}
@@ -552,7 +544,7 @@
         </section>
         <section>
             <div class="vaseDiagnostic">
-                <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
+                <img class="vase" src="assets/img/temple2.png" alt="dessin temple grecque">
                 <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
             </div>
 <!--------------------------------------DIV MIX MARKETING----------------------------------------->
@@ -608,19 +600,19 @@
                 </div>
             </form>
             <?php
-            if (isset($_POST['concept'])) {$concept = ($_POST['concept']);}
-            if (isset($_POST['performance'])) {$performance = ($_POST['performance']);}
-            if (isset($_POST['design'])) {$design = ($_POST['design']);}
-            if (isset($_POST['packaging'])) {$packaging = ($_POST['packaging']);}
-            if (isset($_POST['service'])) {$service = ($_POST['service']);}
-            if (isset($_POST['mark'])) {$mark = ($_POST['mark']);}
-            if (isset($_POST['price'])) {$price = ($_POST['price']);}
-            if (isset($_POST['tarifs'])) {$tarifs = ($_POST['tarifs']);}
-            if (isset($_POST['vente'])) {$vente = ($_POST['vente']);}
-            if (isset($_POST['taille'])) {$taille = ($_POST['taille']);}
-            if (isset($_POST['distribution'])) {$distribution = ($_POST['distribution']);}
-            if (isset($_POST['strategie'])) {$strategie = ($_POST['strategie']);}
-            if (isset($_POST['hors_media'])) {$hors_media = ($_POST['hors_media']);}
+            if (isset($_POST['concept'])) {$concept = (strip_tags($_POST['concept']));}
+            if (isset($_POST['performance'])) {$performance = (strip_tags($_POST['performance']));}
+            if (isset($_POST['design'])) {$design = (strip_tags($_POST['design']));}
+            if (isset($_POST['packaging'])) {$packaging = (strip_tags($_POST['packaging']));}
+            if (isset($_POST['service'])) {$service = (strip_tags($_POST['service']));}
+            if (isset($_POST['mark'])) {$mark = (strip_tags($_POST['mark']));}
+            if (isset($_POST['price'])) {$price = (strip_tags($_POST['price']));}
+            if (isset($_POST['tarifs'])) {$tarifs = (strip_tags($_POST['tarifs']));}
+            if (isset($_POST['vente'])) {$vente = (strip_tags($_POST['vente']));}
+            if (isset($_POST['taille'])) {$taille = (strip_tags($_POST['taille']));}
+            if (isset($_POST['distribution'])) {$distribution = (strip_tags($_POST['distribution']));}
+            if (isset($_POST['strategie'])) {$strategie = (strip_tags($_POST['strategie']));}
+            if (isset($_POST['hors_media'])) {$hors_media = (strip_tags($_POST['hors_media']));}
 
             if (isset($concept) && isset($performance) && isset($design) && isset($packaging) && isset($service) && isset($mark) && isset($price) && isset($tarifs) && isset($vente) && isset($taille) && isset($distribution) && isset($strategie) && isset($hors_media)) {
 
