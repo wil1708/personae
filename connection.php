@@ -30,7 +30,7 @@
                 <label for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
                 <label for="password">Mot de passe</label>
-                <input class="inputCreate" type="text" id="password" name="password" value="">
+                <input class="inputCreate" type="password" id="password" name="password" value="">
                 <button class="submitButton" type="submit" name="action">Se connecter</button>
             </form>
             <?php

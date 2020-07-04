@@ -53,16 +53,17 @@ if (isset($_GET['deconnexion']))
     <img class="laurierW" src="assets/img/laurier2.png" alt="image laurier blanc">
     <h1 class="h1Plan">PLAN STRATEGIQUE</h1>
     <h3 class="diagTitle">1.Diagnostic interne et externe SWOT</h3>
-    <i class="fas fa-angle-down fa-3x"></i>
+    <a href="#diagTotal" class="arrowMargin1"><i class="fas fa-angle-down fa-3x"></i></a>
     <h3 class="diagTitle">2. Choix des priorités et des cibles</h3>
-    <i class="fas fa-angle-down fa-3x"></i>
+    <a href="#priorityTotal"  class="arrowMargin2"><i class="fas fa-angle-down fa-3x"></i></a>
     <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
+    <a href="#mixTotal"  class="arrowMargin3"><i class="fas fa-angle-down arrowMargin fa-3x"></i></a>
 </section>
 <!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
 <section class="diagnostic">
     <div class="vaseDiagnostic">
         <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
-        <h1 class="diagnosticTitle">DIAGNOSTIC</h1>
+        <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
     </div>
         <div class="diagnosticForm">
             <div class="divRotate">
@@ -131,7 +132,7 @@ if (isset($_GET['deconnexion']))
 <section>
     <div class="vaseDiagnostic">
         <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
-        <h1 class="diagnosticTitle">PRIORITES ET CIBLES</h1>
+        <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
     </div>
     <!--            ---------------------------------FORM marchés prioritaires--------------------------->
     <form action="update.php" method="POST" enctype="multipart/form-data">
@@ -197,11 +198,11 @@ if (isset($_GET['deconnexion']))
                 <div class="productC">
                     <h3 class="titlePriority2">Produit C</h3>
                     <div class="C">
-                        <p class="echoP"><?= $user->caracteristique11() ?></p>
-                        <p class="echoP"><?= $user->caracteristique12() ?></p>
-                        <p class="echoP"><?= $user->caracteristique13() ?></p>
-                        <p class="echoP"><?= $user->caracteristique14() ?></p>
-                        <p class="echoP"><?= $user->caracteristique15() ?></p>
+                        <p class="echoP2"><?= $user->caracteristique11() ?></p>
+                        <p class="echoP2"><?= $user->caracteristique12() ?></p>
+                        <p class="echoP2"><?= $user->caracteristique13() ?></p>
+                        <p class="echoP2"><?= $user->caracteristique14() ?></p>
+                        <p class="echoP2"><?= $user->caracteristique15() ?></p>
                     </div>
                 </div>
             </div>
@@ -324,7 +325,7 @@ if (isset($_GET['deconnexion']))
 <section>
     <div class="vaseDiagnostic">
         <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
-        <h1 class="diagnosticTitle">MIX MARKETING</h1>
+        <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
     </div>
     <!--------------------------------------DIV MIX MARKETING----------------------------------------->
     <form action="update.php" method="POST" enctype="multipart/form-data">

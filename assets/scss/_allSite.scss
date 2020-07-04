@@ -80,6 +80,7 @@ header {
   border-style: solid;
   border-radius: 60%;
   position: relative;
+
 }
 .wheel {
   height: 3px;
@@ -89,6 +90,14 @@ header {
   position: absolute;
   top: 1%;
   left: 5px;
+}
+.deleteLink {
+  text-decoration: underline;
+  font-size: small;
+  position: absolute;
+  right: 110px;
+  top: 110px;
+
 }
 //----------------------------------------UPDATE section strategic plan-----------------------------
 .strategicPlan {
@@ -118,7 +127,7 @@ h3 {
 .fa-angle-down {
   color: $white;
 }
-.h3Mix {
+.arrowMargin {
   margin-bottom: 60px;
 }
 //---------------------------------------UPDATE section diagnostic----------------------------------------

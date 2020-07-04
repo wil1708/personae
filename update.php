@@ -37,6 +37,15 @@
 <!---------------------------------------------HEADER--------------------------------------------->
         <header>
             <?php include 'header.php';?>
+            <h3 class="deleteLink"><a href="<?php
+                $user = new User(array('user'=>$_SESSION['user']));
+                $manager->delete($user);
+                $success3 = true;
+                if($success3){
+                    echo '<META http-equiv="refresh" content="1; URL=index.php"> ';
+                }
+                ?>">(Supprimer mon compte)</a>
+            </h3>
             <div class="titleButton2">
                 <h1>PERSONAE</h1>
                 <img src="assets/img/laurier1.png" alt="dessin couronne de laurier">
@@ -53,16 +62,17 @@
             <img class="laurierW" src="assets/img/laurier2.png" alt="image laurier blanc">
             <h1 class="h1Plan">PLAN STRATEGIQUE</h1>
             <h3 class="diagTitle">1.Diagnostic interne et externe SWOT</h3>
-            <i class="fas fa-angle-down fa-3x"></i>
+            <a href="#diagTotal" class="arrowMargin1"><i class="fas fa-angle-down fa-3x"></i></a>
             <h3 class="diagTitle">2. Choix des priorités et des cibles</h3>
-            <i class="fas fa-angle-down fa-3x"></i>
+            <a href="#priorityTotal"  class="arrowMargin2"><i class="fas fa-angle-down fa-3x"></i></a>
             <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
+            <a href="#mixTotal"  class="arrowMargin3"><i class="fas fa-angle-down arrowMargin fa-3x"></i></a>
         </section>
 <!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
         <section class="diagnostic">
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
-                <h1 class="diagnosticTitle">DIAGNOSTIC</h1>
+                <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
             </div>
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="diagnosticForm">
@@ -185,7 +195,7 @@
         <section>
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
-                <h1 class="diagnosticTitle">PRIORITES ET CIBLES</h1>
+                <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
             </div>
 <!--            ---------------------------------FORM marchés prioritaires--------------------------->
             <form action="update.php" method="POST" enctype="multipart/form-data">
@@ -331,7 +341,7 @@
                 $manager->updateProduct($user);
                 $success = true;
                 if($success){
-                    echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                    echo '<META http-equiv="refresh" content="1; URL=update.php#personaTotal"> ';
                 }else{
                     echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
                 }
@@ -341,7 +351,7 @@
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="mainB2c">
                     <h4 class="titlePriority3">Persona</h4>
-                    <div class="persona">
+                    <div class="persona" id="personaTotal">
                         <div class="bandName">
                             <label for="persona_name"></label>
                             <input type="text" name="persona_name" id="persona_name" placeholder="nom..." value="<?= $user->persona_name() ?>">
@@ -526,17 +536,14 @@
                         $manager->updatePersona($user);
                     }
                 }else {
-                    echo '<p class="labelDiv3">Veuillez renseigner les 4 images</p>';
+                    echo '<p class="labelDiv3">Veuillez renseigner tous les champs du persona avant de valider (dont les 4 images "photo, marque n°1, 2 et 3")</p>';
                 }
-
-
-
-//                        $success = true;
-//                        if($success){
-//                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
-//                        }else{
-//                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
-//                        }
+                        $success = true;
+                        if($success){
+                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
+                        }else{
+                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
+                        }
 
 
             }
@@ -546,7 +553,7 @@
         <section>
             <div class="vaseDiagnostic">
                 <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
-                <h1 class="diagnosticTitle">MIX MARKETING</h1>
+                <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
             </div>
 <!--------------------------------------DIV MIX MARKETING----------------------------------------->
             <form action="update.php" method="POST" enctype="multipart/form-data">

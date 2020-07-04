@@ -24,6 +24,12 @@ class UserManager
         $q->bindValue(':password', $obj->password(), PDO::PARAM_STR);
         $q->execute();
 }
+//------------------------------------function delete---------------------------------------------
+    public function delete(User $obj) {
+        $q = $this->_db->prepare('DELETE FROM main_table WHERE user=:user');
+        $q->bindValue(':user', $obj->user(), PDO::PARAM_STR);
+        $q->execute();
+    }
 //------------------------------------function exists---------------------------------------------
     public function exists($info){
         $q = $this->_db->prepare('SELECT COUNT(*) FROM main_table WHERE user=:user');

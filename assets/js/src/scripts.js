@@ -10,7 +10,7 @@ function wheelloop() {
     $('.wheel').show(0);
     wheelloop();
 };
-// ------------------------------------BURGER SCRIPT--------------------------------------------------------
+// ------------------------------------BURGER SCRIPT----------------------------------------------------
 $('.fa-bars').click(function() {
     $(this).hide();
     $('.fa-times, .temple, .menuText').fadeIn(1500);
@@ -23,7 +23,7 @@ $('.fa-times').click(function() {
 
 
 
-// ------------------------------------------SCRIPT ARROW SCROLL---------------------------------------------
+// ------------------------------------------SCRIPT ARROW SCROLL-----------------------------------------
 var btn = $("#top_window");
 
 $(window).scroll(function() {
@@ -40,8 +40,20 @@ $(window).scroll(function() {
 btn.click(function() {
     $("html,body").animate({scrollTop: 0},'slow');
 });
-
-// ---------------------------------------SCRIPT WHEELOOP------------------------------------------------------
+// ---------------------------------------SCRIPT SMOOTH ANCHOR-------------------------------------------
+$('.arrowMargin1').click(function () {
+    var link = $(this).attr('href');
+    $('html,body').animate({scrollTop: $(link).offset().top }, 750);
+    })
+$('.arrowMargin2').click(function () {
+    var link = $(this).attr('href');
+    $('html,body').animate({scrollTop: $(link).offset().top }, 750);
+})
+$('.arrowMargin3').click(function () {
+    var link = $(this).attr('href');
+    $('html,body').animate({scrollTop: $(link).offset().top }, 750);
+})
+// ---------------------------------------SCRIPT WHEELOOP------------------------------------------------
 wheelloop();
 
 
