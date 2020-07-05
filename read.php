@@ -62,7 +62,7 @@ if (isset($_GET['deconnexion']))
 <!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
 <section class="diagnostic">
     <div class="vaseDiagnostic">
-        <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
+        <img class="vase scrollVase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
         <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
     </div>
         <div class="diagnosticForm">
@@ -131,7 +131,7 @@ if (isset($_GET['deconnexion']))
 <!------------------------------------SECTION PRIORITES ET CIBLES----------------------------->
 <section>
     <div class="vaseDiagnostic">
-        <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
+        <img class="vase scrollCircle" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
         <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
     </div>
     <!--            ---------------------------------FORM marchés prioritaires--------------------------->
@@ -322,12 +322,13 @@ if (isset($_GET['deconnexion']))
 
     <hr class="hrPriority">
 </section>
+<!--------------------------------------DIV MIX MARKETING----------------------------------------->
 <section>
     <div class="vaseDiagnostic">
-        <img class="vase" src="assets/img/temple.png" alt="dessin temple grecque">
+        <img class="vase scrollTemple" src="assets/img/temple.png" alt="dessin temple grecque">
         <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
     </div>
-    <!--------------------------------------DIV MIX MARKETING----------------------------------------->
+
     <form action="update.php" method="POST" enctype="multipart/form-data">
         <div class="divMix">
             <div class="produit">

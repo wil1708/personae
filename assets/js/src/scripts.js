@@ -16,7 +16,7 @@ $(document).ready(function(){
                 return (number * wheelloop(number - 1));
             }
         };
-    wheelloop(9600);
+    wheelloop(1600);
 
 // ------------------------------------BURGER SCRIPT----------------------------------------------------
     $('.fa-bars').click(function() {
@@ -46,6 +46,7 @@ $(document).ready(function(){
 
 // ------------------------------------------SCRIPT ARROW SCROLL---------------------------------------
     var btn = $("#top_window");
+    var elem = $(".h1Plan");
 
     $(window).scroll(function() {
 
@@ -55,6 +56,72 @@ $(document).ready(function(){
             btn.fadeIn(500);
         }else {
             btn.fadeOut(500);
+        }
+        if(scrollTop > 1000) {
+            elem.addClass('fadeIn');
+        }
+        else {
+            elem.removeClass('fadeIn');
+        }
+        if(scrollTop > 1200) {
+            $('.divPlan').addClass('fadeIn');
+        }
+        else {
+            $('.divPlan').removeClass('fadeIn');
+        }
+        if(scrollTop > 800) {
+            $('.laurierW').addClass('fadeIn2');
+        }
+        else {
+            $('.laurierW').removeClass('fadeIn2');
+        }
+        if(scrollTop > 1500) {
+            $('.scrollVase').addClass('slideExpandUp');
+        }
+        else {
+            $('.scrollVase').removeClass('slideExpandUp');
+        }
+        if(scrollTop > 2000) {
+            $('.diagnosticForm').addClass('fadeIn');
+        }
+        else {
+            $('.diagnosticForm').removeClass('fadeIn');
+        }
+        if(scrollTop > 2800) {
+            $('.scrollCircle').addClass('slideExpandUp');
+        }
+        else {
+            $('.scrollCircle').removeClass('slideExpandUp');
+        }
+        if(scrollTop > 3400) {
+            $('.mainB2c').addClass('fadeIn');
+        }
+        else {
+            $('.mainB2c').removeClass('fadeIn');
+        }
+        if(scrollTop > 4200) {
+            $('.threeProducts').addClass('fadeIn');
+        }
+        else {
+            $('.threeProducts').removeClass('fadeIn');
+        }
+        if(scrollTop > 4600) {
+            $('.persona').addClass('fadeIn');
+        }
+        else {
+            $('.persona').removeClass('fadeIn');
+        }
+        if(scrollTop > 5500) {
+            $('.scrollTemple').addClass('slideExpandUp');
+        }
+        else {
+            $('.scrollTemple').removeClass('slideExpandUp');
+        }
+        if(scrollTop > 6000) {
+            $('.divMix').addClass('fadeIn');
+        }
+        else {
+            $('.divMix').removeClass('fadeIn');
         }
     });
 
@@ -78,6 +145,11 @@ $(document).ready(function(){
         var link = $(this).attr('href');
         $('html,body').animate({scrollTop: $(link).offset().top }, 750);
     })
+
+
+
+
+
 })
 
 

@@ -17,7 +17,7 @@ h1 {
   font-size: 4vw;
   font-weight: normal;
   color: transparent;
-  -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 2px #172A3A;
 }
 .h1Subtitle {
   margin: 0;
@@ -111,8 +111,22 @@ header {
   align-items: center;
 }
 .laurierW {
+  visibility: hidden;
   width: 10%;
   margin-top: 60px;
+}
+.fadeIn2 {
+  animation-duration: 0.8s;
+  animation-name: fadeIn2;
+  visibility: visible !important;
+}
+@keyframes fadeIn2  {
+  from{
+    width: 0;
+  }
+  to {
+    width: 10%;
+  }
 }
 .h1Plan {
   font-family: Aclonica;
@@ -121,6 +135,7 @@ header {
   color: #00000000;
   -webkit-text-stroke: 1px #fff;
   border-color: $white;
+  visibility: hidden;
 }
 .diagTitle {
   color: $white;
@@ -134,10 +149,17 @@ h3 {
 .arrowMargin {
   margin-bottom: 60px;
 }
-
+.divPlan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  visibility: hidden;
+}
 //---------------------------------------UPDATE section diagnostic-------------------------------------
 .vase {
   width: 10%;
+  visibility: hidden;
 }
 .vaseDiagnostic {
   display: flex;
@@ -148,6 +170,7 @@ h3 {
 .diagnosticForm {
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 .posNeg {
   width: 30%;
@@ -233,6 +256,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  visibility: hidden;
 }
 .titlePriority {
   text-align: center;
@@ -274,6 +298,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  visibility: hidden;
   }
 .productA {
   display: flex;
@@ -333,6 +358,7 @@ hr {
   width: 90%;
   border-style: solid;
   border-color: $purple;
+  visibility: hidden;
 }
 .titlePersona{
   color: $purple;
@@ -439,7 +465,7 @@ hr {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-
+  visibility: hidden;
 }
 .produit {
   display: flex;
@@ -541,4 +567,90 @@ hr {
   text-align: right;
   color: $purple;
   font-family: Source_Sans_Pro;
+}
+.changeColor {
+  font-family: Source_Sans_Pro;
+}
+//--------------------------------------------SCRIPT fadeIn CLASS-------------------------------------
+.fadeIn {
+  -webkit-animation: animat_show 0.8s;
+  animation: animat_show 0.8s;
+  visibility: visible !important;
+}
+//------------------------------------------SCRIPT expandUP-------------------------------------
+@-webkit-keyframes animat_show{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+.slideExpandUp{
+  animation-name: slideExpandUp;
+  -webkit-animation-name: slideExpandUp;
+
+  animation-duration: 1.6s;
+  -webkit-animation-duration: 1.6s;
+
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+
+  visibility: visible !important;
+}
+
+@keyframes slideExpandUp {
+  0% {
+    transform: translateY(100%) scaleX(0.5);
+  }
+  30%{
+    transform: translateY(-8%) scaleX(0.5);
+  }
+  40%{
+    transform: translateY(2%) scaleX(0.5);
+  }
+  50%{
+    transform: translateY(0%) scaleX(1.1);
+  }
+  60%{
+    transform: translateY(0%) scaleX(0.9);
+  }
+  70% {
+    transform: translateY(0%) scaleX(1.05);
+  }
+  80%{
+    transform: translateY(0%) scaleX(0.95);
+  }
+  90% {
+    transform: translateY(0%) scaleX(1.02);
+  }
+  100%{
+    transform: translateY(0%) scaleX(1);
+  }
+}
+
+@-webkit-keyframes slideExpandUp {
+  0% {
+    -webkit-transform: translateY(100%) scaleX(0.5);
+  }
+  30%{
+    -webkit-transform: translateY(-8%) scaleX(0.5);
+  }
+  40%{
+    -webkit-transform: translateY(2%) scaleX(0.5);
+  }
+  50%{
+    -webkit-transform: translateY(0%) scaleX(1.1);
+  }
+  60%{
+    -webkit-transform: translateY(0%) scaleX(0.9);
+  }
+  70% {
+    -webkit-transform: translateY(0%) scaleX(1.05);
+  }
+  80%{
+    -webkit-transform: translateY(0%) scaleX(0.95);
+  }
+  90% {
+    -webkit-transform: translateY(0%) scaleX(1.02);
+  }
+  100%{
+    -webkit-transform: translateY(0%) scaleX(1);
+  }
 }

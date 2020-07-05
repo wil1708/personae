@@ -39,7 +39,7 @@
             <?php include 'header.php';?>
 
             <div class="titleButton2">
-                <h1>PERSONAE</h1>
+                <h1 class="mainTitle">PERSONAE</h1>
                 <img src="assets/img/laurier1.png" alt="dessin couronne de laurier">
                 <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
                 <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
@@ -53,17 +53,20 @@
         <section class="strategicPlan">
             <img class="laurierW" src="assets/img/laurier2.png" alt="image laurier blanc">
             <h1 class="h1Plan">PLAN STRATEGIQUE</h1>
-            <h3 class="diagTitle">1.Diagnostic interne et externe SWOT</h3>
-            <a href="#diagTotal" class="arrowMargin1"><i class="fas fa-angle-down fa-3x"></i></a>
-            <h3 class="diagTitle">2. Choix des priorités et des cibles</h3>
-            <a href="#priorityTotal"  class="arrowMargin2"><i class="fas fa-angle-down fa-3x"></i></a>
-            <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
-            <a href="#mixTotal"  class="arrowMargin3"><i class="fas fa-angle-down arrowMargin fa-3x"></i></a>
+            <div class="divPlan">
+                <h3 class="diagTitle">1.Diagnostic interne et externe SWOT</h3>
+                <a href="#diagTotal" class="arrowMargin1"><i class="fas fa-angle-down fa-3x"></i></a>
+                <h3 class="diagTitle">2. Choix des priorités et des cibles</h3>
+                <a href="#priorityTotal"  class="arrowMargin2"><i class="fas fa-angle-down fa-3x"></i></a>
+                <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
+                <a href="#mixTotal"  class="arrowMargin3"><i class="fas fa-angle-down arrowMargin fa-3x"></i></a>
+
+            </div>
         </section>
 <!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
         <section class="diagnostic">
             <div class="vaseDiagnostic">
-                <img class="vase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
+                <img class="vase scrollVase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
                 <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
             </div>
             <form action="update.php" method="POST" enctype="multipart/form-data">
@@ -186,7 +189,7 @@
 <!------------------------------------SECTION PRIORITES ET CIBLES----------------------------->
         <section>
             <div class="vaseDiagnostic">
-                <img class="vase" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
+                <img class="vase scrollCircle" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
                 <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
             </div>
 <!--            ---------------------------------FORM marchés prioritaires--------------------------->
@@ -542,12 +545,13 @@
             ?>
             <hr class="hrPriority">
         </section>
+<!--------------------------------------DIV MIX MARKETING----------------------------------------->
         <section>
             <div class="vaseDiagnostic">
-                <img class="vase" src="assets/img/temple2.png" alt="dessin temple grecque">
+                <img class="vase scrollTemple" src="assets/img/temple2.png" alt="dessin temple grecque">
                 <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
             </div>
-<!--------------------------------------DIV MIX MARKETING----------------------------------------->
+
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="divMix">
                     <div class="produit">
