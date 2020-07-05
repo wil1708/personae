@@ -9,9 +9,6 @@
             <li>
                 <a href="index.php"><img class="temple" src="assets/img/temple2.png" alt="icône temple"></a>
             </li>
-            <a href="presentation.php"><li class="menuText">
-                    Présentation
-                </li></a>
             <a href="create.php"><li class="menuText">
                     Créer mon compte
                 </li></a>

@@ -16,9 +16,9 @@ $(document).ready(function(){
                 return (number * wheelloop(number - 1));
             }
         };
-    wheelloop(1600);
+    wheelloop(6000);
 
-// ------------------------------------BURGER SCRIPT----------------------------------------------------
+// ------------------------------------BURGER SCRIPT---------------------------------------------------
     $('.fa-bars').click(function() {
         $(this).hide();
         $('.fa-times, .temple, .menuText').fadeIn(1500);
@@ -47,83 +47,85 @@ $(document).ready(function(){
 // ------------------------------------------SCRIPT ARROW SCROLL---------------------------------------
     var btn = $("#top_window");
     var elem = $(".h1Plan");
+    if ($(window).width() > 992) {
+        $(window).scroll(function() {
 
-    $(window).scroll(function() {
+            var scrollTop = $(this).scrollTop();
+            console.log(scrollTop);
+            if(scrollTop > 6400) {
+                btn.fadeIn(500);
+            }else {
+                btn.fadeOut(500);
+            }
+            if(scrollTop > 1000) {
+                elem.addClass('fadeIn');
+            }
+            else {
+                elem.removeClass('fadeIn');
+            }
+            if(scrollTop > 1200) {
+                $('.divPlan').addClass('fadeIn');
+            }
+            else {
+                $('.divPlan').removeClass('fadeIn');
+            }
+            if(scrollTop > 800) {
+                $('.laurierW').addClass('fadeIn2');
+            }
+            else {
+                $('.laurierW').removeClass('fadeIn2');
+            }
+            if(scrollTop > 1500) {
+                $('.scrollVase').addClass('slideExpandUp');
+            }
+            else {
+                $('.scrollVase').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 2000) {
+                $('.diagnosticForm').addClass('fadeIn');
+            }
+            else {
+                $('.diagnosticForm').removeClass('fadeIn');
+            }
+            if(scrollTop > 2800) {
+                $('.scrollCircle').addClass('slideExpandUp');
+            }
+            else {
+                $('.scrollCircle').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 3400) {
+                $('.mainB2c').addClass('fadeIn');
+            }
+            else {
+                $('.mainB2c').removeClass('fadeIn');
+            }
+            if(scrollTop > 4200) {
+                $('.threeProducts').addClass('fadeIn');
+            }
+            else {
+                $('.threeProducts').removeClass('fadeIn');
+            }
+            if(scrollTop > 4600) {
+                $('.persona').addClass('fadeIn');
+            }
+            else {
+                $('.persona').removeClass('fadeIn');
+            }
+            if(scrollTop > 5500) {
+                $('.scrollTemple').addClass('slideExpandUp');
+            }
+            else {
+                $('.scrollTemple').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 6000) {
+                $('.divMix').addClass('fadeIn');
+            }
+            else {
+                $('.divMix').removeClass('fadeIn');
+            }
+        });
+    };
 
-        var scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
-        if(scrollTop > 6400) {
-            btn.fadeIn(500);
-        }else {
-            btn.fadeOut(500);
-        }
-        if(scrollTop > 1000) {
-            elem.addClass('fadeIn');
-        }
-        else {
-            elem.removeClass('fadeIn');
-        }
-        if(scrollTop > 1200) {
-            $('.divPlan').addClass('fadeIn');
-        }
-        else {
-            $('.divPlan').removeClass('fadeIn');
-        }
-        if(scrollTop > 800) {
-            $('.laurierW').addClass('fadeIn2');
-        }
-        else {
-            $('.laurierW').removeClass('fadeIn2');
-        }
-        if(scrollTop > 1500) {
-            $('.scrollVase').addClass('slideExpandUp');
-        }
-        else {
-            $('.scrollVase').removeClass('slideExpandUp');
-        }
-        if(scrollTop > 2000) {
-            $('.diagnosticForm').addClass('fadeIn');
-        }
-        else {
-            $('.diagnosticForm').removeClass('fadeIn');
-        }
-        if(scrollTop > 2800) {
-            $('.scrollCircle').addClass('slideExpandUp');
-        }
-        else {
-            $('.scrollCircle').removeClass('slideExpandUp');
-        }
-        if(scrollTop > 3400) {
-            $('.mainB2c').addClass('fadeIn');
-        }
-        else {
-            $('.mainB2c').removeClass('fadeIn');
-        }
-        if(scrollTop > 4200) {
-            $('.threeProducts').addClass('fadeIn');
-        }
-        else {
-            $('.threeProducts').removeClass('fadeIn');
-        }
-        if(scrollTop > 4600) {
-            $('.persona').addClass('fadeIn');
-        }
-        else {
-            $('.persona').removeClass('fadeIn');
-        }
-        if(scrollTop > 5500) {
-            $('.scrollTemple').addClass('slideExpandUp');
-        }
-        else {
-            $('.scrollTemple').removeClass('slideExpandUp');
-        }
-        if(scrollTop > 6000) {
-            $('.divMix').addClass('fadeIn');
-        }
-        else {
-            $('.divMix').removeClass('fadeIn');
-        }
-    });
 
     btn.click(function() {
         $("html,body").animate({scrollTop: 0},'slow');

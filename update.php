@@ -178,6 +178,7 @@
                 $manager -> updateDiagnostic($user);
                 $success = true;
                 if($success){
+                    echo '<p class="messageConfirm">Success !</p>';
                     echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
                 }else{
                     echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
@@ -249,6 +250,7 @@
                  $manager->updateMarket($user);
                  $success = true;
                  if($success){
+                     echo '<p class="messageConfirm">Success !</p>';
                      echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
                  }else{
                      echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
@@ -336,6 +338,7 @@
                 $manager->updateProduct($user);
                 $success = true;
                 if($success){
+                    echo '<p class="messageConfirm">Success !</p>';
                     echo '<META http-equiv="refresh" content="1; URL=update.php#personaTotal"> ';
                 }else{
                     echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
@@ -529,18 +532,13 @@
                         $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
 
                         $manager->updatePersona($user);
+                        echo '<p class="messageConfirm">Success !</p>';
+                        echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
                     }
                 }else {
-                    echo '<p class="labelDiv3">Veuillez renseigner tous les champs du persona avant de valider (dont les 4 images "photo, marque n°1, 2 et 3")</p>';
+                    echo '<p class="messageConfirm"></p>';
+                    echo '<p class="labelDiv3">Erreur : veuillez renseigner tous les champs du persona avant de valider (dont les 4 images "photo, marque n°1, 2 et 3")</p>';
                 }
-                        $success = true;
-                        if($success){
-                            echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
-                        }else{
-                            echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
-                        }
-
-
             }
             ?>
             <hr class="hrPriority">
@@ -625,6 +623,7 @@
                 $manager->updateMix($user);
                 $success = true;
                 if($success){
+                    echo '<p class="messageConfirm">Success !</p>';
                     echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
                 }else{
                     echo '<p class="labelDiv3">Les champs n\'ont pas été remplis correctement</p>';
