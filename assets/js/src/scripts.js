@@ -44,10 +44,10 @@ $(document).ready(function(){
         }
     });
 
-// ------------------------------------------SCRIPT ARROW SCROLL---------------------------------------
+// ------------------------------------------SCRIPT ARROW SCROLL-----------------------------------
     var btn = $("#top_window");
     var elem = $(".h1Plan");
-    if ($(window).width() > 992) {
+    if ($(window).width() > 1150) {
         $(window).scroll(function() {
 
             var scrollTop = $(this).scrollTop();
@@ -57,19 +57,31 @@ $(document).ready(function(){
             }else {
                 btn.fadeOut(500);
             }
-            if(scrollTop > 1000) {
+            if(scrollTop > 900) {
                 elem.addClass('fadeIn');
             }
             else {
                 elem.removeClass('fadeIn');
             }
-            if(scrollTop > 1200) {
+            if(scrollTop > 1100) {
                 $('.divPlan').addClass('fadeIn');
             }
             else {
                 $('.divPlan').removeClass('fadeIn');
             }
-            if(scrollTop > 800) {
+            if(scrollTop > 400) {
+                $('.pilier3').addClass('slideExpandUp');
+            }
+            else {
+                $('.pilier3').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 600) {
+                $('.pilier2').addClass('slideExpandUp');
+            }
+            else {
+                $('.pilier2').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 700) {
                 $('.laurierW').addClass('fadeIn2');
             }
             else {
@@ -122,6 +134,12 @@ $(document).ready(function(){
             }
             else {
                 $('.divMix').removeClass('fadeIn');
+            }
+            if(scrollTop > 6800) {
+                $('.pilier').addClass('slideExpandUp');
+            }
+            else {
+                $('.pilier').removeClass('slideExpandUp');
             }
         });
     };

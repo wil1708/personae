@@ -133,7 +133,7 @@ header {
   font-size: 4vw;
   font-weight: normal;
   color: #00000000;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 2px #fff;
   border-color: $white;
   visibility: hidden;
 }
@@ -156,16 +156,29 @@ h3 {
   position: relative;
   visibility: hidden;
 }
-//---------------------------------------UPDATE section diagnostic-------------------------------------
+//---------------------------------------UPDATE section diagnostic--------------------------------
+.sectionDiag {
+  background-color: $darkBlue;
+  width: 100%;
+}
+.diagnosticTitle {
+  font-family: Aclonica;
+  font-size: 4vw;
+  font-weight: normal;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  text-align: center;
+}
 .vase {
   width: 10%;
   visibility: hidden;
+  margin-bottom: 60px;
 }
 .vaseDiagnostic {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
+  margin: 60px 0 30px 0;
 }
 .diagnosticForm {
   display: flex;
@@ -284,7 +297,7 @@ hr {
   margin: 20px 0 60px 0;
   border: none;
 }
-//-----------------------------UPDATE section Priorites et cibles produits prioritaires------------------
+//-----------------------------UPDATE section Priorites et cibles produits prioritaires------------
 .divProduct {
   display: flex;
   flex-direction: column;
@@ -346,7 +359,10 @@ hr {
   display: flex;
   justify-content: center;
 }
-//--------------------------------------PERSONA-----------------------------------------------------------
+//--------------------------------------PERSONA----------------------------------------------------
+input[type=file] {
+  color: white;
+}
 .titlePriority3 {
   text-align: center;
   font-family: Source_Sans_Pro;
@@ -357,28 +373,45 @@ hr {
 .persona {
   width: 90%;
   border-style: solid;
-  border-color: $purple;
+  border-color: $darkBlue;
   visibility: hidden;
 }
 .titlePersona{
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
-.bandName {
-  background-color: $purple;
-  padding: 1% 3%;
+.colorPersona {
+  background-color: $darkBlue;
 }
-#personaName {
-  border: none;
+.bandName {
+  background-color: $darkBlue;
+  padding: 1% 2%;
+}
+.personaName {
+  color: $darkBlue;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+.inputName {
+  border-style: solid;
+  border-color: $darkBlue;
+}
+.personaName {
+  color: $white;
 }
 .threePersonaDivs {
   display: flex;
+  background-color: $darkBlue;
 }
 .divPersona1 {
   display: flex;
   flex-direction: column;
   width: 30%;
   padding: 1% 2%;
+}
+.photoPersona {
+  margin-top: 19px;
 }
 .divPersona2 {
   display: flex;
@@ -387,9 +420,11 @@ hr {
   padding: 1% 3%;
 }
 .bio {
-  background-color: $purple;
+  background-color: $darkBlue;
   margin-top: 40px;
   padding: 10px;
+  border-style: solid;
+  border-color: white;
 }
 .bioTitle {
   font-family: Source_Sans_Pro;
@@ -417,9 +452,11 @@ hr {
 }
 .introvertiLabel {
   text-align: left;
+  color: $white;
 }
 .extravertiLabel {
   text-align: right;
+  color: $white;
 }
 .threeBrands {
   display: flex;
@@ -427,8 +464,6 @@ hr {
 }
 .inputTrait {
   margin: 5px;
-  border-color: $purple;
-  border-style: solid;
 }
 .traits2 {
   margin-bottom: 40px;
@@ -440,7 +475,7 @@ hr {
   margin-bottom: 40px;
 }
 .labelColor {
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
 #quote {
@@ -455,6 +490,7 @@ hr {
 }
 .labelDiv3 {
   font-family: Source_Sans_Pro;
+  color: $white;
 }
 .hrPriority {
   margin-top: 60px;
@@ -531,7 +567,7 @@ hr {
   justify-content: center;
   margin-bottom: 60px;
 }
-//-----------------------------------------------READ DIAGNOSTIC------------------------------------------
+//-----------------------------------------------READ DIAGNOSTIC----------------------------------
 .divDiagRead {
   display: flex;
   flex-direction: column;
@@ -549,29 +585,29 @@ hr {
   font-family: Source_Sans_Pro;
 }
 .echoP3 {
-  margin: 10px 20px;
+  margin: 10px 0;
   padding: 1px 2px;
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
 .echoP4 {
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
 .introvertiLabel2 {
   text-align: left;
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
 .extravertiLabel2 {
   text-align: right;
-  color: $purple;
+  color: $white;
   font-family: Source_Sans_Pro;
 }
 .changeColor {
   font-family: Source_Sans_Pro;
 }
-//--------------------------------------------SCRIPT fadeIn CLASS-------------------------------------
+//--------------------------------------------SCRIPT fadeIn CLASS----------------------------
 .fadeIn {
   -webkit-animation: animat_show 0.8s;
   animation: animat_show 0.8s;

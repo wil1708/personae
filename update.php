@@ -67,7 +67,9 @@
         <section class="diagnostic">
             <div class="vaseDiagnostic">
                 <img class="vase scrollVase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
-                <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
+                <div class="sectionDiag">
+                    <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
+                </div>
             </div>
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="diagnosticForm">
@@ -191,7 +193,9 @@
         <section>
             <div class="vaseDiagnostic">
                 <img class="vase scrollCircle" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
-                <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
+                <div class="sectionDiag">
+                    <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
+                </div>
             </div>
 <!--            ---------------------------------FORM marchés prioritaires--------------------------->
             <form action="update.php" method="POST" enctype="multipart/form-data">
@@ -352,7 +356,7 @@
                     <div class="persona" id="personaTotal">
                         <div class="bandName">
                             <label for="persona_name"></label>
-                            <input type="text" name="persona_name" id="persona_name" placeholder="nom..." value="<?= $user->persona_name() ?>">
+                            <input class="inputName" type="text" name="persona_name" id="persona_name" placeholder="nom..." value="<?= $user->persona_name() ?>">
                         </div>
                         <div class="threePersonaDivs">
 <!-----------------------------------------------DIV PERSONA 1---------------------------------------->
@@ -391,7 +395,7 @@
                                 <label for="quote"></label>
                                 <textarea name="quote" id="quote" placeholder="quote personnelle" cols="30" rows="5"><?= $user->quote() ?></textarea>
                             </div>
-<!-----------------------------------------------DIV PERSONA 2---------------------------------------->
+<!-----------------------------------------------DIV PERSONA 2----------------------------------->
                             <div class="divPersona2">
                                 <h3 class="titlePersona">MOTIVATIONS</h3>
                                 <label for="motivation1"></label>
@@ -419,7 +423,7 @@
                                     <textarea name="bio" id="bio" placeholder="description..." cols="70" rows="5"><?= $user->bio() ?></textarea>
                                 </div>
                             </div>
-<!-----------------------------------------------DIV PERSONA 3---------------------------------------->
+<!-----------------------------------------------DIV PERSONA 3----------------------------------->
                             <div class="divPersona3">
                                 <h3 class="titlePersona">PERSONALITE</h3>
                                 <label for="introverti">
@@ -462,7 +466,7 @@
                                 <h3 class="titlePersona">MARQUES</h3>
                                 <div class="threeBrands">
                                     <label class="labelDiv3" for="brand1">Marque n°1</label>
-                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept=".png, .jpg" value="<?= $user->brand1() ?>"
+                                    <input class="div3Margin" type="file" name="brand1" id="brand1" accept=".png, .jpg">
                                     <label class="labelDiv3" for="brand2">Marque n°2</label>
                                     <input class="div3Margin" type="file" name="brand2" id="brand2" accept=".png, .jpg">
                                     <label class="labelDiv3" for="brand3">Marque n°3</label>
@@ -547,7 +551,9 @@
         <section>
             <div class="vaseDiagnostic">
                 <img class="vase scrollTemple" src="assets/img/temple2.png" alt="dessin temple grecque">
-                <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
+                <div class="sectionDiag">
+                    <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
+                </div>
             </div>
 
             <form action="update.php" method="POST" enctype="multipart/form-data">

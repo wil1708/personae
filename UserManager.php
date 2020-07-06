@@ -164,7 +164,7 @@ class UserManager
 
         $q->execute();
     }
-    //----------------------------------------function updatePersona-----------------------------------
+    //----------------------------------------function updatePersona--------------------------------
     public function updatePersona(User $obj){
         $q = $this->_db->prepare('UPDATE main_table SET persona_name=:persona_name, trait1=:trait1, trait2=:trait2, trait3=:trait3, trait4=:trait4, age=:age, fonction=:fonction, ville=:ville, famille=:famille, photo=:photo, quote=:quote, motivation1=:motivation1, range_motivation1=:range_motivation1, motivation2=:motivation2, range_motivation2=:range_motivation2, motivation3=:motivation3, range_motivation3=:range_motivation3, objectif1=:objectif1, objectif2=:objectif2, objectif3=:objectif3, bio=:bio, introverti=:introverti, analytique=:analytique, loyal=:loyal, passif=:passif, reseau=:reseau, mobile=:mobile, email=:email, media=:media, brand1=:brand1, brand2=:brand2, brand3=:brand3 WHERE user=:user');
 

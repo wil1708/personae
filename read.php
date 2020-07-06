@@ -63,7 +63,9 @@ if (isset($_GET['deconnexion']))
 <section class="diagnostic">
     <div class="vaseDiagnostic">
         <img class="vase scrollVase" src="assets/img/europe-2028128_1280.png" alt="vase grèce antique">
-        <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
+        <div class="sectionDiag">
+            <h1 class="diagnosticTitle" id="diagTotal">DIAGNOSTIC</h1>
+        </div>
     </div>
         <div class="diagnosticForm">
             <div class="divRotate">
@@ -132,7 +134,9 @@ if (isset($_GET['deconnexion']))
 <section>
     <div class="vaseDiagnostic">
         <img class="vase scrollCircle" src="assets/img/greek-3223553_1280.png" alt="vase grèce antique">
-        <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
+        <div class="sectionDiag">
+            <h1 class="diagnosticTitle" id="priorityTotal">PRIORITES ET CIBLES</h1>
+        </div>
     </div>
     <!--            ---------------------------------FORM marchés prioritaires--------------------------->
     <form action="update.php" method="POST" enctype="multipart/form-data">
@@ -212,41 +216,43 @@ if (isset($_GET['deconnexion']))
         </div>
     </form>
 
-    <!--            --------------------------------FORM PERSONA----------------------------------------->
+    <!--            --------------------------------FORM PERSONA-------------------------------->
     <form action="update.php" method="POST" enctype="multipart/form-data">
         <div class="mainB2c">
             <h4 class="titlePriority3">Persona</h4>
             <div class="persona">
                 <div class="bandName">
-                    <h3 class="bioTitle"><?= $user->persona_name() ?></h3>
+                    <h3 class="personaName"><?= $user->persona_name() ?></h3>
                 </div>
                 <div class="threePersonaDivs">
-                    <!-----------------------------------------------DIV PERSONA 1------------------------>
+                    <!-----------------------------------------------DIV PERSONA 1----------------->
                     <div class="divPersona1">
+                        <h3 class="titlePersona">TRAITS DE PERSONALITE</h3>
                         <div class="traits1">
                             <p class="echoP3"><?= $user->trait1() ?></p>
                             <p class="echoP3"><?= $user->trait2() ?></p>
-                        </div>
-                        <div class="traits2">
+
                             <p class="echoP3"><?= $user->trait3() ?></p>
                             <p class="echoP3"><?= $user->trait4() ?></p>
                         </div>
+                        <h3 class="titlePersona">SITUATION</h3>
                         <div>
-                            <p class="echoP3"><?= $user->age() ?></p>
+                            <p class="echoP3">Age : <?= $user->age() ?></p>
                         </div>
                         <div>
-                            <p class="echoP3"><?= $user->fonction() ?></p>
+                            <p class="echoP3">Fonction : <?= $user->fonction() ?></p>
                         </div>
                         <div>
-                            <p class="echoP3"><?= $user->ville() ?></p>
+                            <p class="echoP3">Location : <?= $user->ville() ?></p>
                         </div>
                         <div>
-                            <p class="echoP3"><?= $user->famille() ?></p>
+                            <p class="echoP3">Famille : <?= $user->famille() ?></p>
                         </div>
-                        <div><?= "<img src='./assets/upload/".$user->photo()."' />" ?></div>
-                        <p class="echoP3"><?= $user->quote() ?></p>
+                        <div class="photoPersona"><?= "<img src='./assets/upload/".$user->photo()."' />" ?></div>
+                        <h3 class="titlePersona">QUOTE PERSONNELLE</h3>
+                        <p class="echoP3">"<?= $user->quote() ?>"</p>
                     </div>
-                    <!-----------------------------------------------DIV PERSONA 2------------------------>
+                    <!-----------------------------------------------DIV PERSONA 2---------------->
                     <div class="divPersona2">
                         <h3 class="titlePersona">MOTIVATIONS</h3>
                         <div class="echoP4"><?= $user->motivation1() ?></div>
@@ -264,10 +270,10 @@ if (isset($_GET['deconnexion']))
                         <p class="echoP3"><?= $user->objectif3() ?></p>
                         <div class="bio">
                             <h3 class="bioTitle">BIO</h3>
-                            <p class="echoP"><?= $user->bio() ?></p>
+                            <p class="echoP3"><?= $user->bio() ?></p>
                         </div>
                     </div>
-                    <!-----------------------------------------------DIV PERSONA 3------------------------>
+                    <!-----------------------------------------------DIV PERSONA 3----------------->
                     <div class="divPersona3">
                         <h3 class="titlePersona">PERSONALITE</h3>
                         <label for="introverti">
@@ -325,8 +331,10 @@ if (isset($_GET['deconnexion']))
 <!--------------------------------------DIV MIX MARKETING----------------------------------------->
 <section>
     <div class="vaseDiagnostic">
-        <img class="vase scrollTemple" src="assets/img/temple.png" alt="dessin temple grecque">
-        <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
+        <img class="vase scrollTemple" src="assets/img/temple2.png" alt="dessin temple grecque">
+        <div class="sectionDiag">
+            <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
+        </div>
     </div>
 
     <form action="update.php" method="POST" enctype="multipart/form-data">
