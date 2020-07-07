@@ -27,11 +27,11 @@
         <div class="titleButton2">
             <h1>PERSONAE</h1>
             <form class="formCreate" action="create.php" method="post">
-                <label class="labelDiv3" for="user">Nom d'utilisateur</label>
+                <label class="labelDiv4" for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
-                <label class="labelDiv3" for="password">Mot de passe</label>
+                <label class="labelDiv4" for="password">Mot de passe</label>
                 <input class="inputCreate" type="password" id="password" name="password" value="">
-                <label class="labelDiv3" for="password">Confirmation de mot de passe</label>
+                <label class="labelDiv4" for="password">Confirmation de mot de passe</label>
                 <input class="inputCreate" type="password" id="password" name="confpassword" value="">
                 <button onclick="href=update.php;" class="submitButton" type="submit" name="action">Créer un compte</button>
             </form>
@@ -43,16 +43,16 @@
 
         if (isset($user) && isset($password) && isset($confpassword) && $password == $confpassword && !empty($user) && !empty($password) && !empty($confpassword)){
             if ($manager->exists($_POST['user'])){
-                echo '<p class="labelDiv3">Cet utilisateur existe déjà</p>';
+                echo '<p class="labelDiv4">Cet utilisateur existe déjà</p>';
             }else{
                 $user = new User (array('user'=>$_POST['user'], 'password'=>password_hash($_POST['password'], PASSWORD_DEFAULT)));
                 $manager -> add($user);
-                echo '<p class="labelDiv3">Votre compte a bien été crée</p>';
+                echo '<p class="labelDiv4">Votre compte a bien été crée</p>';
                 echo '<META http-equiv="refresh" content="2; URL=connection.php"> ';
             }
 
         }else {
-            echo '<p class="labelDiv3">Veuillez remplir entièrement les champs</p>';
+            echo '<p class="labelDiv4">Veuillez remplir entièrement les champs</p>';
         }
         ?>
         </div>

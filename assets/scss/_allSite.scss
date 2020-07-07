@@ -5,6 +5,9 @@ a, a:link, a:visited, a:focus, a:hover, a:active {
   text-decoration: none;
   color: #000000;
 }
+label {
+  font-family: Source_Sans_Pro;
+}
 //-------------------------------------------INDEX--------------------------------------------------
 .titleButton {
   display: flex;
@@ -71,6 +74,9 @@ header {
   flex-direction: column;
   align-items: center;
   margin: 100px auto 500px auto;
+}
+.labelDiv4 {
+  font-family: Source_Sans_Pro;
 }
 //----------------------------------------------UPDATE header--------------------------------------
 .infoTitle {
@@ -613,11 +619,12 @@ input[type=file] {
   animation: animat_show 0.8s;
   visibility: visible !important;
 }
-//------------------------------------------SCRIPT expandUP-------------------------------------
+
 @-webkit-keyframes animat_show{
   0%{opacity:0}
   100%{opacity:1}
 }
+//------------------------------------------SCRIPT expandUP-------------------------------------
 .slideExpandUp{
   animation-name: slideExpandUp;
   -webkit-animation-name: slideExpandUp;
@@ -688,6 +695,68 @@ input[type=file] {
   }
   100%{
     -webkit-transform: translateY(0%) scaleX(1);
+  }
+}
+.stretchRight{
+  animation-name: stretchRight;
+  -webkit-animation-name: stretchRight;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+
+  transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@keyframes stretchRight {
+  0% {
+    transform: scaleX(0.3);
+  }
+  40% {
+    transform: scaleX(1.02);
+  }
+  60% {
+    transform: scaleX(0.98);
+  }
+  80% {
+    transform: scaleX(1.01);
+  }
+  100% {
+    transform: scaleX(0.98);
+  }
+  80% {
+    transform: scaleX(1.01);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes stretchRight {
+  0% {
+    -webkit-transform: scaleX(0.3);
+  }
+  40% {
+    -webkit-transform: scaleX(1.02);
+  }
+  60% {
+    -webkit-transform: scaleX(0.98);
+  }
+  80% {
+    -webkit-transform: scaleX(1.01);
+  }
+  100% {
+    -webkit-transform: scaleX(0.98);
+  }
+  80% {
+    -webkit-transform: scaleX(1.01);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
   }
 }
 //-----------------------------------------CONFIRM MESSAGE------------------------------------------

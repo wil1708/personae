@@ -47,7 +47,7 @@ $(document).ready(function(){
 // ------------------------------------------SCRIPT ARROW SCROLL-----------------------------------
     var btn = $("#top_window");
     var elem = $(".h1Plan");
-    if ($(window).width() > 1150) {
+    if ($(window).width() > 1250) {
         $(window).scroll(function() {
 
             var scrollTop = $(this).scrollTop();
@@ -99,11 +99,23 @@ $(document).ready(function(){
             else {
                 $('.diagnosticForm').removeClass('fadeIn');
             }
+            if(scrollTop > 1700) {
+                $('#diagTotal').addClass('stretchRight');
+            }
+            else {
+                $('#diagTotal').removeClass('stretchRight');
+            }
             if(scrollTop > 2800) {
                 $('.scrollCircle').addClass('slideExpandUp');
             }
             else {
                 $('.scrollCircle').removeClass('slideExpandUp');
+            }
+            if(scrollTop > 3000) {
+                $('#priorityTotal').addClass('stretchRight');
+            }
+            else {
+                $('#priorityTotal').removeClass('stretchRight');
             }
             if(scrollTop > 3400) {
                 $('.mainB2c').addClass('fadeIn');
@@ -123,19 +135,25 @@ $(document).ready(function(){
             else {
                 $('.persona').removeClass('fadeIn');
             }
-            if(scrollTop > 5500) {
+            if(scrollTop > 5800) {
                 $('.scrollTemple').addClass('slideExpandUp');
             }
             else {
                 $('.scrollTemple').removeClass('slideExpandUp');
             }
-            if(scrollTop > 6000) {
+            if(scrollTop > 5900) {
+                $('#mixTotal').addClass('stretchRight');
+            }
+            else {
+                $('#mixTotal').removeClass('stretchRight');
+            }
+            if(scrollTop > 6100) {
                 $('.divMix').addClass('fadeIn');
             }
             else {
                 $('.divMix').removeClass('fadeIn');
             }
-            if(scrollTop > 6800) {
+            if(scrollTop > 6400) {
                 $('.pilier').addClass('slideExpandUp');
             }
             else {
