@@ -69,7 +69,7 @@ $(document).ready(function(){
             else {
                 $('.divPlan').removeClass('fadeIn');
             }
-            if(scrollTop > 400) {
+            if(scrollTop > 300) {
                 $('.pilier3').addClass('slideExpandUp');
             }
             else {
