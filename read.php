@@ -39,7 +39,7 @@ if (isset($_GET['deconnexion']))
     <?php include 'header.php';?>
     <div class="titleButton2">
         <h1>PERSONAE</h1>
-        <img src="./assets/img/laurier1.png" alt="dessin couronne de laurier">
+        <img  class="laurierImg" src="./assets/img/laurier1.png" alt="dessin couronne de laurier">
         <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
         <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
         <h3 class="infoTitle">Voir ma stratégie marketing</h3>
@@ -340,6 +340,7 @@ if (isset($_GET['deconnexion']))
     <form action="update.php" method="POST" enctype="multipart/form-data">
         <div class="divMix">
             <div class="produit">
+                <h4 class="titleMix2">Produit</h4>
                 <p class="echoP"><?= $user->concept() ?></p>
                 <p class="echoP"><?= $user->performance() ?></p>
                 <p class="echoP"><?= $user->design() ?></p>
@@ -348,15 +349,18 @@ if (isset($_GET['deconnexion']))
                 <p class="echoP"><?= $user->mark() ?></p>
             </div>
             <div class="prix">
+                <h4 class="titleMix2">Prix</h4>
                 <p class="echoP"><?= $user->price() ?></p>
                 <p class="echoP"><?= $user->tarifs() ?></p>
             </div>
             <div class="distribution">
+                <h4 class="titleMix2">Distribution</h4>
                 <p class="echoP"><?= $user->vente() ?></p>
                 <p class="echoP"><?= $user->taille() ?></p>
                 <p class="echoP"><?= $user->distribution() ?></p>
             </div>
             <div class="communication">
+                <h4 class="titleMix2">Communication</h4>
                 <p class="echoP"><?= $user->strategie() ?></p>
                 <p class="echoP"><?= $user->hors_media() ?></p>
             </div>

@@ -40,7 +40,7 @@
 
             <div class="titleButton2">
                 <h1 class="mainTitle">PERSONAE</h1>
-                <img src="assets/img/laurier1.png" alt="dessin couronne de laurier">
+                <img class="laurierImg" src="assets/img/laurier1.png" alt="dessin couronne de laurier">
                 <h3 class="infoTitle">Bienvenue <?= htmlspecialchars($user->user()) ?> </h3>
                 <a href="?deconnexion=1"><button class="submitButton" type="submit" name="action">Déconnexion</button></a>
                 <h3 class="infoTitle">Créer/éditer ma stratégie marketing</h3>
@@ -361,6 +361,7 @@
                         <div class="threePersonaDivs">
 <!-----------------------------------------------DIV PERSONA 1---------------------------------------->
                             <div class="divPersona1">
+                                <h3 class="titlePersona">TRAITS DE PERSONALITE</h3>
                                 <div class="traits1">
                                     <label for="trait1"></label>
                                     <input class="inputTrait" type="text" name="trait1" id="trait1" placeholder="trait de personnalité..." value="<?= $user->trait1() ?>">
@@ -373,19 +374,20 @@
                                     <label for="trait4"></label>
                                     <input class="inputTrait" type="text" name="trait4" id="trait4" placeholder="trait de personnalité..." value="<?= $user->trait4() ?>">
                                 </div>
-                                <div>
+                                <h3 class="titlePersona">SITUATION</h3>
+                                <div class="situationPersona">
                                     <label class="labelColor" for="age">Age :</label>
                                     <input class="inputTrait" type="text" name="age" id="age" placeholder="âge..." value="<?= $user->age() ?>">
                                 </div>
-                                <div>
+                                <div class="situationPersona">
                                     <label class="labelColor" for="fonction">Fonction :</label>
                                     <input class="inputTrait" type="text" name="fonction" id="fonction" placeholder="fonction..." value="<?= $user->fonction() ?>">
                                 </div>
-                                <div>
+                                <div class="situationPersona">
                                     <label class="labelColor" for="ville">Ville :</label>
                                     <input class="inputTrait" type="text" name="ville" id="ville" placeholder="ville..." value="<?= $user->ville() ?>">
                                 </div>
-                                <div>
+                                <div class="situationPersona">
                                 <label class="labelColor" for="famille">Famille :</label>
                                 <input class="inputTrait" type="text" name="famille" id="famille" placeholder="situation familiale..." value="<?= $user->famille() ?>">
                                 </div>
@@ -559,6 +561,7 @@
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="divMix">
                     <div class="produit">
+                        <h4 class="titleMix2">Produit</h4>
                         <label for="concept"></label>
                         <input class="inputDiag inputLenght" type="text" name="concept" id="concept" placeholder="Concept..." value="<?= $user->concept() ?>">
                         <label for="performance"></label>
@@ -573,12 +576,14 @@
                         <input class="inputDiag inputLenght" type="text" name="mark" id="mark" placeholder="Nom de marque..." value="<?= $user->mark() ?>">
                     </div>
                     <div class="prix">
+                        <h4 class="titleMix2">Prix</h4>
                         <label for="price"></label>
                         <input class="inputDiag inputLenght2" type="text" name="price" id="price" placeholder="Prix de base..." value="<?= $user->price() ?>">
                         <label for="tarifs"></label>
                         <input class="inputDiag inputLenght2" type="text" name="tarifs" id="tarifs" placeholder="Tarifs préférentiels..." value="<?= $user->tarifs() ?>">
                     </div>
                     <div class="distribution">
+                        <h4 class="titleMix2">Distribution</h4>
                         <label for="vente"></label>
                         <input class="inputDiag inputLenght" type="text" name="vente" id="vente" placeholder="Force de vente..." value="<?= $user->vente() ?>">
                         <label for="taille"></label>
@@ -587,6 +592,7 @@
                         <input class="inputDiag inputLenght" type="text" name="distribution" id="distribution" placeholder="Circuits de distribution..." value="<?= $user->distribution() ?>">
                     </div>
                     <div class="communication">
+                        <h4 class="titleMix2">Communication</h4>
                         <label for="strategie"></label>
                         <input class="inputDiag inputLenght2" type="text" name="strategie" id="strategie" placeholder="Stratégie média..." value="<?= $user->strategie() ?>">
                         <label for="hors_media"></label>

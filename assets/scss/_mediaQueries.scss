@@ -1,0 +1,671 @@
+//------------------------------------------------MQ 320------------------------------------
+//INDEX
+@media screen and (max-width: 320px) {
+  .statueFace {
+    width: 10%;
+  }
+  .headerContain {
+    margin: 0;
+  }
+  #fa-bars2 {
+    margin-left: 20%;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  .titleButton {
+    margin: 200px auto 200px auto;
+  }
+  .headerContain {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .menuText {
+    font-size: 6vw;
+    margin: 5px 0;
+  }
+  .pilier2 {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+  .contact {
+    margin: 40px 0 0 10px;
+  }
+
+  //CREATE
+  .pilier3 {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+  //UPDATE
+  .fa-bars {
+    margin: 0 0 0 20%;
+  }
+  .laurierImg {
+    width: 50%;
+  }
+  .faceMenu {
+    align-items: flex-start;
+  }
+  .laurierW {
+    visibility: visible;
+    width: 30%;
+  }
+  .divPlan {
+    visibility: visible;
+  }
+  .h1Plan {
+    visibility: visible;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 7vw;
+  }
+  .vase {
+    visibility: visible;
+    width: 30%;
+  }
+  .diagnosticTitle {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .divRotate {
+    display: none;
+  }
+  .diagnosticForm {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+  }
+  .posNeg {
+    width: 80%;
+  }
+.mainB2c {
+  visibility: visible;
+  }
+  .b2c {
+    width: 80%;
+  }
+  .b2b {
+    width: 80%;
+  }
+  .threeProducts {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productA,.productB,.productC {
+    width: 80%;
+  }
+  .persona {
+    visibility: visible;
+  }
+  .threePersonaDivs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bandName {
+    text-align: center;
+  }
+  .inputName {
+    margin-right: 5%;
+  }
+  .divPersona1, .divPersona2, .divPersona3 {
+    width: 80%;
+    align-items: center;
+  }
+  .bio {
+    width: 100%;
+  }
+  .rowPersona {
+    width: 230px;
+  }
+  #range_motivation1, #range_motivation2, #range_motivation3, #introverti, #analytique, #loyal, #passif, #reseau, #mobile, #email, #media {
+    width: 100%;
+  }
+  .divMix {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mixCircle {
+    display: none;
+  }
+.produit, .prix, .distribution, .communication {
+  width: 80%;
+  align-items: center;
+  }
+  .distribution {
+  padding: 10px 0;
+  }
+.titleMix2 {
+  display: block;
+  }
+  .pilier {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+  //READ
+.personaName {
+  font-size: 30px;
+  }
+}
+
+
+//--------------------------------------------------------------------------------------------------
+  //----------------------------------------------MQ 375------------------------------------------
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .statueFace {
+      width: 13%;
+    }
+    .headerContain {
+      margin: 0;
+    }
+    #fa-bars2 {
+      margin-left: 20%;
+    }
+    h1 {
+      font-size: 7vw;
+    }
+    .titleButton {
+      margin: 200px auto 200px auto;
+    }
+    .headerContain {
+      display: flex;
+      flex-direction: column;
+
+    }
+    .menuText {
+      font-size: 6vw;
+      margin: 5px 0;
+    }
+    .pilier2 {
+      visibility: visible;
+      width: 30%;
+      height: 30%;
+      margin: 30px 0 0 0;
+    }
+    .contact {
+      margin: 40px 0 0 10px;
+    }
+
+    //CREATE
+    .pilier3 {
+      visibility: visible;
+      width: 30%;
+      height: 30%;
+      margin: 30px 0 0 0;
+    }
+
+    //UPDATE
+    .fa-bars {
+      margin: 0 0 0 20%;
+    }
+    .laurierImg {
+      width: 50%;
+    }
+    .faceMenu {
+      align-items: flex-start;
+    }
+    .laurierW {
+      visibility: visible;
+      width: 30%;
+    }
+    .divPlan {
+      visibility: visible;
+    }
+    .h1Plan {
+      visibility: visible;
+      -webkit-text-stroke: 1px #fff;
+      font-size: 7vw;
+    }
+    .vase {
+      visibility: visible;
+      width: 30%;
+    }
+    .diagnosticTitle {
+      font-size: 7vw;
+      -webkit-text-stroke: 1px #fff;
+    }
+    .divRotate {
+      display: none;
+    }
+    .diagnosticForm {
+      visibility: visible;
+      flex-direction: column;
+      align-items: center;
+      justify-content: normal;
+    }
+    .posNeg {
+      width: 80%;
+    }
+    .mainB2c {
+      visibility: visible;
+    }
+    .b2c {
+      width: 80%;
+    }
+    .b2b {
+      width: 80%;
+    }
+    .threeProducts {
+      visibility: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+    .productA,.productB,.productC {
+      width: 80%;
+    }
+    .persona {
+      visibility: visible;
+    }
+    .threePersonaDivs {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bandName {
+      text-align: center;
+    }
+
+    .divPersona1, .divPersona2, .divPersona3 {
+      width: 100%;
+      align-items: center;
+    }
+    .situationPersona {
+      display: flex;
+      align-items: center;
+      width: 95%;
+    }
+    .bio {
+      width: 90%;
+    }
+    .rowPersona {
+      width: 300px;
+    }
+    #range_motivation1, #range_motivation2, #range_motivation3, #introverti, #analytique, #loyal, #passif, #reseau, #mobile, #email, #media {
+      width: 90%;
+    }
+    .divMix {
+      visibility: visible;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mixCircle {
+      display: none;
+    }
+    .produit, .prix, .distribution, .communication {
+      width: 80%;
+      align-items: center;
+    }
+    .distribution {
+      padding: 10px 0;
+    }
+    .titleMix2 {
+      display: block;
+    }
+    .pilier {
+      visibility: visible;
+      width: 30%;
+      height: 30%;
+      margin: 30px 0 0 0;
+    }
+    //READ
+    .personaName {
+      font-size: 30px;
+    }
+}
+//------------------------------------------------------------------------------------------------
+//----------------------------------------------MQ 414------------------------------------------
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .statueFace {
+    width: 13%;
+  }
+  .headerContain {
+    margin: 0;
+  }
+  #fa-bars2 {
+    margin-left: 20%;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  .titleButton {
+    margin: 200px auto 200px auto;
+  }
+  .headerContain {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .menuText {
+    font-size: 6vw;
+    margin: 5px 0;
+  }
+  .pilier2 {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+  .contact {
+    margin: 40px 0 0 10px;
+  }
+
+  //CREATE
+  .pilier3 {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+
+  //UPDATE
+  .fa-bars {
+    margin: 0 0 0 20%;
+  }
+  .laurierImg {
+    width: 50%;
+  }
+  .faceMenu {
+    align-items: flex-start;
+  }
+  .laurierW {
+    visibility: visible;
+    width: 30%;
+  }
+  .divPlan {
+    visibility: visible;
+  }
+  .h1Plan {
+    visibility: visible;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 7vw;
+  }
+  .vase {
+    visibility: visible;
+    width: 30%;
+  }
+  .diagnosticTitle {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .divRotate {
+    display: none;
+  }
+  .diagnosticForm {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+  }
+  .posNeg {
+    width: 80%;
+  }
+  .mainB2c {
+    visibility: visible;
+  }
+  .b2c {
+    width: 80%;
+  }
+  .b2b {
+    width: 80%;
+  }
+  .threeProducts {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productA,.productB,.productC {
+    width: 80%;
+  }
+  .persona {
+    visibility: visible;
+  }
+  .threePersonaDivs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bandName {
+    text-align: center;
+  }
+
+  .divPersona1, .divPersona2, .divPersona3 {
+    width: 100%;
+    align-items: center;
+  }
+  .situationPersona {
+    display: flex;
+    align-items: center;
+    width: 95%;
+  }
+  .bio {
+    width: 90%;
+  }
+  .rowPersona {
+    width: 300px;
+  }
+  #range_motivation1, #range_motivation2, #range_motivation3, #introverti, #analytique, #loyal, #passif, #reseau, #mobile, #email, #media {
+    width: 90%;
+  }
+  .divMix {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mixCircle {
+    display: none;
+  }
+  .produit, .prix, .distribution, .communication {
+    width: 80%;
+    align-items: center;
+  }
+  .distribution {
+    padding: 10px 0;
+  }
+  .titleMix2 {
+    display: block;
+  }
+  .pilier {
+    visibility: visible;
+    width: 30%;
+    height: 30%;
+    margin: 30px 0 0 0;
+  }
+  //READ
+  .personaName {
+    font-size: 30px;
+  }
+}
+
+//------------------------------------------------------------------------------------------------
+//----------------------------------------------MQ 1024------------------------------------------
+@media screen and (min-width: 415px) and (max-width: 1024px) {
+  .statueFace {
+    width: 10%;
+  }
+  .headerContain {
+    margin: 0;
+  }
+  #fa-bars2 {
+    margin-left: 20%;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  .titleButton {
+    margin: 200px auto 200px auto;
+  }
+  .headerContain {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .menuText {
+    font-size: 3vw;
+    margin: 5px 0;
+  }
+  .pilier2 {
+    visibility: visible;
+    width: 10%;
+    height: 10%;
+    margin: 30px 0 0 20%;
+  }
+  .contact {
+    margin: 40px 0 0 10px;
+  }
+
+  //CREATE
+  .inputCreate {
+    margin: 10px 0 20px 0;
+  }
+  .pilier3 {
+      visibility: visible;
+      width: 10%;
+      height: 10%;
+      margin: 30px 0 0 20%;
+  }
+  //UPDATE
+  .fa-bars {
+    margin: 0 0 0 20%;
+  }
+  .laurierImg {
+    width: 50%;
+  }
+  .faceMenu {
+    align-items: flex-start;
+  }
+  .laurierW {
+    visibility: visible;
+    width: 20%;
+  }
+  .divPlan {
+    visibility: visible;
+  }
+  .h1Plan {
+    visibility: visible;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 7vw;
+  }
+  .vase {
+    visibility: visible;
+    width: 20%;
+  }
+  .diagnosticTitle {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .divRotate {
+    display: none;
+  }
+  .diagnosticForm {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+  }
+  .posNeg {
+    width: 80%;
+  }
+  .mainB2c {
+    visibility: visible;
+  }
+  .b2c {
+    width: 80%;
+  }
+  .b2b {
+    width: 80%;
+  }
+  .threeProducts {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productA,.productB,.productC {
+    width: 80%;
+  }
+  .persona {
+    visibility: visible;
+  }
+  .threePersonaDivs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bandName {
+    text-align: center;
+  }
+
+  .divPersona1, .divPersona2, .divPersona3 {
+    width: 100%;
+    align-items: center;
+  }
+  .situationPersona {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    margin-left: 5%;
+  }
+  .bio {
+    width: 60%;
+  }
+  .rowPersona {
+    width: 550px;
+  }
+  #range_motivation1, #range_motivation2, #range_motivation3, #introverti, #analytique, #loyal, #passif, #reseau, #mobile, #email, #media {
+    width: 60%;
+  }
+  .divMix {
+    visibility: visible;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mixCircle {
+    display: none;
+  }
+  .produit, .prix, .distribution, .communication {
+    width: 80%;
+    align-items: center;
+  }
+  .distribution {
+    padding: 10px 0;
+  }
+  .titleMix2 {
+    display: block;
+  }
+  .inputLenght, .inputLenght2 {
+    max-width: 100%;
+    width :90%;
+  }
+  .pilier {
+    visibility: visible;
+    width: 10%;
+    height: 10%;
+    margin: 30px 0 0 20%;
+  }
+  //READ
+  .personaName {
+    font-size: 30px;
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+//--------------------------------------------MQ 1370-----------------------------------------------------
+@media screen and (min-width: 1025px) and (max-width: 1257px) {
+  .mixCircle {
+    border: none;
+  }
+}
+//-------------------------------------------------------------------------------------------------------
+//--------------------------------------------MQ 1370-----------------------------------------------------
+@media screen and (min-width: 1257px) and (max-width: 1370px) {
+  .mixCircle {
+    width: 450px;
+    height: 450px;
+    top: 6%;
+  }
+}

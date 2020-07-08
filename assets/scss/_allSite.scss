@@ -79,6 +79,12 @@ header {
   font-family: Source_Sans_Pro;
 }
 //----------------------------------------------UPDATE header--------------------------------------
+.titleStrategy {
+  margin-top: 0;
+}
+.titleIndexCreateConnect {
+  margin: 0;
+}
 .infoTitle {
   font-family: Source_Sans_Pro;
   font-weight: normal;
@@ -502,6 +508,12 @@ input[type=file] {
   margin-top: 60px;
 }
 //----------------------------------------MIX MARKETING---------------------------------------------
+.titleMix2 {
+  text-align: center;
+  font-family: Source_Sans_Pro;
+  color: $white;
+  display: none;
+}
 .divMix {
   display: flex;
   justify-content: center;

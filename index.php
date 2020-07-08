@@ -25,7 +25,8 @@
     <header>
         <?php include 'header2.php'; ?>
         <div class="titleButton">
-            <h1>PERSONAE</h1>
+            <h1 class="titleIndexCreateConnect">PERSONAE</h1>
+            <h3 class="titleStrategy">Votre stratégie marketing</h3>
             <a href="connection.php"><h6>Se connecter</h6></a>
             <a href="create.php"><h5>Créer un compte</h5></a>
         </div>

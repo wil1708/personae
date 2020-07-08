@@ -25,7 +25,8 @@
     <header>
         <?php include 'header2.php'; ?>
         <div class="titleButton2">
-            <h1>PERSONAE</h1>
+            <h1 class="titleIndexCreateConnect">PERSONAE</h1>
+            <h3 class="titleStrategy">Votre stratégie marketing</h3>
             <form class="formCreate" action="connection.php" method="post">
                 <label for="user">Nom d'utilisateur</label>
                 <input class="inputCreate" type="text" id="user" name="user" value="">
