@@ -1,16 +1,16 @@
 <?php
     require "config.php";
     session_start();
-    $user = $manager->get($_SESSION['user']);
+    if(isset($_SESSION['user'])) {$user = $manager->get($_SESSION['user']);}
+
 
     if (isset($_GET['deconnexion']))
     {
         session_destroy();
-        header('Location: index.php');
+        echo '<META http-equiv="refresh" content="1; URL=index.php"> ';
         exit();
     }
 ?>
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -37,7 +37,6 @@
 <!---------------------------------------------HEADER--------------------------------------------->
         <header>
             <?php include 'header.php';?>
-
             <div class="titleButton2">
                 <h1 class="mainTitle">PERSONAE</h1>
                 <img class="laurierImg" src="assets/img/laurier1.png" alt="dessin couronne de laurier">
@@ -60,7 +59,6 @@
                 <a href="#priorityTotal"  class="arrowMargin2"><i class="fas fa-angle-down fa-3x"></i></a>
                 <h3 class="h3Mix diagTitle">3. Mix Marketing</h3>
                 <a href="#mixTotal"  class="arrowMargin3"><i class="fas fa-angle-down arrowMargin fa-3x"></i></a>
-
             </div>
         </section>
 <!--------------------------------------------SECTION DIAGNOSTIC------------------------------>
@@ -173,10 +171,9 @@
             if (isset($_POST['menace4'])) {$menace4 = (strip_tags($_POST['menace4']));}
             if (isset($_POST['menace5'])) {$menace5 = (strip_tags($_POST['menace5']));}
             if (isset($_POST['menace6'])) {$menace6 = (strip_tags($_POST['menace6']));}
-
+//            CONDITION
             if (isset($force1) && isset($force2) && isset($force3) && isset($force4) && isset($force5) && isset($force6) && isset($opportunite1) && isset($opportunite2) && isset($opportunite3) && isset($opportunite4) && isset($opportunite5) && isset($opportunite6) && isset($faiblesse1) && isset($faiblesse2) && isset($faiblesse3) && isset($faiblesse4) && isset($faiblesse5) && isset($faiblesse6) && isset($menace1) && isset($menace2) && isset($menace3) && isset($menace4) && isset($menace5) && isset($menace6)) {
                 $user = new User (array('user'=>$_SESSION['user'], 'force1'=>$_POST['force1'], 'force2'=>$_POST['force2'], 'force3'=>$_POST['force3'], 'force4'=>$_POST['force4'], 'force5'=>$_POST['force5'], 'force6'=>$_POST['force6'], 'opportunite1'=>$_POST['opportunite1'], 'opportunite2'=>$_POST['opportunite2'], 'opportunite3'=>$_POST['opportunite3'], 'opportunite4'=>$_POST['opportunite4'], 'opportunite5'=>$_POST['opportunite5'], 'opportunite6'=>$_POST['opportunite6'], 'faiblesse1'=>$_POST['faiblesse1'], 'faiblesse2'=>$_POST['faiblesse2'], 'faiblesse3'=>$_POST['faiblesse3'], 'faiblesse4'=>$_POST['faiblesse4'], 'faiblesse5'=>$_POST['faiblesse5'], 'faiblesse6'=>$_POST['faiblesse6'], 'menace1'=>$_POST['menace1'], 'menace2'=>$_POST['menace2'], 'menace3'=>$_POST['menace3'], 'menace4'=>$_POST['menace4'], 'menace5'=>$_POST['menace5'], 'menace6'=>$_POST['menace6']));
-
                 $manager -> updateDiagnostic($user);
                 $success = true;
                 if($success){
@@ -247,10 +244,9 @@
             if (isset($_POST['identite3'])) {$identite3 = (strip_tags($_POST['identite3']));}
             if (isset($_POST['identite4'])) {$identite4 = (strip_tags($_POST['identite4']));}
             if (isset($_POST['identite5'])) {$identite5 = (strip_tags($_POST['identite5']));}
-
+//            CONDITION
              if (isset($psycho1) && isset($psycho2) && isset($psycho3) && isset($psycho4) && isset($psycho5) && isset($identite1) && isset($identite2) && isset($identite3) && isset($identite4) && isset($identite5)) {
                  $user = new User (array('user'=>$_SESSION['user'], 'psycho1'=>$_POST['psycho1'], 'psycho2'=>$_POST['psycho2'], 'psycho3'=>$_POST['psycho3'], 'psycho4'=>$_POST['psycho4'], 'psycho5'=>$_POST['psycho5'], 'identite1'=>$_POST['identite1'], 'identite2'=>$_POST['identite2'], 'identite3'=>$_POST['identite3'], 'identite4'=>$_POST['identite4'], 'identite5'=>$_POST['identite5']));
-
                  $manager->updateMarket($user);
                  $success = true;
                  if($success){
@@ -335,10 +331,9 @@
             if (isset($_POST['caracteristique13'])) {$caracteristique13 = (strip_tags($_POST['caracteristique13']));}
             if (isset($_POST['caracteristique14'])) {$caracteristique14 = (strip_tags($_POST['caracteristique14']));}
             if (isset($_POST['caracteristique15'])) {$caracteristique15 = (strip_tags($_POST['caracteristique15']));}
-
+//            CONDITION
             if (isset($caracteristique1) && isset($caracteristique2) && isset($caracteristique3) && isset($caracteristique4) && isset($caracteristique5) && isset($caracteristique6) && isset($caracteristique7) && isset($caracteristique8) && isset($caracteristique9) && isset($caracteristique10) && isset($caracteristique11) && isset($caracteristique12) && isset($caracteristique13) && isset($caracteristique14) && isset($caracteristique15)) {
                 $user = new User (array('user'=>$_SESSION['user'], 'caracteristique1'=>$_POST['caracteristique1'], 'caracteristique2'=>$_POST['caracteristique2'], 'caracteristique3'=>$_POST['caracteristique3'], 'caracteristique4'=>$_POST['caracteristique4'], 'caracteristique5'=>$_POST['caracteristique5'], 'caracteristique6'=>$_POST['caracteristique6'], 'caracteristique7'=>$_POST['caracteristique7'], 'caracteristique8'=>$_POST['caracteristique8'], 'caracteristique9'=>$_POST['caracteristique9'], 'caracteristique10'=>$_POST['caracteristique10'], 'caracteristique11'=>$_POST['caracteristique11'], 'caracteristique12'=>$_POST['caracteristique12'], 'caracteristique13'=>$_POST['caracteristique13'], 'caracteristique14'=>$_POST['caracteristique14'], 'caracteristique15'=>$_POST['caracteristique15']));
-
                 $manager->updateProduct($user);
                 $success = true;
                 if($success){
@@ -513,12 +508,11 @@
             if (isset($_FILES['brand1'])) {$brand1 = ($_FILES['brand1']);}
             if (isset($_FILES['brand2'])) {$brand2 = ($_FILES['brand2']);}
             if (isset($_FILES['brand3'])) {$brand3 = ($_FILES['brand3']);}
-
+//            CONDITION
             if (isset($persona_name) && isset($trait1) && isset($trait2) && isset($trait3) && isset($trait4) && isset($age) && isset($fonction) && isset($ville) && isset($famille) && isset($quote) && isset($motivation1) && isset($range_motivation1) && isset($motivation2) && isset($range_motivation2) && isset($motivation3) && isset($range_motivation3) && isset($objectif1) && isset($objectif2) && isset($objectif3) && isset($bio) && isset($introverti) && isset($analytique) && isset($loyal) && isset($passif) && isset($reseau) && isset($mobile) && isset($email) && isset($media)) {
-
                 $valid_ext = array('jpg','png');
                 $upload_ext = pathinfo($photo['name'],PATHINFO_EXTENSION) && pathinfo($brand1['name'],PATHINFO_EXTENSION) && pathinfo($brand2['name'],PATHINFO_EXTENSION) && pathinfo($brand3['name'],PATHINFO_EXTENSION);
-
+//                CONDITION
                 if(in_array($upload_ext,$valid_ext) && ($photo['size'] <= 1000000 && $brand1['size'] <= 1000000 && $brand2['size'] <= 1000000 && $brand3['size'] <= 1000000)) {
                     $dbname1 = uniqid() . '_' . $photo['name'];
                     $dbname2 = uniqid() . '_' . $brand1['name'];
@@ -532,11 +526,9 @@
                     $move_result2 = move_uploaded_file($brand1['tmp_name'], $upload_name2);
                     $move_result3 = move_uploaded_file($brand2['tmp_name'], $upload_name3);
                     $move_result4 = move_uploaded_file($brand3['tmp_name'], $upload_name4);
-
                     $success2 = true;
                     if($success2){
                         $user = new User (array('user'=>$_SESSION['user'], 'persona_name'=>$_POST['persona_name'], 'trait1'=>$_POST['trait1'], 'trait2'=>$_POST['trait2'], 'trait3'=>$_POST['trait3'], 'trait4'=>$_POST['trait4'], 'age'=>$_POST['age'], 'fonction'=>$_POST['fonction'], 'ville'=>$_POST['ville'], 'famille'=>$_POST['famille'], 'photo'=>$dbname1, 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'range_motivation1'=>$_POST['range_motivation1'], 'motivation2'=>$_POST['motivation2'], 'range_motivation2'=>$_POST['range_motivation2'], 'motivation3'=>$_POST['motivation3'], 'range_motivation3'=>$_POST['range_motivation3'], 'objectif1'=>$_POST['objectif1'], 'objectif2'=>$_POST['objectif2'], 'objectif3'=>$_POST['objectif3'], 'bio'=>$_POST['bio'], 'introverti'=>$_POST['introverti'], 'analytique'=>$_POST['analytique'], 'quote'=>$_POST['quote'], 'motivation1'=>$_POST['motivation1'], 'loyal'=>$_POST['loyal'], 'passif'=>$_POST['passif'], 'reseau'=>$_POST['reseau'], 'mobile'=>$_POST['mobile'], 'email'=>$_POST['email'], 'media'=>$_POST['media'], 'brand1'=>$dbname2, 'brand2'=>$dbname3, 'brand3'=>$dbname4));
-
                         $manager->updatePersona($user);
                         echo '<p class="messageConfirm">Success !</p>';
                         echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
@@ -557,7 +549,6 @@
                     <h1 class="diagnosticTitle" id="mixTotal">MIX MARKETING</h1>
                 </div>
             </div>
-
             <form action="update.php" method="POST" enctype="multipart/form-data">
                 <div class="divMix">
                     <div class="produit">
@@ -627,11 +618,9 @@
             if (isset($_POST['distribution'])) {$distribution = (strip_tags($_POST['distribution']));}
             if (isset($_POST['strategie'])) {$strategie = (strip_tags($_POST['strategie']));}
             if (isset($_POST['hors_media'])) {$hors_media = (strip_tags($_POST['hors_media']));}
-
+//            CONDITION
             if (isset($concept) && isset($performance) && isset($design) && isset($packaging) && isset($service) && isset($mark) && isset($price) && isset($tarifs) && isset($vente) && isset($taille) && isset($distribution) && isset($strategie) && isset($hors_media)) {
-
                 $user = new User (array('user'=>$_SESSION['user'], 'concept'=>$_POST['concept'], 'performance'=>$_POST['performance'], 'design'=>$_POST['design'], 'packaging'=>$_POST['packaging'], 'service'=>$_POST['service'], 'mark'=>$_POST['mark'], 'price'=>$_POST['price'], 'tarifs'=>$_POST['tarifs'], 'vente'=>$_POST['vente'], 'taille'=>$_POST['taille'], 'distribution'=>$_POST['distribution'], 'strategie'=>$_POST['strategie'], 'hors_media'=>$_POST['hors_media']));
-
                 $manager->updateMix($user);
                 $success = true;
                 if($success){

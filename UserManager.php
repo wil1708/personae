@@ -40,7 +40,7 @@ class UserManager
     }
 //    ---------------------------------function connection------------------------------------
     public function connection($info2){
-        $q = $this->_db->prepare('SELECT user, password FROM main_table WHERE user=:user');
+        $q = $this->_db->prepare('SELECT * FROM main_table WHERE user=:user');
         $q->bindValue(':user', $info2, PDO::PARAM_STR);
         $q->execute();
         $result = $q->fetch();
@@ -49,16 +49,17 @@ class UserManager
 
         if($passverify){
             session_start();
-            $_SESSION['user'] = $result['user'];
             $_SESSION['user'] = $info2;
-            echo '<p class="labelDiv3">Vous êtes connecté</p>';
+//
+            echo '<p class="labelDiv4">Vous êtes connecté</p>';
             $success = true;
             if($success){
-                header('Location: update.php');
+                var_dump($_SESSION['user']);
+                echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
             }
         }
         else{
-            echo '<p class="labelDiv3">Mauvais identifiant ou mot de passe</p>';
+            echo '<p class="labelDiv4">Mauvais identifiant ou mot de passe</p>';
         }
 
     }
@@ -67,7 +68,7 @@ class UserManager
         $q = $this->_db->prepare('SELECT * FROM main_table WHERE user=:user');
         $q->bindValue(':user', $user);
         $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
+        $donnees = $q->fetch(PDO::FETCH_BOTH);
         return new User ($donnees);
     }
 //    -------------------------------------function updateDiagnostic-----------------------------
@@ -204,28 +205,4 @@ class UserManager
 
         $q->execute();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -893,27 +893,5 @@ class User
             $this->_hors_media=$hor;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

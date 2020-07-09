@@ -75,7 +75,7 @@ $(document).ready(function(){
             else {
                 $('.pilier3').removeClass('slideExpandUp');
             }
-            if(scrollTop > 600) {
+            if(scrollTop > 300) {
                 $('.pilier2').addClass('slideExpandUp');
             }
             else {
@@ -154,7 +154,7 @@ $(document).ready(function(){
                 $('.divMix').removeClass('fadeIn');
             }
             if(scrollTop > 6400) {
-                $('.pilier').delay(3000).addClass('slideExpandUp');
+                $('.pilier').addClass('slideExpandUp');
             }
             else {
                 $('.pilier').removeClass('slideExpandUp');

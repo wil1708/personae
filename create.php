@@ -34,7 +34,7 @@
                 <input class="inputCreate" type="password" id="password" name="password" value="">
                 <label class="labelDiv4" for="password">Confirmation de mot de passe</label>
                 <input class="inputCreate" type="password" id="password" name="confpassword" value="">
-                <button onclick="href=update.php;" class="submitButton" type="submit" name="action">Créer un compte</button>
+                <button class="submitButton" type="submit" name="action">Créer un compte</button>
             </form>
 
         <?php
