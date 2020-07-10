@@ -20,17 +20,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="author" content="William Pires">
         <meta name="description" content="Votre ressource stragégie marketing">
-        <meta name="robots" content="index, no follow">
+        <meta name="robots" content="updte, no follow">
         <!--LINKS-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="assets/css/style.min.css">
 
-        <!--OPENGRAPH ogp.me-->
-        <meta property="og:title" content="Personae">
-        <meta property="og:description" content="Votre ressource stratégie marketing">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
         <title>Personae créer ma stratégie</title>
     </head>
     <body>

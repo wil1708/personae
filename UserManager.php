@@ -54,7 +54,6 @@ class UserManager
             echo '<p class="labelDiv4">Vous êtes connecté</p>';
             $success = true;
             if($success){
-                var_dump($_SESSION['user']);
                 echo '<META http-equiv="refresh" content="1; URL=update.php"> ';
             }
         }
