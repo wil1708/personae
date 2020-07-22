@@ -57,31 +57,31 @@ $(document).ready(function(){
             }else {
                 btn.fadeOut(500);
             }
-            if(scrollTop > 900) {
+            if(scrollTop > 1600) {
                 elem.addClass('fadeIn');
             }
             else {
                 elem.removeClass('fadeIn');
             }
-            if(scrollTop > 1100) {
+            if(scrollTop > 1800) {
                 $('.divPlan').addClass('fadeIn');
             }
             else {
                 $('.divPlan').removeClass('fadeIn');
             }
-            if(scrollTop > 300) {
+            if(scrollTop > 700) {
                 $('.pilier3').addClass('slideExpandUp');
             }
             else {
                 $('.pilier3').removeClass('slideExpandUp');
             }
-            if(scrollTop > 300) {
+            if(scrollTop > 400) {
                 $('.pilier2').addClass('slideExpandUp');
             }
             else {
                 $('.pilier2').removeClass('slideExpandUp');
             }
-            if(scrollTop > 700) {
+            if(scrollTop > 1400) {
                 $('.laurierW').addClass('fadeIn2');
             }
             else {
